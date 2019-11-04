@@ -1,0 +1,136 @@
+uuid: 34230f9e-9fb6-4c80-9098-2f8566688962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cavalla_webform.field_webform_address
+    - field.field.paragraph.cavalla_webform.field_webform_address_sec_desc
+    - field.field.paragraph.cavalla_webform.field_webform_address_sec_header
+    - field.field.paragraph.cavalla_webform.field_webform_email
+    - field.field.paragraph.cavalla_webform.field_webform_email_desc
+    - field.field.paragraph.cavalla_webform.field_webform_email_header
+    - field.field.paragraph.cavalla_webform.field_webform_hide_top_section
+    - field.field.paragraph.cavalla_webform.field_webform_iframe
+    - field.field.paragraph.cavalla_webform.field_webform_intro_desc
+    - field.field.paragraph.cavalla_webform.field_webform_intro_header
+    - field.field.paragraph.cavalla_webform.field_webform_phone
+    - field.field.paragraph.cavalla_webform.field_webform_phone_desc
+    - field.field.paragraph.cavalla_webform.field_webform_phone_header
+    - field.field.paragraph.cavalla_webform.field_webform_webform
+    - paragraphs.paragraphs_type.cavalla_webform
+  module:
+    - text
+    - webform
+id: paragraph.cavalla_webform.default
+targetEntityType: paragraph
+bundle: cavalla_webform
+mode: default
+content:
+  field_webform_address:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform_address_sec_desc:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform_address_sec_header:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_email:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_webform_email_desc:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform_email_header:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_hide_top_section:
+    type: boolean
+    weight: 13
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_webform_iframe:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform_intro_desc:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_webform_intro_header:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_phone:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_phone_desc:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform_phone_header:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_webform_webform:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 77f46e54-b83c-4b9b-a6e9-dcd62831c8ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_address_sec_desc
+    - paragraphs.paragraphs_type.cavalla_webform
+  module:
+    - text
+id: paragraph.cavalla_webform.field_webform_address_sec_desc
+field_name: field_webform_address_sec_desc
+entity_type: paragraph
+bundle: cavalla_webform
+label: 'Section Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

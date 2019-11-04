@@ -1,0 +1,21 @@
+uuid: 33a02683-46e8-4e1b-891b-abe29d229346
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_webform_phone_header
+field_name: field_webform_phone_header
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

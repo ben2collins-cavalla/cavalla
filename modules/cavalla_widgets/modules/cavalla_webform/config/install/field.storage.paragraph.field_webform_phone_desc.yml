@@ -1,0 +1,19 @@
+uuid: f31d6329-2a55-4794-bb23-62245b0d0c5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_webform_phone_desc
+field_name: field_webform_phone_desc
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

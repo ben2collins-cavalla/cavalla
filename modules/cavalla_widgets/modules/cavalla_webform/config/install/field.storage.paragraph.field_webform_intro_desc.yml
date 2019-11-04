@@ -1,0 +1,19 @@
+uuid: 8b2fae51-0769-4437-8fe8-38a854a8718b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_webform_intro_desc
+field_name: field_webform_intro_desc
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

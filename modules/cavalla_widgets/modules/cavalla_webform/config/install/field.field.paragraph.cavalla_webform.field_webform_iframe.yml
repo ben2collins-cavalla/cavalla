@@ -1,0 +1,21 @@
+uuid: 41003386-b2ea-419f-8fbe-5c3a3f63c345
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_iframe
+    - paragraphs.paragraphs_type.cavalla_webform
+  module:
+    - text
+id: paragraph.cavalla_webform.field_webform_iframe
+field_name: field_webform_iframe
+entity_type: paragraph
+bundle: cavalla_webform
+label: iFrame
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

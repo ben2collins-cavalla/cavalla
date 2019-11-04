@@ -1,0 +1,21 @@
+uuid: fc83e305-8eb1-4430-9609-9905119ea0af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_address
+    - paragraphs.paragraphs_type.cavalla_webform
+  module:
+    - text
+id: paragraph.cavalla_webform.field_webform_address
+field_name: field_webform_address
+entity_type: paragraph
+bundle: cavalla_webform
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

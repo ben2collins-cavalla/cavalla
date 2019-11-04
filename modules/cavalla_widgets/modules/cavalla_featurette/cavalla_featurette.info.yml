@@ -1,0 +1,16 @@
+name: 'Cavalla: Featurette'
+type: module
+description: A Paragraph Bunble that provides a means to create Bootstrap Featurettes.		
+version: '8.x-1.0'
+core: '8.x'
+
+
+package: Cavalla Widgets
+dependencies:
+  - entity_reference_revisions
+  - paragraphs
+  - link_target
+  - entity_browser
+  - media_entity_browser
+  - easy_install
+  - field_group

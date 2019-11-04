@@ -1,0 +1,21 @@
+uuid: c8a70f50-41c6-4fe3-a1cb-83684cbd361a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_phone
+    - paragraphs.paragraphs_type.cavalla_webform
+  module:
+    - telephone
+id: paragraph.cavalla_webform.field_webform_phone
+field_name: field_webform_phone
+entity_type: paragraph
+bundle: cavalla_webform
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

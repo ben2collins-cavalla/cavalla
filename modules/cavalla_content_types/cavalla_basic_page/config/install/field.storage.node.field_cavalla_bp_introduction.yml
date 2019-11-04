@@ -1,0 +1,21 @@
+uuid: ad983824-c004-4bed-8b98-587601c04c1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: UZBvB--JP2I543QXFu2yb_iEINV9yiuIHzTLmbCFg3g
+id: node.field_cavalla_bp_introduction
+field_name: field_cavalla_bp_introduction
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

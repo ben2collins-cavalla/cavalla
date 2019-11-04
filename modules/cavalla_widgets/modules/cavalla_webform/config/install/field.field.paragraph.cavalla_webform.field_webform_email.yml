@@ -1,0 +1,19 @@
+uuid: 5e31634e-b4b2-458f-9e1b-76799ce10f82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_email
+    - paragraphs.paragraphs_type.cavalla_webform
+id: paragraph.cavalla_webform.field_webform_email
+field_name: field_webform_email
+entity_type: paragraph
+bundle: cavalla_webform
+label: E-mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

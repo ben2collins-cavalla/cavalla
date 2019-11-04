@@ -1,0 +1,23 @@
+uuid: f60daebf-cd60-4504-8dab-d86589f86fb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_hide_top_section
+    - paragraphs.paragraphs_type.cavalla_webform
+id: paragraph.cavalla_webform.field_webform_hide_top_section
+field_name: field_webform_hide_top_section
+entity_type: paragraph
+bundle: cavalla_webform
+label: 'Display Informational Section'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
