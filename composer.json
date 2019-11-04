@@ -1,0 +1,24 @@
+{
+    "name": "cavalla/cavalla_mods",
+    "type": "drupal-module",
+    "description": "This module is designed to provide default content types and modules for the Cavalla",
+    "keywords": ["Drupal"],
+    "homepage": "https://github.com/ben2collins-cavalla/cavalla",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+          "name": "Ben Collins",
+          "homepage": "https://cavallatech.com/about",
+          "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/ben2collins-cavalla/cavalla"
+    },
+    "extra": {
+        "branch-alias": {
+        "8.x-1.x": "1.x-dev"
+        }
+    }
+}
