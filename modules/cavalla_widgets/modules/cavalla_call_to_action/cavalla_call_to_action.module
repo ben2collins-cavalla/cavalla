@@ -45,4 +45,6 @@ function cavalla_call_to_action_help($route_name, RouteMatchInterface $route_mat
     ];
  }
 
-
+ function cavalla_call_to_action_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_call_to_action');
+}
