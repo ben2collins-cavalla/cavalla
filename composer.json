@@ -1,5 +1,5 @@
 {
-    "name": "cavalla/cavalla_mods",
+    "name": "cavalla/cavalla",
     "type": "drupal-module",
     "description": "This module is designed to provide default content types and modules for the Cavalla",
     "keywords": ["Drupal"],
