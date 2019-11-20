@@ -28,11 +28,9 @@
         "drupal/media_entity": "^1.8",
         "drupal/filefield_paths": "^1.0",
         "drupal/commerce": "^2.14",
-        "drupal/commerce_examples": "dev-master",
         "drupal/color_field": "^2.0",
         "drupal/commerce_add_to_cart_link": "^1.0",
         "drupal/commerce_cart_flyout": "^1.7",
-        "drupal/image_delta_formatter": "^1.0",
         "drupal/devel": "^2.1",
         "drupal/search_api": "^1.14"    
     },
