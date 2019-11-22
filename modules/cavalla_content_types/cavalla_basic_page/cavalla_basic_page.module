@@ -46,4 +46,7 @@ function cavalla_basic_page_help($route_name, RouteMatchInterface $route_match) 
     ];
  }
 
+ function cavalla_basic_page_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
+}
 
