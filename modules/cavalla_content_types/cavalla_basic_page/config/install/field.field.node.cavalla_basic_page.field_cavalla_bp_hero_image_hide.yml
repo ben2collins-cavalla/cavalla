@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_cavalla_bp_hero_image_hide
     - node.type.cavalla_basic_page
 _core:
-  default_config_hash: LzLCPXXw4z_bcUCJm1_x_ZQVgiilR5kPmDla7Bf2iOI
+  default_config_hash: GZlNPcgX3CGE0Z3uTDIljRvxaEj1PXNvkHwAzcmkuw4
 id: node.cavalla_basic_page.field_cavalla_bp_hero_image_hide
 field_name: field_cavalla_bp_hero_image_hide
 entity_type: node

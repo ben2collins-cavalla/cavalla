@@ -13,7 +13,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: ABP3EcDBiAzuGdlrEiFBqhrmIel23GokkCEAlhTNXNM
+  default_config_hash: o-34ffdKNNR7l4Ln-2kCiGX4_Wbmqc0G85fx1euByjU
 id: node.cavalla_basic_page.field_cavalla_bp_widgets
 field_name: field_cavalla_bp_widgets
 entity_type: node

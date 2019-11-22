@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: aU5NVWaSABeoJYGDURxHxOQd4u-ngJw8yWSYsSdk45E
+  default_config_hash: pICEv906cAtQabJAcJIcFVVWsVDemaCKveDSbNLWsMQ
 id: node.cavalla_basic_page.field_cavalla_bp_hero_image
 field_name: field_cavalla_bp_hero_image
 entity_type: node

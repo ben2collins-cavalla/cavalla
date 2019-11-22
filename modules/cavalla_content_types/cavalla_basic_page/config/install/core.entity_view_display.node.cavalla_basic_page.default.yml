@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.cavalla_basic_page.field_cavalla_bp_hero_image
     - field.field.node.cavalla_basic_page.field_cavalla_bp_hero_image_hide
-    - field.field.node.cavalla_basic_page.field_cavalla_bp_intro_hide
     - field.field.node.cavalla_basic_page.field_cavalla_bp_introduction
     - field.field.node.cavalla_basic_page.field_cavalla_bp_widgets
     - node.type.cavalla_basic_page
@@ -14,7 +13,7 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: UZeLDYN4Vrkm5nxIF1IJU8zTgbht2FE34Kd6TWv9HkI
+  default_config_hash: PUCPZQkGWB50xULzgUSlKs5Fdl8QZHBoNqex-_IqGsE
 id: node.cavalla_basic_page.default
 targetEntityType: node
 bundle: cavalla_basic_page
@@ -30,16 +29,6 @@ content:
     region: content
   field_cavalla_bp_hero_image_hide:
     weight: 103
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_cavalla_bp_intro_hide:
-    weight: 107
     label: hidden
     settings:
       format: default

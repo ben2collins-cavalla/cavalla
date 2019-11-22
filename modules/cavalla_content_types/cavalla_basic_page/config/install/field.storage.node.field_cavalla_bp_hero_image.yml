@@ -7,7 +7,7 @@ dependencies:
     - image
     - node
 _core:
-  default_config_hash: X0bYWmTwSohFFE-6npOuXU2bItXBkK8oQBJwl0ONw8s
+  default_config_hash: X9H_Yw8v9uAlFV8VyTpanpOTfUlTab1SnZWwGtytyd8
 id: node.field_cavalla_bp_hero_image
 field_name: field_cavalla_bp_hero_image
 entity_type: node

@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: UZBvB--JP2I543QXFu2yb_iEINV9yiuIHzTLmbCFg3g
+  default_config_hash: B3IEmJf6bg5rfP9Vdk90-FFSx2O2YkoGf_LCINwzQeA
 id: node.field_cavalla_bp_introduction
 field_name: field_cavalla_bp_introduction
 entity_type: node

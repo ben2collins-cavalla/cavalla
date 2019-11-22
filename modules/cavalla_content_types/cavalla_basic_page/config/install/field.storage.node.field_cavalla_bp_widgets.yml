@@ -7,7 +7,7 @@ dependencies:
     - node
     - paragraphs
 _core:
-  default_config_hash: s9rkiB5b5chpFzgDT1LXBpkAQoZayR9FFqDk8hXiqwU
+  default_config_hash: xHTrvO5xBeby1TiAWSnQV6V4RaAxcO6XXF3um5gDTqs
 id: node.field_cavalla_bp_widgets
 field_name: field_cavalla_bp_widgets
 entity_type: node

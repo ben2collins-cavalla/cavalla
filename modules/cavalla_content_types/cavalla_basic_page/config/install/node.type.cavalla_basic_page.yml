@@ -10,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: 8ZB5zPKTDeqIzpfyCrZr0ekIYwkltgCQMfH_JtYgDhA
+  default_config_hash: V8fWECU1faA3vNPsDS_tZxiUfSCvXQ1RkT5HDYV049U
 name: 'Cavalla Basic Page'
 type: cavalla_basic_page
 description: ''
