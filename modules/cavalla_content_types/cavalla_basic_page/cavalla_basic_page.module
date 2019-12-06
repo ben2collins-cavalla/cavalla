@@ -46,7 +46,7 @@ function cavalla_basic_page_help($route_name, RouteMatchInterface $route_match) 
     ];
  }
 
- function cavalla_basic_preprocess_node(&$variables) {
+ function cavalla_basic_page_preprocess_node(&$variables) {
   /* create a block object */
   $breadcrump_block_object = \Drupal\block\Entity\Block::load('cavalla_breadcrumbs');
   /* creates a renderable array from the block object */
