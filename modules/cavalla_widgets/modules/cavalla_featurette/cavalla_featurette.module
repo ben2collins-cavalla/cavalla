@@ -2,13 +2,12 @@
 
 /**
  * @file
- * cavalla_featurette module file.
+ * Cavalla_featurette module file.
  */
 
- use Drupal\Core\Routing\RouteMatchInterface;
- use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Routing\RouteMatchInterface;
 
- /**
+/**
  * Implements hook_help().
  *
  * @inheritdoc
@@ -32,17 +31,15 @@ function cavalla_featurette_help($route_name, RouteMatchInterface $route_match) 
   return NULL;
 }
 
- /**
-  * Implements hook_theme().
-  * Lets us define our paragraphs templates in this module.
-  */
- function cavalla_featurette_theme($existing, $type, $theme, $path) {
-   return [
-     'paragraph__cavalla_featurette' => [
-       'base hook' => 'paragraph',
-     ]
-     
-    ];
- }
+/**
+ * Implements hook_theme().
+ * Lets us define our paragraphs templates in this module.
+ */
+function cavalla_featurette_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__cavalla_featurette' => [
+      'base hook' => 'paragraph',
+    ],
 
-
+  ];
+}
