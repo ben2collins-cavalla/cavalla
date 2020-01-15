@@ -1,4 +1,3 @@
-uuid: e284df86-4204-4962-b69b-9f31d999defa
 langcode: en
 status: true
 dependencies:
@@ -9,12 +8,11 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
+    - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
     - image
     - link
-_core:
-  default_config_hash: pYDKp7mPOTK82DgbbByZoylBPrLZpDNb7GtVCuQttpk
 id: paragraph.cavalla_call_to_action.default
 targetEntityType: paragraph
 bundle: cavalla_call_to_action
@@ -72,5 +70,15 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+    region: content
+  field_cavalla_call_to_action_vw:
+    weight: 6
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
 hidden: {  }

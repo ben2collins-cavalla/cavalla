@@ -1,12 +1,9 @@
-uuid: 10d575b9-962d-41d3-bcad-6eeb04019259
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_call_to_action_animation
     - paragraphs.paragraphs_type.cavalla_call_to_action
-_core:
-  default_config_hash: HYCBDQ8Nl0UyDQaXl1Zo1rZ0fuVnKb3JBuaLdJXdyPE
 id: paragraph.cavalla_call_to_action.field_call_to_action_animation
 field_name: field_call_to_action_animation
 entity_type: paragraph

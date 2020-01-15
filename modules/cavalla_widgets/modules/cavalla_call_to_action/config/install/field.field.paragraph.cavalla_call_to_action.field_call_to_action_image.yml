@@ -1,4 +1,3 @@
-uuid: 3ccd51f2-bb09-4909-9d33-fbb3fcdfae6e
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
     - image
-_core:
-  default_config_hash: yNBwZy_3rGfV5SFWVrNGDB8lm8T72qxA9OEsVri55_o
 id: paragraph.cavalla_call_to_action.field_call_to_action_image
 field_name: field_call_to_action_image
 entity_type: paragraph

@@ -1,11 +1,8 @@
-uuid: b568b73c-ff3c-45a8-ac3c-ccbff29cb60b
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: qnOZiwjbIgRrXtdzBQnNF-kOrgtNwLVxwPnwI2nPEEw
 id: paragraph.field_call_to_action_header
 field_name: field_call_to_action_header
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: 8f661ff4-08ec-418e-a943-c7fdb3717588
 langcode: en
 status: true
 dependencies:
@@ -6,8 +5,6 @@ dependencies:
     - file
     - image
     - paragraphs
-_core:
-  default_config_hash: Wr3F7SFIKYELQqjnGn9PN1la3aPXxdMXlD3dEOv_3RM
 id: paragraph.field_call_to_action_image
 field_name: field_call_to_action_image
 entity_type: paragraph

@@ -1,4 +1,3 @@
-uuid: 17224f6e-6a76-4c4c-aedc-7159ec07c99b
 langcode: en
 status: true
 dependencies:
@@ -9,6 +8,7 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
+    - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - image.style.thumbnail
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
@@ -36,7 +36,7 @@ third_party_settings:
         - field_call_to_action_image
         - field_call_to_action_video
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         required_fields: true
@@ -49,7 +49,7 @@ third_party_settings:
       children:
         - field_call_to_action_hyperlink
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         required_fields: true
@@ -58,8 +58,20 @@ third_party_settings:
         open: false
       label: Hyperlink(s)
       region: content
-_core:
-  default_config_hash: Z0UDGkySPFeFdQ6X44JNube2x5m_pYTjzt7ES0MmFlY
+    group_cavalla_call_to_action_vw:
+      children:
+        - field_cavalla_call_to_action_vw
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Selecting this option will set the max-height of the Call to Action section to 600px.'
+        open: false
+        required_fields: true
+      label: Display
+      region: content
 id: paragraph.cavalla_call_to_action.default
 targetEntityType: paragraph
 bundle: cavalla_call_to_action
@@ -112,6 +124,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_cavalla_call_to_action_vw:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden:
   created: true
