@@ -41,10 +41,18 @@ function cavalla_call_to_action_help($route_name, RouteMatchInterface $route_mat
      'paragraph__cavalla_call_to_action' => [
        'base hook' => 'paragraph',
      ]
-     
+
     ];
  }
 
- function cavalla_call_to_action_update_8001() {
+ function cavalla_call_to_action_preprocess_paragraph__cavalla_call_to_action(&$variables) {
+    $paragraph = $variables['elements']['#paragraph'];
+
+    if($paragraph->get('field_cavalla_call_to_action_vw')->value=='1'){
+      $variables['half_view_display']='call_to_action_bundle_half_view';
+    }
+}
+
+ function cavalla_call_to_action_update_8002() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_call_to_action');
 }
