@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_photo_album_feed module file.
+ * Cavalla_photo_album_feed module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -30,8 +30,6 @@ function cavalla_photo_album_feed_help($route_name, RouteMatchInterface $route_m
   }
   return NULL;
 }
-
-
 
 /**
  * Implements hook_theme().

@@ -2,13 +2,12 @@
 
 /**
  * @file
- * cavalla_basic_page module file.
+ * Cavalla_basic_page module file.
  */
 
- use Drupal\Core\Routing\RouteMatchInterface;
- use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Routing\RouteMatchInterface;
 
- /**
+/**
  * Implements hook_help().
  *
  * @inheritdoc
@@ -32,23 +31,22 @@ function cavalla_basic_page_help($route_name, RouteMatchInterface $route_match) 
   return NULL;
 }
 
- /**
-  * Implements hook_theme().
-  * Lets us define our node templates in this module.
-  */
- function cavalla_basic_page_theme($existing, $type, $theme, $path) {
-   return [
-     'node__cavalla_basic_page' => [
-       'base hook' => 'node',
-     ],
-    
-     
-    ];
- }
+/**
+ * Implements hook_theme().
+ * Lets us define our node templates in this module.
+ */
+function cavalla_basic_page_theme($existing, $type, $theme, $path) {
+  return [
+    'node__cavalla_basic_page' => [
+      'base hook' => 'node',
+    ],
 
-
-
- function cavalla_basic_page_update_8001() {
-  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
+  ];
 }
 
+/**
+ *
+ */
+function cavalla_basic_page_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
+}

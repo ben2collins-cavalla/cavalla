@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_photo_album module file.
+ * Cavalla_photo_album module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -38,6 +38,6 @@ function cavalla_photo_album_theme($existing, $type, $theme, $path) {
   return [
     'node__cavalla_photo_album' => [
       'base hook' => 'node',
-    ]
+    ],
   ];
 }
