@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_photos module file.
+ * cavalla_photo_album_feed module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -12,9 +12,9 @@ use Drupal\Core\Routing\RouteMatchInterface;
  *
  * @inheritdoc
  */
-function cavalla_photos_help($route_name, RouteMatchInterface $route_match) {
+function cavalla_photo_album_feed_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    case 'help.page.cavalla_photos':
+    case 'help.page.cavalla_photo_album_feed':
       $text = file_get_contents(dirname(__FILE__) . "/README.md");
       if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
         return '<pre>' . $text . '</pre>';
@@ -31,13 +31,17 @@ function cavalla_photos_help($route_name, RouteMatchInterface $route_match) {
   return NULL;
 }
 
+
+
 /**
- * Implements hook_theme(). Lets us define our paragraphs templates in this module.
+ * Implements hook_theme().
+ * Lets us define our paragraphs templates in this module.
  */
-function cavalla_photos_theme($existing, $type, $theme, $path) {
+function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
   return [
-    'paragraph__cavalla_photos' => [
+    'paragraph__cavalla_photo_album_feed' => [
       'base hook' => 'paragraph',
-    ]
+    ],
+
   ];
 }
