@@ -11,6 +11,5 @@ dependencies:
   - paragraphs
   - link_target
   - entity_browser
-  - media_entity_browser
   - easy_install
   - field_group
