@@ -1,6 +1,6 @@
 name: 'Cavalla: Webform'
 type: module
-description: Provides a paragraphs bundle for adding webforms.	
+description: Provides a paragraphs bundle for adding webforms.
 version: '8.x-1.0'
 core: '8.x'
 
@@ -10,7 +10,6 @@ dependencies:
   - entity_reference_revisions
   - paragraphs
   - link_target
-  - entity_browser
   - easy_install
   - field_group
   - webform

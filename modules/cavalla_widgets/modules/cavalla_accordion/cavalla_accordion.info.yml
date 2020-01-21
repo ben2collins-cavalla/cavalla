@@ -10,6 +10,5 @@ dependencies:
   - entity_reference_revisions
   - paragraphs
   - link_target
-  - entity_browser
   - easy_install
   - field_group
