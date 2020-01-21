@@ -52,7 +52,7 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
     'views_view_fields__cavalla_photo_album_feed' => [
       'base hook' => 'views_view_fields',
     ],
-    'container__cavalla_photo_album_feed' => [
+    'container' => [
       'base hook' => 'container',
     ],
 
