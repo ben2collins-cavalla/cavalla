@@ -43,6 +43,18 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
     'viewfield_item__cavalla_photo_album_feed' => [
       'base hook' => 'viewfield_item',
     ],
+    'views_view__cavalla_photo_album_feed' => [
+      'base hook' => 'views_view',
+    ],
+    'views_view_unformatted__cavalla_photo_album_feed' => [
+      'base hook' => 'views_view_unformatted',
+    ],
+    'views_view_fields__cavalla_photo_album_feed' => [
+      'base hook' => 'views_view_fields',
+    ],
+    'container__cavalla_photo_album_feed' => [
+      'base hook' => 'container',
+    ],
 
   ];
 }
