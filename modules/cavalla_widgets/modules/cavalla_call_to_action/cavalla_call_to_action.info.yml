@@ -1,6 +1,6 @@
 name: 'Cavalla: Call To Action'
 type: module
-description: Provides a paragraphs bundle for adding a full background Call to Action section that uses either images and videos.	
+description: Provides a paragraphs bundle for adding a full background Call to Action section that uses either images and videos.
 version: '8.x-1.0'
 core: '8.x'
 
