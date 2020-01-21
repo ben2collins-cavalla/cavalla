@@ -32,6 +32,17 @@ function cavalla_photo_album_feed_help($route_name, RouteMatchInterface $route_m
 }
 
 /**
+* Implements hook_theme_suggestions_user_alter().
+*/
+function cavalla_photo_album_feed_theme_suggestions_container_alter(array &$suggestions, array $variables) {
+  // A list of view names in which to exclude the container markup.
+
+  if (in_array($variables['element']['#name'])) {
+    $suggestions[] = 'container__cavalla_photo_album_feed';
+  }
+}
+
+/**
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
  */
@@ -52,9 +63,10 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
     'views_view_fields__cavalla_photo_album_feed' => [
       'base hook' => 'views_view_fields',
     ],
-    'container' => [
+    'container__cavalla_photo_album_feed' => [
       'base hook' => 'container',
     ],
 
   ];
 }
+
