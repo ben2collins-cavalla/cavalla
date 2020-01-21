@@ -268,7 +268,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card\">\r\n    {{ field_cavalla_photo_album_cover }}\r\n    <div class=\"card-body\">\r\n      <h1 class=\"card-title\">{{ title }}</h1>\r\n      {{ view_node }} \r\n    </div>\r\n  </div>"
+            text: "<div class=\"card mb-4\">\r\n    {{ field_cavalla_photo_album_cover }}\r\n    <div class=\"card-body\">\r\n      <h1 class=\"card-title\">{{ title }}</h1>\r\n      {{ view_node }} \r\n    </div>\r\n  </div>"
             make_link: false
             path: ''
             absolute: false
