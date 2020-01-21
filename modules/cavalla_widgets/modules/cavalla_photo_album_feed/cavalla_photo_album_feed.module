@@ -40,6 +40,9 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
     'paragraph__cavalla_photo_album_feed' => [
       'base hook' => 'paragraph',
     ],
+    'viewfield_item__cavalla-photo-album-feed' => [
+      'base hook' => 'viewfield_item',
+    ],
 
   ];
 }
