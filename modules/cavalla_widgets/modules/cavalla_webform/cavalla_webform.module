@@ -35,7 +35,7 @@ function cavalla_webform_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
  */
-function cavalla_cavalla_webform_theme($existing, $type, $theme, $path) {
+function cavalla_webform_theme($existing, $type, $theme, $path) {
   return [
     'paragraph__cavalla_webform' => [
       'base hook' => 'paragraph',

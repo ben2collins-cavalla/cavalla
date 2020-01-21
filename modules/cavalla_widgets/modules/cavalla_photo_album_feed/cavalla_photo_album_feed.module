@@ -37,9 +37,7 @@ function cavalla_photo_album_feed_help($route_name, RouteMatchInterface $route_m
 function cavalla_photo_album_feed_theme_suggestions_container_alter(array &$suggestions, array $variables) {
 
   if($variables['element']['#name'] = 'cavalla_photo_album_feed'){
-
     $suggestions[] = 'container__cavalla_photo_album_feed';
-
   } 
     
 }
