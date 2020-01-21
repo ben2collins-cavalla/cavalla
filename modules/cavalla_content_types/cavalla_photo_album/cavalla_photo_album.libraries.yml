@@ -2,7 +2,7 @@ photoGallery:
    version: VERSION
    css:
     theme:
-     build/css/fancybox.css: {}
+     css/fancybox.css: {}
    js:
-     build/js/fancybox.js: {}
-     build/js/fancy_photo.js: {}
+    js/fancybox.js: {}
+    js/fancy_photo.js: {}
