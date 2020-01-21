@@ -9,3 +9,4 @@ dependencies:
   - node
   - user
   - cavalla_photo_album
+  - viewfield
