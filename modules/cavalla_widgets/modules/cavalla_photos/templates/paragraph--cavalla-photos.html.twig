@@ -1,4 +1,4 @@
-<div class="photoshelter-feed my-5">
+<div class="photoshelter-feed py-5">
   <div class="wrapper container">
     <div class="row auto-clear">
       {%  if true in content.field_cavalla_photos_title[0] %}
@@ -12,8 +12,8 @@
           {% if content.field_cavalla_photos_images[i] is not null %}
 
           <div class="photoshelter_photo col-md-4 col-sm-6 col-xs-12" >
-            <a href="{{ content.field_cavalla_photos_images[i]}}" data-fancybox="images">
-              <img src="{{ content.field_cavalla_photos_images[i]}}"   style="width:100%;"/>
+            <a href="{{ content.field_cavalla_photos_images[i] }}" data-fancybox="images">
+              <img src="{{ content.field_cavalla_photos_images[i] }}"   style="width:100%;"/>
             </a>
           </div>
           {% endif %}
