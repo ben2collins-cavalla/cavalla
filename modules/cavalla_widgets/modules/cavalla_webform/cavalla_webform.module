@@ -42,3 +42,10 @@ function cavalla_webform_theme($existing, $type, $theme, $path) {
 
   ];
 }
+
+/**
+ * Code Update.
+ */
+function cavalla_cards_update_8002() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
+}
