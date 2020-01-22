@@ -1,21 +1,20 @@
-uuid: e16b09b4-d387-46b6-a096-ee66979434f2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_webform_phone_desc
+    - field.storage.paragraph.field_cavalla_wf_address_state
     - paragraphs.paragraphs_type.cavalla_webform
   module:
-    - text
-id: paragraph.cavalla_webform.field_webform_phone_desc
-field_name: field_webform_phone_desc
+    - options
+id: paragraph.cavalla_webform.field_cavalla_wf_address_state
+field_name: field_cavalla_wf_address_state
 entity_type: paragraph
 bundle: cavalla_webform
-label: 'Section Description'
+label: State
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: text_long
+field_type: list_string

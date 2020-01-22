@@ -1,11 +1,10 @@
-uuid: 7311f6f4-866f-423a-a71e-0611dbe2b025
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_webform_email_header
-field_name: field_webform_email_header
+id: paragraph.field_cavalla_wf_address_city
+field_name: field_cavalla_wf_address_city
 entity_type: paragraph
 type: string
 settings:

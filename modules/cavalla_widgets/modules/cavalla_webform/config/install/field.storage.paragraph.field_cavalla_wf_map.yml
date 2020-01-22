@@ -1,12 +1,11 @@
-uuid: 0bf25752-9a8a-4be1-9265-23ce5ae4360f
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_webform_address
-field_name: field_webform_address
+id: paragraph.field_cavalla_wf_map
+field_name: field_cavalla_wf_map
 entity_type: paragraph
 type: text_long
 settings: {  }

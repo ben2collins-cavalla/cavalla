@@ -1,11 +1,10 @@
-uuid: 33a02683-46e8-4e1b-891b-abe29d229346
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_webform_phone_header
-field_name: field_webform_phone_header
+id: paragraph.field_cavalla_wf_address_zipcode
+field_name: field_cavalla_wf_address_zipcode
 entity_type: paragraph
 type: string
 settings:

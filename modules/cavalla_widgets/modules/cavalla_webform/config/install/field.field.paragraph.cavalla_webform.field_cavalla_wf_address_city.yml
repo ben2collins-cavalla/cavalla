@@ -1,15 +1,14 @@
-uuid: 839b504e-a2e2-4b94-b599-79dbd692c7e8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_webform_address_sec_header
+    - field.storage.paragraph.field_cavalla_wf_address_city
     - paragraphs.paragraphs_type.cavalla_webform
-id: paragraph.cavalla_webform.field_webform_address_sec_header
-field_name: field_webform_address_sec_header
+id: paragraph.cavalla_webform.field_cavalla_wf_address_city
+field_name: field_cavalla_wf_address_city
 entity_type: paragraph
 bundle: cavalla_webform
-label: 'Section Header'
+label: City
 description: ''
 required: false
 translatable: false

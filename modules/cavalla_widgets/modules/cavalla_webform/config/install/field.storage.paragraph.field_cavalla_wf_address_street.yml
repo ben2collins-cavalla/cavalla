@@ -1,16 +1,17 @@
-uuid: 55604a93-1688-421a-aefd-4c43b1cdf0fb
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-    - text
-id: paragraph.field_webform_address_sec_desc
-field_name: field_webform_address_sec_desc
+id: paragraph.field_cavalla_wf_address_street
+field_name: field_cavalla_wf_address_street
 entity_type: paragraph
-type: text_long
-settings: {  }
-module: text
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

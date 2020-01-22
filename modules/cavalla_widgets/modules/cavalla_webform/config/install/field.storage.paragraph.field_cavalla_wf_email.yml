@@ -1,17 +1,13 @@
-uuid: cdb5a67a-1083-4a81-8f06-dd536e48dda5
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_webform_intro_header
-field_name: field_webform_intro_header
+id: paragraph.field_cavalla_wf_email
+field_name: field_cavalla_wf_email
 entity_type: paragraph
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+type: email
+settings: {  }
 module: core
 locked: false
 cardinality: 1

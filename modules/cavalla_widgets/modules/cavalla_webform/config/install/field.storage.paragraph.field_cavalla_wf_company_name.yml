@@ -1,17 +1,17 @@
-uuid: 28a07bf0-1b10-4231-b934-1bf378132f12
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-    - webform
-id: paragraph.field_webform_webform
-field_name: field_webform_webform
+id: paragraph.field_cavalla_wf_company_name
+field_name: field_cavalla_wf_company_name
 entity_type: paragraph
-type: webform
+type: string
 settings:
-  target_type: webform
-module: webform
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
