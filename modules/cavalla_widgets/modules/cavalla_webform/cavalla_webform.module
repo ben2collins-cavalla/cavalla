@@ -43,6 +43,16 @@ function cavalla_webform_theme($existing, $type, $theme, $path) {
   ];
 }
 
+
+function cavalla_webform_preprocess(&$variables) {
+  $my_form = \Drupal\webform\Entity\Webform::load($my_webform_machinename);
+  $output = \Drupal::entityManager()
+      ->getViewBuilder('webform')
+      ->view($my_form);
+
+      $variables['webform'] = $output;
+}
+
 /**
  * Code Update.
  */
