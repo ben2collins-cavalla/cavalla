@@ -1,38 +1,38 @@
 <section class="webform_bundle">
     <aside class="left">
         <section class="webform">
-          {%  if true in content.field_cavalla_wf_intro_title[0] %}
-            <h1>{{-content.field_cavalla_wf_intro_title[0]-}}</h1>
+          {%  if true in content.field_cavalla_wf_intro_title %}
+            <h1>{{ content.field_cavalla_wf_intro_title }}</h1>
           {% endif %}
-          {%  if true in content.field_cavalla_wf_intro_text[0] %}
-            <p class="lead">{{ content.field_cavalla_wf_intro_text[0] }}</p>
+          {%  if true in content.field_cavalla_wf_intro_text %}
+            <p class="lead">{{ content.field_cavalla_wf_intro_text }}</p>
           {% endif %}
-          <section class="my-4">{{ content.[0] }}</section>
+          <section class="my-4">{# {{ content.[0] }} #}</section>
         </section>
     </aside>
     <aside class="right">
-        {{ content.field_cavalla_wf_map[0] }}
+        {{ content.field_cavalla_wf_map }}
         <div class="contactInfo">
           <address>
-            <h1>{{ content.field_cavalla_wf_company_name[0] }}</h1>
+            <h1>{{ content.field_cavalla_wf_company_name }}</h1>
             <p>
-              <b>Address</b></br>
-              {{ content.field_cavalla_wf_address_street[0] }}</br>
-              {{ content.field_cavalla_wf_address_city[0] }},{{ content.field_cavalla_wf_address_state[0] }}&npsb;{{ content.field_cavalla_wf_address_zipcode[0] }}</br>
+              <b><u>Address</u></b></br>
+              {{ content.field_cavalla_wf_address_street }}</br>
+              {{ content.field_cavalla_wf_address_city }},{{ content.field_cavalla_wf_address_state }} {{ content.field_cavalla_wf_address_zipcode }}</br>
             </p>
              <p>
-              <b>Hours</b></br>
-               {{ content.field_cavalla_wf_work_hours[0] }}
+              <b><u>Hours</u></b></br>
+               {{ content.field_cavalla_wf_work_hours }}
              </p>
              <p>
-              <b>Email</b> </br>
-              <a href="mailto:{{ content.field_cavalla_wf_email[0] }}?subject=Inquiry">{{ content.field_cavalla_wf_email[0] }}</a>
+              <b><u>Email</u></b> </br>
+              <a href="mailto:{{ content.field_cavalla_wf_email }}?subject=Inquiry">{{ content.field_cavalla_wf_email }}</a>
             </p>
             <p>
-              <b>Telephone</b></br>
-              {{ content.field_cavalla_wf_telephone[0] }}
+              <b><u>Telephone</u></b></br>
+              {{ content.field_cavalla_wf_telephone }}
             </p>
-            {{ content.field_cavalla_wf_link[0] }}
+            {{ content.field_cavalla_wf_link }}
           </address>
         </div>
     </aside>
