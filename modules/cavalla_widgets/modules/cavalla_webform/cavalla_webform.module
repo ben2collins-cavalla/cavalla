@@ -53,3 +53,21 @@ function cavalla_webform_preprocess(&$variables) {
       $variables['webform'] = $output;
 }
 
+function cavalla_webform_preprocess_input(&$variables) {
+
+  $variables['attributes']['class'][] = 'form-control';
+
+}
+
+
+
+
+
+
+
+
+function cavalla_webform_preprocess_form_element_label(&$variables) {
+  $variables['attributes']['class'] = 'form-check-label';
+}
+
+

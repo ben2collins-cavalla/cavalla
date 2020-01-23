@@ -20,59 +20,11 @@ function cavalla_webform_update_8001() {
  */
 function cavalla_webform_update_8002() {
     \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
-  }
-
-function cavalla_webform_update_8003() {
-
-    $paragraphs = \Drupal::entityTypeManager()
-    ->getStorage('paragraph')
-    ->loadByProperties(array('type' => 'cavalla_webform'));
-
-    foreach ($paragraphs as $paragraph) {
-        $paragraph->delete();
-    }
-
 }
 
 function cavalla_webform_update_8004() {
 
     \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
-}
-
-
-function cavalla_webform_update_8005() {
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform',  'field_webform_address')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform',  'field_webform_hide_top_section')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_iframe')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone_desc')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_intro_desc')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email_desc')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_address_sec_desc')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform',  'field_webform_address_sec_header')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email_header')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_intro_header')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone_header')->delete();
-    FieldStorageConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_webform')->delete();
-
-
-
-    // Deleting field.
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_address')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_hide_top_section')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_iframe')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone_desc')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_intro_desc')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email_desc')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_address_sec_desc')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_address_sec_header')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email_header')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_intro_header')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_webform')->delete();
-
 }
 
 
