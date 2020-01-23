@@ -54,6 +54,7 @@ function cavalla_webform_update_8005() {
     FieldStorageConfig::loadByName('paragraph', 'field_webform_email_header')->delete();
     FieldStorageConfig::loadByName('paragraph', 'field_webform_intro_header')->delete();
     FieldStorageConfig::loadByName('paragraph', 'field_webform_phone_header')->delete();
+    FieldStorageConfig::loadByName('paragraph', 'field_webform_webform')->delete();
 
 
 
@@ -70,11 +71,10 @@ function cavalla_webform_update_8005() {
     FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_address_sec_header')->delete();
     FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_email_header')->delete();
     FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_intro_header')->delete();
-    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_phone_header')->delete();
+    FieldConfig::loadByName('paragraph', 'cavalla_webform', 'field_webform_webform')->delete();
 
 }
 
 function cavalla_webform_update_8006() {
 
-    \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
 }
