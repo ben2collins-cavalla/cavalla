@@ -56,6 +56,6 @@ function cavalla_webform_preprocess(&$variables) {
 /**
  * Code Update.
  */
-function cavalla_cards_update_8002() {
+function cavalla_webform_update_8002() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
 }
