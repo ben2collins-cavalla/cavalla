@@ -60,12 +60,6 @@ function cavalla_webform_preprocess_input(&$variables) {
 }
 
 
-
-
-
-
-
-
 function cavalla_webform_preprocess_form_element_label(&$variables) {
   $variables['attributes']['class'] = 'form-check-label';
 }
