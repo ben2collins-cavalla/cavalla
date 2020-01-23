@@ -54,9 +54,11 @@ function cavalla_webform_preprocess(&$variables) {
 }
 
 function cavalla_webform_preprocess_input(&$variables) {
-
   $variables['attributes']['class'][] = 'form-control';
+}
 
+function cavalla_webform_preprocess_textarea(&$variables) {
+  $variables['attributes']['class'][] = 'w-100';
 }
 
 
