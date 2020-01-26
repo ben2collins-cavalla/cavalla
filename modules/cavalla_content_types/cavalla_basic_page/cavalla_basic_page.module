@@ -37,7 +37,10 @@ function cavalla_basic_page_help($route_name, RouteMatchInterface $route_match) 
  */
 function cavalla_basic_page_theme($existing, $type, $theme, $path) {
   return [
-    'node__cavalla_basic_page' => [
+    'field__node__cavalla_basic_page' => [
+      'base hook' => 'node',
+    ],
+    'field__cavalla_basic_page' => [
       'base hook' => 'node',
     ],
 
