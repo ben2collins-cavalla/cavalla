@@ -40,7 +40,16 @@ function cavalla_basic_page_theme($existing, $type, $theme, $path) {
     'field__node__title__cavalla_basic_page' => [
       'base hook' => 'node',
     ],
+    
     'field__cavalla_basic_page' => [
+      'base hook' => 'node',
+    ],
+
+    'field__field_cavalla_bp_introduction' => [
+      'base hook' => 'node',
+    ],
+
+    ' field__field_cavalla_bp-hero_image-hide' => [
       'base hook' => 'node',
     ],
 
