@@ -1,0 +1,8 @@
+name: 'Cavalla: Review Scorecard'
+type: module
+description: Provides a paragraph bundle for adding an Review Scorecard section.
+version: '8.x-1.0'
+core: '8.x'
+
+
+package: Cavalla Widgets
