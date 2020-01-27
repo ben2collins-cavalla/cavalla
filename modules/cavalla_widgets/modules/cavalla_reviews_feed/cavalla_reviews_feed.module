@@ -43,3 +43,19 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
 
   ];
 }
+
+function cavalla_reviews_feed_preprocess(&$variables){
+  $reviews = views_get_view_results('page', 'cavalla_review_scorecard');
+  $variables['reviews']= $reviews;
+}
+
+function views_get_view_results($name, $display_id = NULL) {
+  $args = func_get_args();
+  // Remove $name and $display_id from the arguments.
+  unset($args[0], $args[1]);
+  $view = Views::getView($name);
+  $view->setArguments($args);
+  $view->setDisplay($display_id);
+  $view->execute();
+  return  $view->render($display_id);
+}
