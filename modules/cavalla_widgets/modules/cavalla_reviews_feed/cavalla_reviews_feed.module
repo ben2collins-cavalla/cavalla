@@ -40,8 +40,23 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
     'paragraph__cavalla_reviews_feed' => [
       'base hook' => 'paragraph',
     ],
-
+    'viewfield_item__cavalla_reviews_feed' => [
+      'base hook' => 'viewfield_item',
+    ],
+    'views_view__cavalla_reviews_feed' => [
+      'base hook' => 'views_view',
+    ],
+    'views_view_unformatted__cavalla_reviews_feed' => [
+      'base hook' => 'views_view_unformatted',
+    ],
+    'views_view_fields__cavalla_reviews_feed' => [
+      'base hook' => 'views_view_fields',
+    ],
+    'container__cavalla_reviews_feed' => [
+      'base hook' => 'container',
+    ],
   ];
+
 }
 
 function cavalla_reviews_feed_preprocess(&$variables){
