@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cavalla_reviews_feed.field_cavalla_reviews_feed_text
+    - field.field.paragraph.cavalla_reviews_feed.field_cavalla_reviews_feed_title
+    - paragraphs.paragraphs_type.cavalla_reviews_feed
+id: paragraph.cavalla_reviews_feed.default
+targetEntityType: paragraph
+bundle: cavalla_reviews_feed
+mode: default
+content:
+  field_cavalla_reviews_feed_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_cavalla_reviews_feed_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

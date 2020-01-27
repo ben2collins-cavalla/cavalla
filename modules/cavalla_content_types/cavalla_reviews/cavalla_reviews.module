@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_review_scorecard module file.
+ * cavalla_reviews module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -12,9 +12,9 @@ use Drupal\Core\Routing\RouteMatchInterface;
  *
  * @inheritdoc
  */
-function cavalla_review_scorecard_help($route_name, RouteMatchInterface $route_match) {
+function cavalla_reviews_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
-    case 'help.page.cavalla_review_scorecard':
+    case 'help.page.cavalla_reviews':
       $text = file_get_contents(dirname(__FILE__) . "/README.md");
       if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
         return '<pre>' . $text . '</pre>';
@@ -32,14 +32,12 @@ function cavalla_review_scorecard_help($route_name, RouteMatchInterface $route_m
 }
 
 /**
- * Implements hook_theme().
- * Lets us define our paragraphs templates in this module.
+ * Implements hook_theme(). Lets us define our paragraphs templates in this module.
  */
-function cavalla_review_scorecard_theme($existing, $type, $theme, $path) {
+function cavalla_reviews_theme($existing, $type, $theme, $path) {
   return [
-    'paragraph__cavalla_review_scorecard' => [
-      'base hook' => 'paragraph',
+    'node__cavalla_reviews' => [
+      'base hook' => 'node',
     ],
-
   ];
 }

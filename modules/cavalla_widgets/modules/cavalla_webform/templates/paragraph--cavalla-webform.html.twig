@@ -1,5 +1,5 @@
 <section class="webform_bundle">
-    <aside class="left">
+    <aside class="w-50 position-relative d-table-cell webform_section">
         <section class="webform">
           {%  if true in content.field_cavalla_wf_intro_title[0] %}
             <h1>{{ content.field_cavalla_wf_intro_title[0] }}</h1>
@@ -10,7 +10,7 @@
           <section class="my-4"> {{ webform }} </section>
         </section>
     </aside>
-    <aside class="right">
+    <aside class="w-50 position-relative d-table-cell contactInfo_section">
         {{ content.field_cavalla_wf_map[0] }}
         <div class="contactInfo">
           <address>
