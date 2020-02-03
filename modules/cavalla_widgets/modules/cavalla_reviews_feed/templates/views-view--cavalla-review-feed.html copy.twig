@@ -1,0 +1,132 @@
+{#
+/**
+ * @file
+ * Theme override for main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+
+  {{ title_prefix }}
+  {{ title }}
+  {{ title_suffix }}
+
+  {% if header %}
+    <header>
+      {{ header }}
+    </header>
+  {% endif %}
+
+  {{ exposed }}
+  {{ attachment_before }}
+
+  {% if rows -%}
+  <section>
+    <section class="container">
+      <span class="heading">User Rating</span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <p>4.1 average based on {{ rows | length + 1 }} reviews.</p>
+      <hr style="border:3px solid #f1f1f1">
+        <div class="row">
+            <div class="col-md-2 col-lg-1">
+              <div>5 star</div>
+            </div>
+            <div class="col-md-7 col-lg-10">
+              <div class="bar-container w-100">
+                <div class="bar-5"></div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-1">
+              <div>150</div>
+            </div>
+            <div class="col-md-2 col-lg-1">
+              <div>4 star</div>
+            </div>
+            <div class="col-md-7 col-lg-10">
+              <div class="bar-container">
+                <div class="bar-4"></div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-1">
+              <div>63</div>
+            </div>
+            <div class="col-md-2 col-lg-1">
+              <div>3 star</div>
+            </div>
+            <div class="col-md-7 col-lg-10">
+              <div class="bar-container">
+                <div class="bar-3"></div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-1">
+              <div>15</div>
+            </div>
+            <div class="col-md-2 col-lg-1">
+              <div>2 star</div>
+            </div>
+            <div class="col-md-7 col-lg-10">
+              <div class="bar-container">
+                <div class="bar-2"></div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-1">
+              <div>6</div>
+            </div>
+            <div class="col-md-2 col-lg-1">
+              <div>1 star</div>
+            </div>
+            <div class="col-md-7 col-lg-10">
+              <div class="bar-container">
+                <div class="bar-1"></div>
+              </div>
+            </div>
+            <div class="col-md-3 col-lg-1">
+              <div>20</div>
+            </div>
+          </div>
+    </section>
+</section>
+{{ rows }}
+  {% elseif empty -%}
+    {{ empty }}
+  {% endif %}
+  {{ pager }}
+
+  {{ attachment_after }}
+  {{ more }}
+
+  {% if footer %}
+    <footer>
+      {{ footer }}
+    </footer>
+  {% endif %}
+
+  {{ feed_icons }}

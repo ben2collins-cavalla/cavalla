@@ -4,6 +4,8 @@ description: 'Use Cavalla Reviews Feed to view rated critiques and evaluations.'
 version: 8.x-1.0
 core: 8.x
 package: 'Cavalla Widgets'
+libraries:
+  - cavalla_reviews_feed/global-styling
 dependencies:
   - node
   - user

@@ -2,10 +2,11 @@
 
 /**
  * @file
- * cavalla_review_scorecard module file.
+ * Cavalla_review_scorecard module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\Views;
 
 /**
  * Implements hook_help().
@@ -40,21 +41,100 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
     'paragraph__cavalla_reviews_feed' => [
       'base hook' => 'paragraph',
     ],
-    'viewfield_item__cavalla_reviews_feed' => [
+    'viewfield_item__cavalla_review_feed' => [
       'base hook' => 'viewfield_item',
     ],
-    'views_view__cavalla_reviews_feed' => [
+    'views_view__cavalla_review_feed' => [
       'base hook' => 'views_view',
     ],
-    'views_view_unformatted__cavalla_reviews_feed' => [
+    'views_view_unformatted__cavalla_review_feed' => [
       'base hook' => 'views_view_unformatted',
     ],
-    'views_view_fields__cavalla_reviews_feed' => [
+    'views_view_fields__cavalla_review_feed' => [
       'base hook' => 'views_view_fields',
     ],
-    'container__cavalla_reviews_feed' => [
+    'viewfield__paragraph__field_cavalla_review_feed_view' => [
+      'base hook' => 'viewfield',
+    ],
+    'container__cavalla_review_feed' => [
       'base hook' => 'container',
     ],
   ];
 
+}
+
+/**
+ *
+ */
+function cavalla_reviews_preprocess_paragraph__cavalla_reviews_feed(&$variables) {
+
+  $total_results = view_result_total_votes('cavalla_review_feed', 'results');
+  $variables['total_results'] = $total_results;
+
+  // Five Star.
+  $five_star = view_result_total_votes('cavalla_review_feed', 'five_star');
+  $variables['five_star'] = $five_star;
+  $variables['five_star_width'] = calculate($five_star);
+
+  // Four Star.
+  $four_star = view_result_total_votes('cavalla_review_feed', 'four_star');
+  $variables['four_star'] = $four_star;
+  $variables['four_star_width'] = calculate($four_star);
+
+  // Three Star.
+  $three_star = view_result_total_votes('cavalla_review_feed', 'three_star');
+  $variables['three_star'] = $three_star;
+  $variables['three_star_width'] = calculate($three_star);
+
+  // Two Star.
+  $two_star = view_result_total_votes('cavalla_review_feed', 'two_star');
+  $variables['two_star'] = $two_star;
+  $variables['two_star_width'] = calculate($two_star);
+
+  // One Star.
+  $one_star = view_result_total_votes('cavalla_review_feed', 'one_star');
+  $variables['one_star'] = $one_star;
+  $variables['one_star_width'] = calculate($one_star);
+
+  $arr = [$one_star, $two_star, $three_star, $four_star, $five_star];
+  // Total User Average.
+  $variables['total_user_average'] = user_average_calculation($arr, $total_results);
+
+}
+
+/**
+ *
+ */
+function calculate($count) {
+  $total_results = view_result_total_votes('cavalla_review_feed', 'results');
+  return ($count / $total_results) * 100 . '%';
+}
+
+/**
+ *
+ */
+function user_average_calculation(array $arr, $total_results) {
+
+  $item = [];
+
+  foreach ($arr as $key => $value) {
+
+    if (isset($arr[$key])) {
+      $item[$key] = $value * ($key + 1);
+    }
+  }
+
+  return $item = array_sum($item) / $total_results;
+
+}
+
+/**
+ *
+ */
+function view_result_total_votes($name, $display_id = NULL) {
+  $view = Views::getView($name);
+  $view->setDisplay($display_id);
+  // Contextual relationship filter.
+  $view->execute();
+  return count($view->result);
 }
