@@ -12,73 +12,74 @@
       <p>{{ total_user_average }} average based on {{ total_results }} reviews.</p>
     </div>
   </div>
-
-  <div class="row text-md-center">
-    <div class="col-md-1">
-      <div>5 star</div>
-    </div>
-    <div class="col-md-10">
-      <div class="bar-container">
-        <div style="width:{{ five_star_width }}" class="bar-5"></div>
+  <section class="graph">
+      <div class="row text-md-center">
+        <div class="col-md-1">
+          <div>5 star</div>
       </div>
-    </div>
-    <div class="col-md-1">
-      <div>{{ five_star }}</div>
-    </div>
-  </div>
-  <div class="row text-md-center">
-    <div class="col-md-1">
-      <div>4 star</div>
-    </div>
-    <div class="col-md-10">
-      <div class="bar-container">
-        <div style="width:{{ four_star_width }}" class="bar-4"></div>
+      <div class="col-md-10">
+          <div class="bar-container">
+            <div style="width:{{ five_star_width }}" class="bar-5"></div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div>{{ five_star }}</div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-1">
-      <div>{{ four_star }}</div>
-    </div>
-  </div>
-  <div class="row text-md-center">
-    <div class="col-md-1">
-      <div>3 star</div>
-    </div>
-    <div class="col-md-10">
-      <div class="bar-container">
-        <div style="width:{{ three_star_width }}" class="bar-3"></div>
+      <div class="row text-md-center">
+        <div class="col-md-1">
+          <div>4 star</div>
+        </div>
+        <div class="col-md-10">
+          <div class="bar-container">
+            <div style="width:{{ four_star_width }}" class="bar-4"></div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div>{{ four_star }}</div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-1">
-      <div>{{ three_star }}</div>
-    </div>
-  </div>
-  <div class="row text-md-center">
-    <div class="col-md-1">
-      <div>2 star</div>
-    </div>
-    <div class="col-md-10">
-      <div class="bar-container">
-        <div style="width:{{ two_star_width }}" class="bar-2"></div>
+      <div class="row text-md-center">
+        <div class="col-md-1">
+          <div>3 star</div>
+        </div>
+        <div class="col-md-10">
+          <div class="bar-container">
+            <div style="width:{{ three_star_width }}" class="bar-3"></div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div>{{ three_star }}</div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-1">
-      <div>{{ two_star }}</div>
-    </div>
-  </div>
-  <div class="row text-md-center">
-    <div class="col-md-1">
-      <div>1 star</div>
-    </div>
-    <div class="col-md-10">
-      <div class="bar-container">
-        <div style="width:{{ one_star_width }}" class="bar-1"></div>
+      <div class="row text-md-center">
+        <div class="col-md-1">
+          <div>2 star</div>
+        </div>
+        <div class="col-md-10">
+          <div class="bar-container">
+            <div style="width:{{ two_star_width }}" class="bar-2"></div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div>{{ two_star }}</div>
+        </div>
       </div>
-    </div>
-    <div class="col-md-1">
-      <div>{{ one_star }}</div>
-    </div>
-  </div>
-<div>
+      <div class="row text-md-center">
+        <div class="col-md-1">
+          <div>1 star</div>
+        </div>
+        <div class="col-md-10">
+          <div class="bar-container">
+            <div style="width:{{ one_star_width }}" class="bar-1"></div>
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div>{{ one_star }}</div>
+        </div>
+      </div>
+      <div>
+    </section>
   <section>
     {{ content.field_cavalla_review_feed_view[0] }}
   </section>
