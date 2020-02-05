@@ -141,3 +141,11 @@ function view_result_total_votes($name, $display_id = NULL) {
   $view->execute();
   return count($view->result);
 }
+
+
+/**
+ * Code Update.
+ */
+function cavalla_reviews_feed_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_reviews_feed');
+}
