@@ -56,6 +56,9 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
     'viewfield__paragraph__field_cavalla_review_feed_view' => [
       'base hook' => 'viewfield',
     ],
+    'views_mini_pager__cavalla_review_feed' => [
+      'base hook' => 'views_mini_pager',
+    ],
     'container__cavalla_review_feed' => [
       'base hook' => 'container',
     ],
