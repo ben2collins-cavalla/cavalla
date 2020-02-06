@@ -1,9 +1,12 @@
 <section class="container pt-4 reviews_feed_bundle">
-  <div class="row">
+  <div class="row text-md-center">
     <div class="col-12">
-      <h1 class="lead-in">User Rating</h1>
+      <div class="">
+        <h1 class="lead-in">{{ content.field_cavalla_reviews_feed_title[0] }}</h1>
+        <p>{{ content.field_cavalla_reviews_feed_text[0] }}</p>
+      </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 star_rating_{{ total_user_average }}">
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>

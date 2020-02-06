@@ -30,7 +30,9 @@
         "drupal/commerce_cart_flyout": "^1.7",
         "drupal/devel": "^2.1",
         "drupal/search_api": "^1.14",
-        "drupal/pathauto": "^1.6"
+        "drupal/pathauto": "^1.6",
+        "drupal/views_base_url": "^1.0"
+
     },
     "minimum-stability": "dev",
     "authors": [
