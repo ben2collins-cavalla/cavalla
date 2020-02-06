@@ -66,6 +66,15 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
 
 }
 
+
+
+
+function cavalla_reviews_feed_preprocess_pager__cavalla_review_feed(&$variables){
+  $currentPath = getBaseUrl();
+  $variables['currentPath']= $currentPath;
+}
+
+
 /**
  *
  */
