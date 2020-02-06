@@ -1346,7 +1346,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '{{ base_url }}/templates/cavalla_theme/templates/_includes/global/images/male.png'
+          empty: '{{ base_url }}/themes/contrib/cavalla_theme/templates/_includes/global/images/male.png'
           hide_empty: false
           empty_zero: true
           hide_alter_empty: false

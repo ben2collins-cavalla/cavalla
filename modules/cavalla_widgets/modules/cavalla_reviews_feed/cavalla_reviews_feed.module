@@ -146,6 +146,6 @@ function view_result_total_votes($name, $display_id = NULL) {
 /**
  * Code Update.
  */
-function cavalla_reviews_feed_update_8002() {
+function cavalla_reviews_feed_update_8003() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_reviews_feed');
 }
