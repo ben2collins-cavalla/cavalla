@@ -67,8 +67,6 @@ function cavalla_reviews_feed_theme($existing, $type, $theme, $path) {
 }
 
 
-
-
 function cavalla_reviews_feed_preprocess_pager__cavalla_review_feed(&$variables){
   $currentPath = getBaseUrl();
   $variables['currentPath']= $currentPath;
@@ -80,7 +78,7 @@ function cavalla_reviews_feed_preprocess_pager__cavalla_review_feed(&$variables)
  */
 function cavalla_reviews_preprocess_paragraph__cavalla_reviews_feed(&$variables) {
 
-  $total_results = view_result_total_votes('cavalla_review_feed', 'results');
+  $total_results = view_result_total_votes('cavalla_review_feed', 'results_count');
   $variables['total_results'] = $total_results;
 
   // Five Star.
@@ -118,7 +116,7 @@ function cavalla_reviews_preprocess_paragraph__cavalla_reviews_feed(&$variables)
  *
  */
 function calculate($count) {
-  $total_results = view_result_total_votes('cavalla_review_feed', 'results');
+  $total_results = view_result_total_votes('cavalla_review_feed', 'results_count');
   return ($count / $total_results) * 100 . '%';
 }
 
@@ -136,8 +134,8 @@ function user_average_calculation(array $arr, $total_results) {
     }
   }
 
-  return $item = array_sum($item) / $total_results;
-
+  $item = array_sum($item) / $total_results;
+  return round($item,2);
 }
 
 /**
@@ -155,6 +153,6 @@ function view_result_total_votes($name, $display_id = NULL) {
 /**
  * Code Update.
  */
-function cavalla_reviews_feed_update_8003() {
+function cavalla_reviews_feed_update_8004() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_reviews_feed');
 }
