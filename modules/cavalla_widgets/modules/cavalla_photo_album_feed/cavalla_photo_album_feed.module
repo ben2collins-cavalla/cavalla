@@ -73,6 +73,12 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
   ];
 }
 
+function cavalla_photo_album_feed_preprocess(&$variables){
+  $currentPath = getBaseUrl();
+  $variables['currentPath']= $currentPath;
+
+}
+
 /**
  * Code Update.
  */
