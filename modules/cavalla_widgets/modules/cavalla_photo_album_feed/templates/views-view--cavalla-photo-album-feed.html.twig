@@ -45,14 +45,14 @@
   {{ attachment_before }}
 
   {% if rows -%}
-   <div>
+   <div class="card-grid">
     {{ rows }}
   </div>
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
 
-  <div>{{ pager }}</div>
+  <div class="m-auto pagination_wrapper">{{ pager }}</div>
   {{ attachment_after }}
   {{ more }}
 
