@@ -38,8 +38,8 @@ function cavalla_photo_album_feed_theme_suggestions_container_alter(array &$sugg
 
   if($variables['element']['#name'] = 'cavalla_photo_album_feed'){
     $suggestions[] = 'container__cavalla_photo_album_feed';
-  } 
-    
+  }
+
 }
 
 /**
@@ -65,6 +65,9 @@ function cavalla_photo_album_feed_theme($existing, $type, $theme, $path) {
     ],
     'container__cavalla_photo_album_feed' => [
       'base hook' => 'container',
+    ],
+    'pager__cavalla_photo_album_feed' => [
+      'base hook' => 'pager',
     ],
 
   ];
