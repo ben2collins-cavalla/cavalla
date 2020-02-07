@@ -45,12 +45,14 @@
   {{ attachment_before }}
 
   {% if rows -%}
+   <div>
     {{ rows }}
+  </div>
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
-  {{ pager }}
 
+  <div>{{ pager }}</div>
   {{ attachment_after }}
   {{ more }}
 
