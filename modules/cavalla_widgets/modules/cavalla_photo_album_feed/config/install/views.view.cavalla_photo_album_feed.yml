@@ -129,7 +129,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -192,7 +192,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           text: view
-          output_url_as_text: false
+          output_url_as_text: true
           absolute: false
           entity_type: node
           plugin_id: entity_link
@@ -271,7 +271,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"card\">\r\n    {{ field_cavalla_photo_album_cover }}\r\n    <div class=\"card-body\">\r\n      <h1 class=\"card-title\">{{ title }}</h1>\r\n      {{ view_node }} \r\n    </div>\r\n  </div>"
+            text: "<div class=\"card\">\r\n    {{ field_cavalla_photo_album_cover }}\r\n    <div class=\"card-body\">\r\n      <h1 class=\"card-title\">{{ title }}</h1>\r\n      <a href=\"{{ view_node }}\" alt =\"{{ title }}\" class=\"btn btn-warning\"\">View Photos <span class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></span>\r\n</a>\r\n    </div>\r\n  </div>"
             make_link: false
             path: ''
             absolute: false
