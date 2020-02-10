@@ -12,3 +12,4 @@ dependencies:
   - link_target
   - easy_install
   - field_group
+  - media
