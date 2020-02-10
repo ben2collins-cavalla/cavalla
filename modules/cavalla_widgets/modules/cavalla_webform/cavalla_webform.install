@@ -27,4 +27,9 @@ function cavalla_webform_update_8004() {
     \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
 }
 
+function cavalla_webform_update_8005() {
+
+    \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_webform');
+}
+
 

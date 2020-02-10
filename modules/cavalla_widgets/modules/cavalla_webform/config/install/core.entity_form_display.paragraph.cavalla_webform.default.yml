@@ -12,12 +12,14 @@ dependencies:
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_intro_title
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_map
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_telephone
+    - field.field.paragraph.cavalla_webform.field_cavalla_wf_webform
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_work_hours
     - paragraphs.paragraphs_type.cavalla_webform
   module:
     - field_group
     - telephone
     - text
+    - webform
 third_party_settings:
   field_group:
     group_cavalla_wf_address:
@@ -203,6 +205,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: telephone_default
+    region: content
+  field_cavalla_wf_webform:
+    weight: 7
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
     region: content
   field_cavalla_wf_work_hours:
     weight: 6
