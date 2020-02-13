@@ -53,6 +53,8 @@ function cavalla_call_to_action_preprocess_paragraph__cavalla_call_to_action(&$v
   if ($paragraph->get('field_cavalla_call_to_action_vw')->value == '1') {
     $variables['half_view_display'] = 'call_to_action_bundle_half_view';
   }
+
+  $variables['sky_background'] = $paragraph->get('field_cavalla_call_of_action_sb')->value .' cloud';
 }
 
 /**
