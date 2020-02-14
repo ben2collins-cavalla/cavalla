@@ -26,12 +26,7 @@
       </section>
      <!--Breadcrumb-->
   {% endif %}
-
-  {% for i in 0..content.field_cavalla_bp_widgets|length %}
-    {% if content.field_cavalla_bp_widgets[i] is not null %}
-      {{-content.field_cavalla_bp_widgets[i]-}}
-    {% endif %}
-  {% endfor %}
+  {{ content.field_cavalla_bp_widgets }}
 </section>
 
 

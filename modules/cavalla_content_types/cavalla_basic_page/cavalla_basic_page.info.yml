@@ -17,6 +17,8 @@ dependencies:
   - cavalla_testimonials
   - cavalla_webform
   - cavalla_accordion
+  - cavalla_basic_html
+
 
 
 
