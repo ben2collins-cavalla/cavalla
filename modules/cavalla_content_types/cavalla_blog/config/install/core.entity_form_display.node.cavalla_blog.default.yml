@@ -1,0 +1,183 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cavalla_blog.field_cavalla_blog_category
+    - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
+    - field.field.node.cavalla_blog.field_cavalla_blog_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_tags
+    - field.field.node.cavalla_blog.field_cavalla_blog_widgets
+    - image.style.thumbnail
+    - node.type.cavalla_blog
+  module:
+    - field_group
+    - image
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_cavalla_blog_post:
+      children:
+        - group_cavalla_blog_w
+        - field_cavalla_blog_widgets
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Blog Post'
+    group_cavalla_blog_tags_cat:
+      children:
+        - field_cavalla_blog_category
+        - field_cavalla_blog_tags
+      parent_name: ''
+      weight: 4
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Tags/Category
+    group_cavalla_blog_image:
+      children:
+        - field_cavalla_blog_image
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Image
+    group_cavalla_blog_w:
+      children: {  }
+      parent_name: group_cavalla_blog_post
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Widgets
+    group_cavalla_blog_hero_image:
+      children:
+        - field_cavalla_blog_hero_image
+        - field_cavalla_blog_hero_img_hide
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Hero Image'
+id: node.cavalla_blog.default
+targetEntityType: node
+bundle: cavalla_blog
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cavalla_blog_category:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cavalla_blog_hero_image:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cavalla_blog_hero_img_hide:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_cavalla_blog_image:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_cavalla_blog_tags:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cavalla_blog_widgets:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

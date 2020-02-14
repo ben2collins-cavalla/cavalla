@@ -1,7 +1,7 @@
-<section id="basic_page_cavalla">
+<section id="photo_album_page_cavalla">
     {%  if 'Off' in content.field_cavalla_photo_album_hide[0] %}
       <!--Hero Image-->
-    	<section class="bp_hero_image">
+    	<section class="hero_image">
         {%  if true in content.field_cavalla_photo_album_hero[0] %}
           <picture class="">
             <img  class="background_image" src="{% spaceless %}{{ content.field_cavalla_photo_album_hero[0] }}{% endspaceless %}" />
