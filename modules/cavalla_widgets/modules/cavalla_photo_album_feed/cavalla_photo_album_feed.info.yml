@@ -10,3 +10,5 @@ dependencies:
   - user
   - cavalla_photo_album
   - viewfield
+  - paragraphs
+  - field_group

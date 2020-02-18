@@ -6,3 +6,6 @@ core: 8.x
 package: 'Cavalla Widgets'
 dependencies:
   - menu_ui
+  - paragraphs
+  - field_group
+

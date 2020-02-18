@@ -9,3 +9,7 @@ libraries:
 dependencies:
   - node
   - user
+  - paragraphs
+  - field_group
+  - views_base_url
+  - viewfield
