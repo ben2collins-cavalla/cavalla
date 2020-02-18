@@ -35,7 +35,7 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  * Lets us define our node templates in this module.
  */
-function cavalla_blog_theme($existing, $type, $theme, $path) {
+ function cavalla_blog_theme($existing, $type, $theme, $path) {
   return [
     'node__cavalla_blog' => [
       'base hook' => 'node',
@@ -44,6 +44,62 @@ function cavalla_blog_theme($existing, $type, $theme, $path) {
     'field__node__title__cavalla_blog' => [
       'base hook' => 'field',
     ],
+
+    'field__field_cavalla_blog_sp_feeds' => [
+      'base hook' => 'field',
+    ],
+
+    'paragraph__cavalla_blog_popular_post' => [
+      'base hook' => 'paragraph',
+    ],
+
+    'paragraph__cavalla_blog_recent_post' => [
+      'base hook' => 'paragraph',
+    ],
+
+    'viewfield__paragraph__cavalla_blog_popular_post' => [
+      'base hook' => 'viewfield',
+    ],
+
+    'viewfield__paragraph__cavalla_blog_recent_post' => [
+      'base hook' => 'viewfield',
+    ],
+
+    'viewfield_item__cavalla_popular_post' => [
+      'base hook' => 'viewfield_item',
+    ],
+
+    'views_view__cavalla_popular_post' => [
+      'base hook' => 'views_view',
+    ],
+
+    'views_view__cavalla_recent_post' => [
+      'base hook' => 'views_view',
+    ],
+
+    'views_view_unformatted__cavalla_popular_post' => [
+      'base hook' => 'views_view_unformatted',
+    ],
+
+    'views_view_unformatted__cavalla_recent_post' => [
+      'base hook' => 'views_view_unformatted',
+    ],
+
+    'views_view_unformatted__cavalla_recent_post' => [
+      'base hook' => 'views_view_fields',
+    ],
+
+    'views_view_fields__cavalla_popular_post' => [
+      'base hook' => 'views_view_fields',
+    ],
+
+    'views_view_fields__cavalla_recent_post' => [
+      'base hook' => 'views_view_fields',
+    ],
+    
+    
+
+
 
   ];
 }
