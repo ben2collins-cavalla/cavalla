@@ -10,16 +10,13 @@ dependencies:
   - entity_reference_revisions
   - paragraphs
   - field_group
+  - cavalla_accordion
+  - cavalla_basic_html
   - cavalla_call_to_action
   - cavalla_cards
   - cavalla_featurette
+  - cavalla_photo_album_feed
+  - cavalla_photo
+  - cavalla_reviews_feed
   - cavalla_testimonials
   - cavalla_webform
-  - cavalla_accordion
-  - cavalla_basic_html
-
-
-
-
-
-

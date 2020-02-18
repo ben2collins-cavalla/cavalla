@@ -9,7 +9,3 @@ libraries:
 dependencies:
   - menu_ui
   - pathauto
-  - viewfield
-  - views
-  - views_base_url
-  - cavalla_reviews_feed

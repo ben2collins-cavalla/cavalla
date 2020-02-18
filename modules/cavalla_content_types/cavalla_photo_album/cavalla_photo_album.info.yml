@@ -7,3 +7,5 @@ package: 'Cavalla Content Types'
 dependencies:
   - menu_ui
   - cavalla_photos
+  - pathauto
+  

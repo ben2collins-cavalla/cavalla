@@ -1,33 +1,14 @@
-name: 'Cavalla: Basic Page'
+name: 'Cavalla: Cavalla Base Module'
 type: module
-description:  A means to create the Cavalla Basic Page Content Type.
+description: .
 version: '8.x-1.0'
 core: '8.x'
 
 
 package: Cavalla Content Type
 dependencies:
-  - entity_reference_revisions
-  - paragraphs
-  - pathauto
   - easy_install
-  - field_group
-  - cavalla_accordion
-  - cavalla_basic_html
-  - cavalla_call_to_action
-  - cavalla_cards
-  - cavalla_featurette
+  - cavalla_basic_page
+  - cavalla_blog
   - cavalla_photo_album
-  - cavalla_photos
-  - cavalla_reviews_feed
-  - cavalla_testimonials
-  - cavalla_webform
-  - viewfield
-  - views_base_url
-  - statistics
-
-
-
-
-
-
+  - cavalla_reviews
