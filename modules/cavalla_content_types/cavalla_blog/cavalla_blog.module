@@ -96,10 +96,5 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
     'views_view_fields__cavalla_recent_post' => [
       'base hook' => 'views_view_fields',
     ],
-    
-    
-
-
-
   ];
 }

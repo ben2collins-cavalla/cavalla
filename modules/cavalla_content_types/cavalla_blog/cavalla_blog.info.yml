@@ -15,3 +15,6 @@ dependencies:
   - cavalla_reviews_feed
   - cavalla_testimonials
   - cavalla_webform
+  - viewfield
+  - views_base_url
+  - statistics
