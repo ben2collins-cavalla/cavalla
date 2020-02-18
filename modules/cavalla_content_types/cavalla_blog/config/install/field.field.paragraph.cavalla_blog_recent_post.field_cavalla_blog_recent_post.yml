@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cavalla_blog_recent_post
+    - paragraphs.paragraphs_type.cavalla_blog_recent_post
+    - views.view.cavalla_suggested_post_feeds
+  module:
+    - viewfield
+id: paragraph.cavalla_blog_recent_post.field_cavalla_blog_recent_post
+field_name: field_cavalla_blog_recent_post
+entity_type: paragraph
+bundle: cavalla_blog_recent_post
+label: 'Recent Post'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: block_2
+    arguments: ''
+    items_to_display: ''
+    target_uuid: c13d224b-efaf-4d53-a1af-f61f5af19efc
+default_value_callback: ''
+settings:
+  force_default: true
+  allowed_views:
+    cavalla_suggested_post_feeds: '0'
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    files: '0'
+    frontpage: '0'
+    media: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    embed: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

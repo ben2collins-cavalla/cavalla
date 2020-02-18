@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cavalla_blog_popular_post
+label: 'Popular Post'
+icon_uuid: null
+description: 'A widget for displaying a list of popular blog post'
+behavior_plugins: {  }

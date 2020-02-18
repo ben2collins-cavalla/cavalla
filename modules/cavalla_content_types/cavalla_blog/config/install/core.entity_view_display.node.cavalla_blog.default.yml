@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
     - field.field.node.cavalla_blog.field_cavalla_blog_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_sp_feeds
     - field.field.node.cavalla_blog.field_cavalla_blog_tags
     - field.field.node.cavalla_blog.field_cavalla_blog_widgets
     - node.type.cavalla_blog
@@ -31,9 +32,8 @@ content:
     label: hidden
     settings:
       image_style: ''
-      image_link: ''
     third_party_settings: {  }
-    type: image
+    type: image_url
     region: content
   field_cavalla_blog_hero_img_hide:
     weight: 108
@@ -52,6 +52,15 @@ content:
       image_style: ''
     third_party_settings: {  }
     type: image_url
+    region: content
+  field_cavalla_blog_sp_feeds:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_cavalla_blog_tags:
     weight: 104

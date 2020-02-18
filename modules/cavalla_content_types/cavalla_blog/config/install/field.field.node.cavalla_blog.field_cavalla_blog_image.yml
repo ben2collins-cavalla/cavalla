@@ -10,7 +10,7 @@ id: node.cavalla_blog.field_cavalla_blog_image
 field_name: field_cavalla_blog_image
 entity_type: node
 bundle: cavalla_blog
-label: Image
+label: 'Feature Image'
 description: ''
 required: false
 translatable: false

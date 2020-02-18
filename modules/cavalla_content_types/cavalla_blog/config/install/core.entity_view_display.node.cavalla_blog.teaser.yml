@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
     - field.field.node.cavalla_blog.field_cavalla_blog_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_sp_feeds
     - field.field.node.cavalla_blog.field_cavalla_blog_tags
     - field.field.node.cavalla_blog.field_cavalla_blog_widgets
     - node.type.cavalla_blog
@@ -27,5 +28,6 @@ hidden:
   field_cavalla_blog_hero_image: true
   field_cavalla_blog_hero_img_hide: true
   field_cavalla_blog_image: true
+  field_cavalla_blog_sp_feeds: true
   field_cavalla_blog_tags: true
   field_cavalla_blog_widgets: true

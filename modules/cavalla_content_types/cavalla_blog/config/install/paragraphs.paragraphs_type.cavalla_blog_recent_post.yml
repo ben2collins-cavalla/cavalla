@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cavalla_blog_recent_post
+label: 'Recent Post'
+icon_uuid: null
+description: 'A widget for displaying most recent blog post.'
+behavior_plugins: {  }
