@@ -12,3 +12,4 @@ dependencies:
   - viewfield
   - paragraphs
   - field_group
+  - views

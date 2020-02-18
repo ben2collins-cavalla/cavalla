@@ -9,8 +9,6 @@ package: Cavalla Widgets
 dependencies:
   - entity_reference_revisions
   - paragraphs
-  - link_target
-  - easy_install
   - field_group
   - webform
   - telephone

@@ -13,3 +13,4 @@ dependencies:
   - field_group
   - views_base_url
   - viewfield
+  - views
