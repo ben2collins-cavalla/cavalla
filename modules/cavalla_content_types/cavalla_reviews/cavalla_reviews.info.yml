@@ -9,3 +9,5 @@ libraries:
 dependencies:
   - menu_ui
   - pathauto
+  - viewfield
+  - views_base_url
