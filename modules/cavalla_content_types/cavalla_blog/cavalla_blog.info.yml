@@ -9,6 +9,7 @@ dependencies:
   - cavalla_basic_html
   - cavalla_call_to_action
   - cavalla_cards
+  - cavalla_embed_media
   - cavalla_featurette
   - cavalla_testimonials
   - viewfield
