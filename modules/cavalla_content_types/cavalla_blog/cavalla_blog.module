@@ -98,3 +98,7 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
     ],
   ];
 }
+
+function cavalla_blog_theme_preprocess(&$variables) {
+  $variables['cavalla_blog_sp_feeds']= $variables['content']['field_cavalla_blog_sp_feeds'][0]['#title']['#context']['value'];
+}
