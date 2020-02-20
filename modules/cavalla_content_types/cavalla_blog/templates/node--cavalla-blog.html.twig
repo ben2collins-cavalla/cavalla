@@ -1,26 +1,18 @@
-{%
-  set blog_suggested_post_feed = [
-    cavalla_blog_sp_feeds ? 'col col-12 col-md-9' : 'col col-12',
-  ]
-%}
-
 <section id="blog_page_cavalla">
-{% if 'Off' in content.field_cavalla_blog_hero_img_hide[0] %}
+  {% if 'Off' in content.field_cavalla_blog_hero_img_hide[0] %}
   <!--Hero Image-->
   <section class="hero_image">
-    {%  if true in content.field_cavalla_blog_hero_image[0] %}
+  {%  if true in content.field_cavalla_blog_hero_image[0] %}
     <picture class="">
       <img  class="background_image" src="{% spaceless %}{{content.field_cavalla_blog_hero_image[0]}}{% endspaceless %}" />
     </picture>
-
     <div class="marketing_background_text center_text">
       <div class="container">
         <h1 class="title-header">{{node.title.value}}</h1>
       </div>
     </div>
-    {% endif %}
+  {% endif %}
   </section>
-  <!--Hero Image-->
   <!--Breadcrumb-->
   <section class="breadcrumb_section p-3 mb-5">
     <div class="container">
@@ -30,17 +22,15 @@
     </div>
   </section>
   <!--Breadcrumb-->
-{% endif %}
+  {% endif %}
   <section class="row m-auto w-100">
-    <div {{ attributes.addClass(blog_suggested_post_feed) }}>
+    <div class="col col-12 col-md-9">
       <section class="container">
         {{ content.field_cavalla_blog_widgets }}
       </section>
     </div>
-    {%  if true in content.field_cavalla_blog_sp_feeds[0] %}
     <div class="col col-12 col-md-3 blog_post_feed mx-auto">
-      {{ content.field_cavalla_blog_sp_feeds	}}
+      {{ content.field_cavalla_blog_sp_feeds }}
     </div>
-   {% endif %}
   </section>
 </section>

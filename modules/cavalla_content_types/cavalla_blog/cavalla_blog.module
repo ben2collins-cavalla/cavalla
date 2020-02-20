@@ -65,36 +65,28 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
       'base hook' => 'viewfield',
     ],
 
-    'viewfield_item__cavalla_popular_post' => [
+    'viewfield__paragraph__cavalla_blog-reccomened_post.html' => [
+      'base hook' => 'viewfield',
+    ],
+
+    'viewfield_item__cavalla_suggested_post_feeds' => [
       'base hook' => 'viewfield_item',
     ],
 
-    'views_view__cavalla_popular_post' => [
+    'views_view__cavalla_suggested_post_feeds' => [
       'base hook' => 'views_view',
     ],
 
-    'views_view__cavalla_recent_post' => [
-      'base hook' => 'views_view',
-    ],
-
-    'views_view_unformatted__cavalla_popular_post' => [
+    'views_view_unformatted__cavalla_suggested_post_feeds' => [
       'base hook' => 'views_view_unformatted',
     ],
 
-    'views_view_unformatted__cavalla_recent_post' => [
-      'base hook' => 'views_view_unformatted',
-    ],
-
-    'views_view_unformatted__cavalla_recent_post' => [
+    'views_view_fields__cavalla_suggested_post_feeds' => [
       'base hook' => 'views_view_fields',
     ],
 
-    'views_view_fields__cavalla_popular_post' => [
-      'base hook' => 'views_view_fields',
-    ],
-
-    'views_view_fields__cavalla_recent_post' => [
-      'base hook' => 'views_view_fields',
+    'container__cavalla_suggested_post_feeds' => [
+      'base hook' => 'container',
     ],
   ];
 }

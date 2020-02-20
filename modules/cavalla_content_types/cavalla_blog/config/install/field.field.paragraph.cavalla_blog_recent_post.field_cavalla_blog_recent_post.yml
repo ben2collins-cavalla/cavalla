@@ -21,11 +21,13 @@ default_value:
     display_id: block_2
     arguments: ''
     items_to_display: ''
-    target_uuid: c13d224b-efaf-4d53-a1af-f61f5af19efc
+    target_uuid: 856e3bf0-1d16-45df-a161-9045283fa154
 default_value_callback: ''
 settings:
   force_default: true
   allowed_views:
+    cavalla_photo_album_feed: '0'
+    cavalla_review_feed: '0'
     cavalla_suggested_post_feeds: '0'
     comment: '0'
     content: '0'

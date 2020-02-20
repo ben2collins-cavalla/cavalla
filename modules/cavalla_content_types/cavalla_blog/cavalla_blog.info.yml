@@ -15,3 +15,4 @@ dependencies:
   - viewfield
   - views_base_url
   - statistics
+  - menu_ui
