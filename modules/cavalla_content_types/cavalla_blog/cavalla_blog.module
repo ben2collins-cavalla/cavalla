@@ -65,7 +65,7 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
       'base hook' => 'viewfield',
     ],
 
-    'viewfield__paragraph__cavalla_blog-reccomened_post.html' => [
+    'viewfield__paragraph__cavalla_blog_reccomened_post' => [
       'base hook' => 'viewfield',
     ],
 
