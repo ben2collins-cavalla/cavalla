@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.cavalla_blog.field_cavalla_blog_author
     - field.field.node.cavalla_blog.field_cavalla_blog_category
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
@@ -14,11 +15,22 @@ dependencies:
     - entity_reference_revisions
     - image
     - user
+    - viewfield
 id: node.cavalla_blog.default
 targetEntityType: node
 bundle: cavalla_blog
 mode: default
 content:
+  field_cavalla_blog_author:
+    weight: 110
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: false
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
   field_cavalla_blog_category:
     weight: 105
     label: hidden
