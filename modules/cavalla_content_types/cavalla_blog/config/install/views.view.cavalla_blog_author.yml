@@ -346,7 +346,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"media\">\r\n  <img src=\"{{ user_picture }}\" class=\"mr-3 blog_author_photo\" alt=\"The article's author {{ name }}\">\r\n  <div class=\"media-body\">\r\n    <p class=\"m-0 blog_author_name\">{{ name }}</p>\r\n   <p class=\"blog_author_bio\"> {{ field_user_bio }} </p>\r\n  </div>\r\n</div>"
+            text: "<div class=\"media\">\r\n  <img src=\"{{ user_picture }}\" class=\"mr-3 blog_author_photo rounded-circle\" alt=\"The article's author {{ name }}\">\r\n  <div class=\"media-body\">\r\n    <p class=\"m-0 blog_author_name\">{{ name }}</p>\r\n   <p class=\"blog_author_bio\"> {{ field_user_bio }} </p>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

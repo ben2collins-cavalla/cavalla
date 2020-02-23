@@ -4,15 +4,18 @@ dependencies:
   config:
     - field.field.node.cavalla_blog.field_cavalla_blog_author
     - field.field.node.cavalla_blog.field_cavalla_blog_category
+    - field.field.node.cavalla_blog.field_cavalla_blog_comments
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
     - field.field.node.cavalla_blog.field_cavalla_blog_image
     - field.field.node.cavalla_blog.field_cavalla_blog_sp_feeds
     - field.field.node.cavalla_blog.field_cavalla_blog_tags
     - field.field.node.cavalla_blog.field_cavalla_blog_widgets
+    - field.field.node.cavalla_blog.field_suggested_post_feeds_foot
     - image.style.thumbnail
     - node.type.cavalla_blog
   module:
+    - comment
     - field_group
     - image
     - paragraphs
@@ -106,6 +109,20 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Suggested Post Feeds'
+    group_cavalla_blog_sp_feeds_foot:
+      children:
+        - field_suggested_post_feeds_foot
+      parent_name: ''
+      weight: 6
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Suggested Post Feed (Footer)'
 id: node.cavalla_blog.default
 targetEntityType: node
 bundle: cavalla_blog
@@ -113,12 +130,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_cavalla_blog_author:
-    weight: 27
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: viewfield_select
@@ -128,6 +145,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_cavalla_blog_comments:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_cavalla_blog_hero_image:
     weight: 11
@@ -182,9 +205,21 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
+  field_suggested_post_feeds_foot:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -192,7 +227,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -205,7 +240,7 @@ content:
     third_party_settings: {  }
   uid:
     type: options_select
-    weight: 6
+    weight: 7
     settings: {  }
     region: content
     third_party_settings: {  }

@@ -41,81 +41,17 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
       'base hook' => 'node',
     ],
 
-    'field__node__title__cavalla_blog' => [
-      'base hook' => 'field',
+    'paragraph__cavalla_blog_reccomened_post' => [
+      'base hook' => 'paragraph'
     ],
 
-    'field__field_cavalla_blog_sp_feeds' => [
-      'base hook' => 'field',
-    ],
-
-    // Cavalla Popular Post
     'paragraph__cavalla_blog_popular_post' => [
       'base hook' => 'paragraph',
-    ],
-
-    'viewfield__paragraph__cavalla_blog_popular_post' => [
-      'base hook' => 'viewfield',
     ],
 
     // Cavalla Recent Post
     'paragraph__cavalla_blog_recent_post' => [
       'base hook' => 'paragraph',
-    ],
-
-    'viewfield__paragraph__cavalla_blog_recent_post' => [
-      'base hook' => 'viewfield',
-    ],
-
-    // Cavalla Recommended Post
-    'viewfield__paragraph__cavalla_blog_reccomened_post' => [
-      'base hook' => 'viewfield',
-    ],
-
-    // Cavalla Blog Author
-    'viewfield__field_cavalla_blog_author' => [
-      'base hook' => 'viewfield',
-    ],
-
-    'viewfield_item__field_cavalla_blog_author' => [
-      'base hook' => 'viewfield_item',
-    ],
-
-    'views_view__cavalla_blog_author' => [
-      'base hook' => 'views_view',
-    ],
-
-    'views_view_unformatted__cavalla_blog_author' => [
-      'base hook' => 'views_view_unformatted',
-    ],
-
-    'views_view_fields__cavalla_blog_author' => [
-      'base hook' => 'views_view_fields',
-    ],
-
-    // Cavalla Suggested Post Feed
-    'views_view__cavalla_suggested_post_feeds' => [
-      'base hook' => 'views_view',
-    ],
-
-    'viewfield_item__cavalla_suggested_post_feeds' => [
-      'base hook' => 'viewfield_item',
-    ],
-
-    'views_view__cavalla_suggested_post_feeds' => [
-      'base hook' => 'views_view',
-    ],
-
-    'views_view_unformatted__cavalla_suggested_post_feeds' => [
-      'base hook' => 'views_view_unformatted',
-    ],
-
-    'views_view_fields__cavalla_suggested_post_feeds' => [
-      'base hook' => 'views_view_fields',
-    ],
-
-    'container__cavalla_suggested_post_feeds' => [
-      'base hook' => 'container',
     ],
   ];
 }
