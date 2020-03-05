@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Cavalla_blog_feeds module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function cavalla_blog_feeds_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cavalla_blog_feeds':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ * Lets us define our paragraphs templates in this module.
+ */
+function cavalla_blog_feeds_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__cavalla_blog_feeds' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$variables){
+
+  $paragraph = $variables['elements']['#paragraph'];
+
+  $target_id = $paragraph->field_cavalla_blog_feed_taxonomy->getValue();
+  $variables['target_id']= $target_id[0]['target_id'];
+
+  $variables['blog_feeds'] = views_embed_view('cavalla_blog_feeds', 'blog_feeds', $variables['target_id']);
+  $variables['most_recent_blog_feed'] = views_embed_view('cavalla_blog_most_recent_feeds' , 'blog_feeds_mr' , $variables['target_id']);
+
+}

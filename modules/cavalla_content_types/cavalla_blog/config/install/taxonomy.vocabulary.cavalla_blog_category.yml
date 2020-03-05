@@ -4,4 +4,4 @@ dependencies: {  }
 name: Category
 vid: cavalla_blog_category
 description: 'Used to categorize Cavalla Blog Post'
-weight: 0
+weight: -8

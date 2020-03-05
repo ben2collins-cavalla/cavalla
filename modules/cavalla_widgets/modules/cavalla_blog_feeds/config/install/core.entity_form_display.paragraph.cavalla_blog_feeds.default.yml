@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cavalla_blog_feeds.field_cavalla_blog_feed_displays
+    - field.field.paragraph.cavalla_blog_feeds.field_cavalla_blog_feed_taxonomy
+    - paragraphs.paragraphs_type.cavalla_blog_feeds
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_cavalla_blog_feed_taxonomy:
+      children:
+        - field_cavalla_blog_feed_taxonomy
+      parent_name: ''
+      weight: 0
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: Taxonomy
+    group_cavalla_blog_feed_displays:
+      children:
+        - field_cavalla_blog_feed_displays
+      parent_name: ''
+      weight: 1
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Display Options'
+id: paragraph.cavalla_blog_feeds.default
+targetEntityType: paragraph
+bundle: cavalla_blog_feeds
+mode: default
+content:
+  field_cavalla_blog_feed_displays:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cavalla_blog_feed_taxonomy:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

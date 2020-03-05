@@ -3,16 +3,17 @@ status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_cavalla_blog_tags
-field_name: field_cavalla_blog_tags
+    - viewfield
+    - views
+id: node.field_cavalla_blog_comments_feed
+field_name: field_cavalla_blog_comments_feed
 entity_type: node
-type: entity_reference
+type: viewfield
 settings:
-  target_type: taxonomy_term
-module: core
+  target_type: view
+module: viewfield
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

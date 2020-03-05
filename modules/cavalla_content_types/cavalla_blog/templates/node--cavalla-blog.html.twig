@@ -6,7 +6,7 @@
         <!--Hero Image-->
         <section class="hero_image">
         {%  if true in content.field_cavalla_blog_hero_image[0] %}
-          <img  class="background_image" src="{% spaceless %}{{content.field_cavalla_blog_hero_image[0]}}{% endspaceless %}" />
+          <img  class="background_image" src="{{content.field_cavalla_blog_hero_image[0]}}" alt="Photo for {{node.title.value}}" />
           <div class="marketing_background_text center_text">
             <div class="container">
               <h1 class="title-header">{{node.title.value}}</h1>
@@ -31,7 +31,10 @@
             {{ content.field_cavalla_blog_author }}
           </section>
           <section class="blog_comments">
-            {{ content.field_cavalla_blog_comments }}
+            <section class="blog_comment_feed">
+
+              {{ content.field_cavalla_blog_comments }}
+            </section>
           </section>
         </section>
       </section>

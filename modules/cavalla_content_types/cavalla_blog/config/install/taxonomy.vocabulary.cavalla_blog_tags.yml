@@ -4,4 +4,4 @@ dependencies: {  }
 name: Tags
 vid: cavalla_blog_tags
 description: 'Use tags to group articles on similar topics into categories.'
-weight: 0
+weight: -9

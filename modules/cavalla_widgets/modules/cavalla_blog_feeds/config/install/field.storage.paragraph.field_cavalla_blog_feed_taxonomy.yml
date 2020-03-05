@@ -3,15 +3,14 @@ status: true
 dependencies:
   module:
     - paragraphs
-    - viewfield
-    - views
-id: paragraph.field_cavalla_blog_recent_post
-field_name: field_cavalla_blog_recent_post
+    - taxonomy
+id: paragraph.field_cavalla_blog_feed_taxonomy
+field_name: field_cavalla_blog_feed_taxonomy
 entity_type: paragraph
-type: viewfield
+type: entity_reference
 settings:
-  target_type: view
-module: viewfield
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true
