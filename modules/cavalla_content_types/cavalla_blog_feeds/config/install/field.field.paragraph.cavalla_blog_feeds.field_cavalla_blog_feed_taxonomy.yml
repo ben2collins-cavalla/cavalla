@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_cavalla_blog_category
-    - node.type.cavalla_blog
+    - field.storage.paragraph.field_cavalla_blog_feed_taxonomy
+    - paragraphs.paragraphs_type.cavalla_blog_feeds
     - taxonomy.vocabulary.cavalla_blog_category
     - taxonomy.vocabulary.cavalla_blog_tags
-id: node.cavalla_blog.field_cavalla_blog_category
-field_name: field_cavalla_blog_category
-entity_type: node
-bundle: cavalla_blog
-label: Category(s)/Tag(s)
+id: paragraph.cavalla_blog_feeds.field_cavalla_blog_feed_taxonomy
+field_name: field_cavalla_blog_feed_taxonomy
+entity_type: paragraph
+bundle: cavalla_blog_feeds
+label: Taxonomy
 description: ''
 required: false
 translatable: false
