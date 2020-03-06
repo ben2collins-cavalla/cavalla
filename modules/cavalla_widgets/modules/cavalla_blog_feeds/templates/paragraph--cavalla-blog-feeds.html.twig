@@ -1,12 +1,20 @@
 
 <div class="container my-5 blog-feeds">
-  <h2>{{ content.field_cavalla_blog_feed_taxonomy }}</h2>
+  {% if true in content.field_cavalla_blog_feeds_header[0] %}
+  <h1>{{ content.field_cavalla_blog_feeds_header }}</h1>
+  {% endif %}
+
+  {% if true in content.field_cavalla_blog_feeds_subtext[0] %}
+  <p>{{ content.field_cavalla_blog_feeds_subtext }}</p>
+  {% endif %}
   <section class="row">
-    <section class="col-md-8">
+    <section class="{{ col_width }}">
       {{ most_recent_blog_feed }}
     </section>
+    {% if blog_row_visible %}
     <section class="col-md-4">
       {{ blog_feeds }}
     </section>
+   {% endif %}
   </section>
 </div>
