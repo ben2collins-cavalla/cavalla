@@ -1,6 +1,6 @@
 <!-- jumbotron-->
 
-<div class="container my-5 blog-feeds">
+<div class="container my-5 blog_feeds">
   {% if true in content.field_cavalla_blog_feeds_header[0] %}
   <h1>{{ content.field_cavalla_blog_feeds_header }}</h1>
   {% endif %}
@@ -28,7 +28,7 @@
   {% endif %}
 
   {% if display_options =='Cards' %}
-  <div class="card-grpup blog_feeds">
+  <div class="card-grpup card_display">
     <div class="row row-cols-1 row-cols-md-3">
       {{ blog_feeds_cards_display }}
     </div>
