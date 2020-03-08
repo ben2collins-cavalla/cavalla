@@ -5,14 +5,18 @@ version: 8.x-1.0
 core: 8.x
 package: 'Cavalla Content Type'
 dependencies:
-  - cavalla_accordion
-  - cavalla_basic_html
-  - cavalla_call_to_action
-  - cavalla_cards
-  - cavalla_embed_media
-  - cavalla_featurette
-  - cavalla_testimonials
-  - viewfield
-  - views_base_url
-  - statistics
-  - menu_ui
+  0: cavalla_accordion
+  1: cavalla_basic_html
+  2: cavalla_call_to_action
+  3: cavalla_cards
+  4: cavalla_embed_media
+  5: cavalla_featurette
+  6: cavalla_testimonials
+  7: viewfield
+  8: views_base_url
+  9: statistics
+  10: menu_ui
+  11: image
+  12: node
+  14: taxonomy
+  15: user
