@@ -61,6 +61,11 @@ function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$var
   $blog_feed_count= $paragraph->field_cavalla_blog_feed_count->getValue();
   $blog_feed_count= $blog_feed_count[0]['value'];
 
+  $display_options = $paragraph->field_cavalla_blog_feed_displays->getValue();
+  $display_options = $display_options[0]['value'];
+  $variables['display_options'] = $display_options;
+
+
   $config = \Drupal::service('config.factory')->getEditable('cavalla_blog_feed.settings');
   $config->set('article_count', $blog_feed_count)
   ->save();
@@ -77,23 +82,33 @@ function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$var
 
   $variables['blog_feeds'] = views_embed_view('cavalla_blog_feeds', 'blog_feeds', $variables['target_id']);
   $variables['most_recent_blog_feed'] = views_embed_view('cavalla_blog_feeds', 'blog_feeds_most_recent' , $variables['target_id']);
+  $variables['blog_feeds_cards_display'] = views_embed_view('cavalla_blog_feeds', 'blog_feeds_cards_display' , $variables['target_id']);
 
 }
 
 function cavalla_blog_feeds_views_pre_view(ViewExecutable $view) {
 
   $config = \Drupal::config('cavalla_blog_feed.settings');
-  $article_count = $config->get('article_count') - 1;
+  $article_count = $config->get('article_count');
 
   if ($view->id() == 'cavalla_blog_feeds' && $view->current_display == 'blog_feeds') {
-      $view->setItemsPerPage($article_count);
+      $view->setItemsPerPage($article_count - 1);
       $view->setOffset(1);
       $pager = $view->display_handler->getOption('pager');
       $pager['type'] = 'some';
       $view->display_handler->setOption('pager', $pager);
   }
+
   if ($view->id() == 'cavalla_blog_feeds' && $view->current_display == 'blog_feeds_most_recent') {
       $view->setItemsPerPage(1);
+      $view->setOffset(0);
+      $pager = $view->display_handler->getOption('pager');
+      $pager['type'] = 'some';
+      $view->display_handler->setOption('pager', $pager);
+  }
+
+  if ($view->id() == 'cavalla_blog_feeds' && $view->current_display == 'blog_feeds_cards_display') {
+      $view->setItemsPerPage($article_count);
       $view->setOffset(0);
       $pager = $view->display_handler->getOption('pager');
       $pager['type'] = 'some';
