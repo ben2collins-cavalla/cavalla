@@ -735,14 +735,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 18
             word_boundary: true
-            ellipsis: true
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: false
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -760,7 +760,7 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_date
+            date_format: cavalla_date_time
             custom_date_format: ''
             timezone: ''
           group_column: value
@@ -850,7 +850,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"list-group-item list-group-item-action\">\r\n    <div class=\"d-flex w-100 justify-content-between\">\r\n      <h5 class=\"mb-1\">{{ title }}</h5>\r\n      <small>{{ created }} </small>\r\n    </div>\r\n    <small>{{ uid }}</small>\r\n  </div>"
+            text: "<div class=\"media my-3\">\r\n  <img src=\"{{ field_cavalla_blog_image }}\" class=\"mr-3 align-self-center\" alt=\"Post about\" width=\"64\" height=\"64\"/>\r\n  <div class=\"media-body\">\r\n  <p class=\"mb-0\"><small>{{ created }}</small> </p>\r\n    <h5 class=\"mt-0\">{{ title }}</h5>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1119,14 +1119,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 18
             word_boundary: true
-            ellipsis: true
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: false
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -1144,7 +1144,7 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_date
+            date_format: cavalla_date_time
             custom_date_format: ''
             timezone: ''
           group_column: value
@@ -1234,7 +1234,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"list-group-item list-group-item-action\">\r\n    <div class=\"d-flex w-100 justify-content-between\">\r\n      <h5 class=\"mb-1\">{{ title }}</h5>\r\n      <small>{{ created }} </small>\r\n    </div>\r\n    <small>{{ uid }}</small>\r\n  </div>"
+            text: "<div class=\"media my-3\">\r\n  <img src=\"{{ field_cavalla_blog_image }}\" class=\"align-self-center mr-3\" alt=\"Recent Post\">\r\n  <div class=\"media-body\">\r\n  <p class=\"mb-0\"><small>{{ created }}</small> </p>\r\n    <h5 class=\"mt-0\">{{ title }}</h5>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1546,14 +1546,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 0
+            max_length: 18
             word_boundary: true
-            ellipsis: true
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: false
+            trim: true
             preserve_tags: ''
             html: false
           element_type: ''
@@ -1571,7 +1571,7 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: html_date
+            date_format: cavalla_date_time
             custom_date_format: ''
             timezone: ''
           group_column: value
@@ -1714,7 +1714,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div  class=\"list-group-item list-group-item-action\">\r\n    <div class=\"d-flex w-100 justify-content-between\">\r\n      <h5 class=\"mb-1\">{{ title }}</h5>\r\n      <small>{{ created }} </small>\r\n    </div>\r\n    <small>{{ uid }}</small>\r\n  </div>"
+            text: "<div class=\"media my-3\">\r\n  <img src=\"{{ field_cavalla_blog_image }}\" class=\"align-self-center mr-3\" alt=\"Reccomended Post\">\r\n  <div class=\"media-body\">\r\n  <p class=\"mb-0\"><small>{{ created }}</small> </p>\r\n    <h5 class=\"mt-0\">{{ title }}</h5>\r\n  </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false

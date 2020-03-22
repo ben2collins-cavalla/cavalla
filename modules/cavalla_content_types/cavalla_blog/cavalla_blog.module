@@ -51,7 +51,7 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
     ],
 
     // Cavalla Reccommeded Post
-    'paragraph__cavalla_blog_reccomened-post' => [
+    'paragraph__cavalla_blog_reccomened_post' => [
       'base hook' => 'paragraph',
     ],
   ];
