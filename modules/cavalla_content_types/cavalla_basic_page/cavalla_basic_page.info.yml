@@ -12,6 +12,7 @@ dependencies:
   - field_group
   - cavalla_accordion
   - cavalla_basic_html
+  - cavalla_blog_feeds
   - cavalla_call_to_action
   - cavalla_cards
   - cavalla_embed_media
