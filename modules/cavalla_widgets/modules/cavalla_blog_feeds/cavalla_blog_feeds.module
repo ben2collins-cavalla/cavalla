@@ -76,7 +76,7 @@ function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$var
       $variables['blog_row_visible']=false;
   }
   else{
-      $variables['col_width']='col-md-8';
+      $variables['col_width']='col-lg-8 col-md-12';
       $variables['blog_row_visible']=true;
   }
 

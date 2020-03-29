@@ -16,11 +16,14 @@
     </section>
     {% if blog_row_visible %}
     <section class="col-md-4">
-      <div class="category_link">
+      <div class="category_link d-none d-lg-block">
         <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}">Read more {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} post</a>
       </div>
       <div class="blog_feeds_wrapper">
         {{ blog_feeds }}
+      </div>
+       <div class="category_link d-lg-none">
+        <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}">Read more {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} post</a>
       </div>
     </section>
    {% endif %}
