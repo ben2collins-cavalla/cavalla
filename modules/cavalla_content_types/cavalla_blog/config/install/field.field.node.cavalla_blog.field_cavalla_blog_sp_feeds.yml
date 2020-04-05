@@ -70,4 +70,22 @@ settings:
       cavalla_webform:
         weight: 26
         enabled: false
+      cavalla_embed_media:
+        weight: 31
+        enabled: false
+      cavalla_embed_media_soundcloud:
+        weight: 32
+        enabled: false
+      cavalla_embed_media_youtube:
+        weight: 33
+        enabled: false
+      cavalla_photos:
+        weight: 35
+        enabled: false
+      cavalla_photo_album_feed:
+        weight: 36
+        enabled: false
+      cavalla_reviews_feed:
+        weight: 37
+        enabled: false
 field_type: entity_reference_revisions

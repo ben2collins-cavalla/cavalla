@@ -21,12 +21,14 @@ default_value:
     display_id: block_1
     arguments: ''
     items_to_display: ''
-    target_uuid: 9311ffb9-d7ec-44f3-ba2b-c509abf94195
+    target_uuid: e5889205-6536-4eac-b777-53d6796a2b82
 default_value_callback: ''
 settings:
   force_default: true
   allowed_views:
     cavalla_blog_author: '0'
+    cavalla_blog_feed: '0'
+    cavalla_blog_feeds: '0'
     cavalla_photo_album_feed: '0'
     cavalla_review_feed: '0'
     cavalla_suggested_post_feeds: '0'
@@ -37,7 +39,6 @@ settings:
     frontpage: '0'
     media: '0'
     user_admin_people: '0'
-    profiles: '0'
     comments_recent: '0'
     content_recent: '0'
     taxonomy_term: '0'
