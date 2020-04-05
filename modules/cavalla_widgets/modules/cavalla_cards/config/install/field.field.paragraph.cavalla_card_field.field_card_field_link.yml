@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: Rlm5LoIPIE_2uR66XXeGFXaZezg4ca28N7eC4RVejzE
+  default_config_hash: IV93nMjt9Jrq8luH4Npp6ctHoPZMsK5ynL1qCz0uWFY
 id: paragraph.cavalla_card_field.field_card_field_link
 field_name: field_card_field_link
 entity_type: paragraph

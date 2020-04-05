@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: _Y97gcTXbaZbtN3cCKF_4jYP9PGPevVUHQ7fC0FMPT4
+  default_config_hash: EGGd_4Zwk0_OfBj-GiXkGZbi5etLSfT0bSRO3hykfk0
 id: paragraph.cavalla_testimonials_field.field_testimonial_field_image
 field_name: field_testimonial_field_image
 entity_type: paragraph

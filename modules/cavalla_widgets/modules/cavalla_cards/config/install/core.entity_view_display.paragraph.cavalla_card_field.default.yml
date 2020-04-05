@@ -12,7 +12,7 @@ dependencies:
     - image
     - link
 _core:
-  default_config_hash: Y6VITUL8ylvth1xeyuxZE9PH8pmhgA_Ppp_Gm-UmWH8
+  default_config_hash: 7LEClcWSqOvdzUl9UJ56WSmINoNaWvhkNPLY74ayCGM
 id: paragraph.cavalla_card_field.default
 targetEntityType: paragraph
 bundle: cavalla_card_field
@@ -54,4 +54,5 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

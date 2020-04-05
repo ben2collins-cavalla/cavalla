@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: tK0qQdhIwt1y3cejqrcLVIKKm2T7wUJ0GDE83t_g_mg
+  default_config_hash: LPlXt4Ra97vlvaC3d-ivKZlo6fmplDAby7u5sPiDcgM
 id: paragraph.cavalla_card.field_card_field
 field_name: field_card_field
 entity_type: paragraph

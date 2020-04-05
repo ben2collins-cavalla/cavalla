@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 8Y7i3VlWpxALVF1A77I9rnmkHDY6jHIFlkOfQ1Q_RH4
+  default_config_hash: 5M-Js8k-M-K3eZm8nG1_RaEBC4roWugHP1-WPlKfK8o
 id: cavalla_testimonials
 label: Testimonials
 icon_uuid: null

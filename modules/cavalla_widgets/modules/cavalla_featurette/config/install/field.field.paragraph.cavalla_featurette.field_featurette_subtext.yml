@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_featurette_subtext
     - paragraphs.paragraphs_type.cavalla_featurette
 _core:
-  default_config_hash: WYnQBZOcXYFSykOQZIVZ_wWYYxLdkj7M7JNTyxx0n9c
+  default_config_hash: q8DyEteUZIt1N2Wcm-RUuCxcf_PIRqDz05iSC80TgQ4
 id: paragraph.cavalla_featurette.field_featurette_subtext
 field_name: field_featurette_subtext
 entity_type: paragraph

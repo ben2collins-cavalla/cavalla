@@ -25,12 +25,12 @@ third_party_settings:
       weight: 0
       format_type: details
       format_settings:
-        label: Introduction
         id: ''
         classes: ''
         open: false
         required_fields: false
       label: Introduction
+      region: content
     group_featurettes_image:
       children:
         - field_featurette_image
@@ -43,21 +43,37 @@ third_party_settings:
         open: false
         required_fields: true
       label: Image
+      region: content
     group_featurettes_hyperlink:
       children:
         - field_featurette_hyperlink
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
-        label: Hyperlink
         id: ''
         classes: ''
         open: false
         required_fields: false
       label: Hyperlink
+      region: content
+    group_cavalla_featurette_do:
+      children:
+        - field_featurette_image_alignment
+        - field_featurettes_animation
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Display Options'
 _core:
-  default_config_hash: D2lCdTIZfjVgmAqLT5yzE_AVqkYyaT76OqoqR78GKCc
+  default_config_hash: 1qCbv2Z5TDcUS045KmtKqxGUiy5yz0oJzpkf-lIngIc
 id: paragraph.cavalla_featurette.default
 targetEntityType: paragraph
 bundle: cavalla_featurette
@@ -88,7 +104,7 @@ content:
     type: image_image
     region: content
   field_featurette_image_alignment:
-    weight: 3
+    weight: 4
     settings:
       display_label: true
     third_party_settings: {  }

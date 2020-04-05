@@ -12,7 +12,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: zARhJHe-uCAH5Y9L0KtmsbmPbBADQpFZwpdsToVLUrY
+  default_config_hash: sf4tYLsjhEdWqLGrMtMSD2gCVn9g8mHjxHxo0uZvvGQ
 id: paragraph.cavalla_testimonials_field.default
 targetEntityType: paragraph
 bundle: cavalla_testimonials_field

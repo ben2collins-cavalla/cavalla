@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_card_field_header_text
     - paragraphs.paragraphs_type.cavalla_card_field
 _core:
-  default_config_hash: tfepwwpzcuQLlVBit_VuYVTaIQovGXRZdEFDax0K3A8
+  default_config_hash: BfaZ4nuoSd7CZfgbf8HtgfNrt8mj2ROojSSA7neb8pQ
 id: paragraph.cavalla_card_field.field_card_field_header_text
 field_name: field_card_field_header_text
 entity_type: paragraph

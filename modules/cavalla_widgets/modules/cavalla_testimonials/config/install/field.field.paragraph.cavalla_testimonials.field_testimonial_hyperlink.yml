@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: 7rXeZYFFlPgq59CXlV0xRMYEA9ODqulJt_jb2uUTutc
+  default_config_hash: tmE-Y0xDWoLY2nLsL5ixw6-ILhzestQSl9XPH4xl3Xo
 id: paragraph.cavalla_testimonials.field_testimonial_hyperlink
 field_name: field_testimonial_hyperlink
 entity_type: paragraph

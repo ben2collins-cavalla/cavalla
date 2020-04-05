@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_featurettes_animation
     - paragraphs.paragraphs_type.cavalla_featurette
+_core:
+  default_config_hash: 1g-SxGDnX0ID1k_juAoqV0mMfmmUebCPImZrSqx4ZPc
 id: paragraph.cavalla_featurette.field_featurettes_animation
 field_name: field_featurettes_animation
 entity_type: paragraph

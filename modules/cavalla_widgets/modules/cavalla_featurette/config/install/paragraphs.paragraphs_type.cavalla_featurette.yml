@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: rzPE2cXbQPaSkhEsuURhdDPjCx7TT3skgjBBR1HLOT4
+  default_config_hash: WfO36aLc9aCJuUsLSGEXdJGuONyYjdHFSEdlWFj1hb4
 id: cavalla_featurette
 label: Featurette
 icon_uuid: null

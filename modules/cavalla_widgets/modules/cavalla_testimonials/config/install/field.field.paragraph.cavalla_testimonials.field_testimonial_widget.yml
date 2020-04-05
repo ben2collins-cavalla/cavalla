@@ -9,7 +9,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: uAnaw4LKFcyVFRg1V2UmJ4DNE7yCjCrEJ8EHMPSBWRE
+  default_config_hash: 5_-t_ASrHLOa6VlL0E-UJROfeWEj8s1fuy1ZvTBhQj0
 id: paragraph.cavalla_testimonials.field_testimonial_widget
 field_name: field_testimonial_widget
 entity_type: paragraph

@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_featurette_image_alignment
     - paragraphs.paragraphs_type.cavalla_featurette
 _core:
-  default_config_hash: m_VeS0-ik_Q0X0Boykw1lOdPRfBFKfIwxTjXjeOEYD8
+  default_config_hash: YUU-MoDm3B84s9gnS5lCLSkDyAimrdsuWUI1w9invhQ
 id: paragraph.cavalla_featurette.field_featurette_image_alignment
 field_name: field_featurette_image_alignment
 entity_type: paragraph

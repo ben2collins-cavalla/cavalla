@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: 8UVs2LZX7_SPu1yDnj-pGU7oYuEO1I8T50eEjpSX3yc
+  default_config_hash: 1t_JqTwMR-ED1iGpzng2jwzQCBT2tYdtRirE4bMVRBo
 id: paragraph.cavalla_card_field.field_card_field_image
 field_name: field_card_field_image
 entity_type: paragraph

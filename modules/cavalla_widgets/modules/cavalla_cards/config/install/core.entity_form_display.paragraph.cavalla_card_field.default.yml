@@ -13,7 +13,7 @@ dependencies:
     - image
     - link
 _core:
-  default_config_hash: C0Ij-txdtKUOyyzb4uYIIdOrEVNjMIneuGkKl_Xzj98
+  default_config_hash: bdAFIKGXzi2T-58uw9GS7C_PD-kzFJdZ18KB097amiU
 id: paragraph.cavalla_card_field.default
 targetEntityType: paragraph
 bundle: cavalla_card_field

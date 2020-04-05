@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_testimonial_field_job
     - paragraphs.paragraphs_type.cavalla_testimonials_field
 _core:
-  default_config_hash: TzO3X78kMsEqT19TIvjh1Qggr-7OFHr-1URp2JTZ5AY
+  default_config_hash: wny6rdg0_qbV4-bJjrx-xdp5YIx1MEaqcpG5rcfueXk
 id: paragraph.cavalla_testimonials_field.field_testimonial_field_job
 field_name: field_testimonial_field_job
 entity_type: paragraph
