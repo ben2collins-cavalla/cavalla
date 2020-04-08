@@ -10,3 +10,9 @@
 function cavalla_photo_album_feed_update_8001() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_photo_album_feed');
 }
+/**
+ * Code Update.
+ */
+function cavalla_photo_album_feed_update_8002() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_photo_album_feed');
+}

@@ -96,10 +96,3 @@ function cavalla_photo_album_feed_preprocess(&$variables) {
   $variables['currentPath'] = $currentPath;
 
 }
-
-/**
- * Code Update.
- */
-function cavalla_photo_album_feed_update_8001() {
-  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_photo_album_feed');
-}
