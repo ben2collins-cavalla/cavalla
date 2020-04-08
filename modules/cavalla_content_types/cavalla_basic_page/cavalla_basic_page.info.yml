@@ -16,7 +16,6 @@ dependencies:
   - cavalla_call_to_action
   - cavalla_cards
   - cavalla_embed_media
-  - cavalla_feature_blog_post
   - cavalla_featurette
   - cavalla_photo_album_feed
   - cavalla_photos

@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.cavalla_card.field_card_animation
     - field.field.paragraph.cavalla_card.field_card_field
     - field.field.paragraph.cavalla_card.field_card_link
-    - field.field.paragraph.cavalla_card.field_cavalla_bkg_color_selector
     - field.field.paragraph.cavalla_card.field_cavalla_card_header
     - field.field.paragraph.cavalla_card.field_cavalla_card_text
     - paragraphs.paragraphs_type.cavalla_card
@@ -50,15 +49,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_cavalla_bkg_color_selector:
-    type: entity_reference_revisions_entity_view
-    weight: 7
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
     region: content
   field_cavalla_card_header:
     weight: 8

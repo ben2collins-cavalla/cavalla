@@ -1,6 +1,12 @@
 <?php
 
+/**
+ * @file
+ */
 
+/**
+ * Update Hook.
+ */
 function cavalla_featurette_update_8001() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_featurette');
 }

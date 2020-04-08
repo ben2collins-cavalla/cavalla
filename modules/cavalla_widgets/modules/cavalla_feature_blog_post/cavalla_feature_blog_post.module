@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_feature_blog_post module file.
+ * Cavalla_feature_blog_post module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -33,7 +33,6 @@ function cavalla_feature_blog_post_help($route_name, RouteMatchInterface $route_
   return NULL;
 }
 
-
 /**
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
@@ -47,6 +46,9 @@ function cavalla_feature_blog_post_theme($existing, $type, $theme, $path) {
   ];
 }
 
+/**
+ *
+ */
 function cavalla_feature_blog_post_preprocess_paragraph__cavalla_feature_blog_post(&$variables) {
   $paragraph = $variables['elements']['#paragraph'];
   // Get media image URL.
@@ -63,9 +65,9 @@ function cavalla_feature_blog_post_preprocess_paragraph__cavalla_feature_blog_po
       $variables['hyperlink'] = $entity->toUrl()->toString();
 
       $featured_image = $entity->get('field_cavalla_blog_image')->getValue()[0]['target_id'];
-   // Load the image file.
+      // Load the image file.
       $file = File::load($featured_image);
-      $file_uri= $file->getFileUri();
+      $file_uri = $file->getFileUri();
       $variables['image'] = file_url_transform_relative(file_create_url($file_uri));
 
     }

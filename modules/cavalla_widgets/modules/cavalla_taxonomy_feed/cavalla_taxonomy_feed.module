@@ -2,11 +2,11 @@
 
 /**
  * @file
- * cavalla_taxonomy_feed module file.
+ * Cavalla_taxonomy_feed module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use \Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_help().
@@ -31,6 +31,7 @@ function cavalla_taxonomy_feed_help($route_name, RouteMatchInterface $route_matc
   }
   return NULL;
 }
+
 /**
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
@@ -45,18 +46,16 @@ function cavalla_taxonomy_feed_theme($existing, $type, $theme, $path) {
 
 /**
  * Implements hook_preprocess().
- *
  */
-function cavalla_taxonomy_feed_preprocess_paragraph__cavalla_taxonomy_feed(&$variables){
+function cavalla_taxonomy_feed_preprocess_paragraph__cavalla_taxonomy_feed(&$variables) {
   $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
   $name = Term::load($tid)->get('name')->value;
 
-
-  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/category/') !== false) {
+  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/category/') !== FALSE) {
     $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_category_page', $name);
   }
 
-  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/tags/') !== false) {
+  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/tags/') !== FALSE) {
     $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_tag_page', $name);
   }
   $variables['page_title'] = $name;

@@ -47,10 +47,3 @@ function cavalla_basic_page_theme($existing, $type, $theme, $path) {
 
   ];
 }
-
-/**
- *
- */
-function cavalla_basic_page_update_8003() {
-  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
-}

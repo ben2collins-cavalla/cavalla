@@ -5,7 +5,7 @@ dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: RwepPr8IPfw3NhDVDp7F-5pDHflhVT8H8TVdPd8NlIk
+  default_config_hash: jW2i4qIAG9UBSyncAUmY8CSwwPVTVPbVWhjYfN_Atio
 id: paragraph.field_testimonial_text
 field_name: field_testimonial_text
 entity_type: paragraph

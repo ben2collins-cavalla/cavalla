@@ -6,7 +6,7 @@ dependencies:
     - link
     - paragraphs
 _core:
-  default_config_hash: 8nqOkgTuTeajzFzGHPtp8QYEBBG_FB_pu3PWEtVDWyQ
+  default_config_hash: FCHmpzMcN1FYaGBpu6jZ4ti8rt7MYrltYLHemVy0nzs
 id: paragraph.field_testimonial_hyperlink
 field_name: field_testimonial_hyperlink
 entity_type: paragraph

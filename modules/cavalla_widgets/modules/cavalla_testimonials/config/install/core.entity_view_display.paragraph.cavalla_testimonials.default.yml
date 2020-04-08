@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.cavalla_testimonials.field_cavalla_bkg_color
-    - field.field.paragraph.cavalla_testimonials.field_custom_class
     - field.field.paragraph.cavalla_testimonials.field_testimonial_animation
     - field.field.paragraph.cavalla_testimonials.field_testimonial_header
     - field.field.paragraph.cavalla_testimonials.field_testimonial_hyperlink
@@ -12,7 +10,6 @@ dependencies:
     - field.field.paragraph.cavalla_testimonials.field_testimonial_widget
     - paragraphs.paragraphs_type.cavalla_testimonials
   module:
-    - color_field
     - entity_reference_revisions
     - link
 _core:
@@ -22,15 +19,6 @@ targetEntityType: paragraph
 bundle: cavalla_testimonials
 mode: default
 content:
-  field_cavalla_bkg_color:
-    weight: 5
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_testimonial_header:
     weight: 0
     label: hidden
@@ -68,6 +56,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_custom_class: true
   field_testimonial_animation: true
   search_api_excerpt: true

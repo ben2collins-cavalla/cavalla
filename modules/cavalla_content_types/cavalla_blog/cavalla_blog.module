@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_blog module file.
+ * Cavalla_blog module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -35,22 +35,22 @@ function cavalla_blog_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  * Lets us define our node templates in this module.
  */
- function cavalla_blog_theme($existing, $type, $theme, $path) {
+function cavalla_blog_theme($existing, $type, $theme, $path) {
   return [
     'node__cavalla_blog' => [
       'base hook' => 'node',
     ],
 
-    // Cavalla Popular Post
+    // Cavalla Popular Post.
     'paragraph__cavalla_blog_popular_post' => [
       'base hook' => 'paragraph',
     ],
-    // Cavalla Recent Post
+    // Cavalla Recent Post.
     'paragraph__cavalla_blog_recent_post' => [
       'base hook' => 'paragraph',
     ],
 
-    // Cavalla Reccommeded Post
+    // Cavalla Reccommeded Post.
     'paragraph__cavalla_blog_reccomened_post' => [
       'base hook' => 'paragraph',
     ],

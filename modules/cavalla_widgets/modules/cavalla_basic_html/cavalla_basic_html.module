@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_basic_html module file.
+ * Cavalla_basic_html module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -30,7 +30,6 @@ function cavalla_basic_html_help($route_name, RouteMatchInterface $route_match) 
   }
   return NULL;
 }
-
 
 /**
  * Implements hook_theme().

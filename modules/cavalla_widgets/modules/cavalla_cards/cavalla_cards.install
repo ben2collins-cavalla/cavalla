@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_cards install file.
+ * Cavalla_cards install file.
  */
 
 /**
@@ -12,6 +12,9 @@ function cavalla_cards_update_8001() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_cards');
 }
 
+/**
+ *
+ */
 function cavalla_cards_update_8002() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_cards');
 }

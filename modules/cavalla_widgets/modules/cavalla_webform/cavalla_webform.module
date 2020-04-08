@@ -43,26 +43,37 @@ function cavalla_webform_theme($existing, $type, $theme, $path) {
   ];
 }
 
+/**
+ *
+ */
 function cavalla_webform_preprocess_input__textfield(&$variables) {
   $variables['attributes']['class'][] = 'form-control';
 }
 
+/**
+ *
+ */
 function cavalla_webform_preprocess_input__submit(&$variables) {
   $variables['attributes']['class'][] = 'form-control';
 }
 
+/**
+ *
+ */
 function cavalla_webform_preprocess_input__email(&$variables) {
   $variables['attributes']['class'][] = 'form-control';
 }
 
-
+/**
+ *
+ */
 function cavalla_webform_preprocess_textarea(&$variables) {
   $variables['attributes']['class'][] = 'w-100';
 }
 
-
+/**
+ *
+ */
 function cavalla_webform_preprocess_form_element_label(&$variables) {
   $variables['attributes']['class'] = 'form-check-label';
 }
-
-

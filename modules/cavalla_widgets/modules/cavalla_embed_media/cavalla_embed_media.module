@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla_embed_media module file.
+ * Cavalla_embed_media module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;

@@ -42,9 +42,9 @@ function cavalla_photo_album_theme($existing, $type, $theme, $path) {
   ];
 }
 
-
-
+/**
+ *
+ */
 function cavalla_photo_album_preprocess(&$variables) {
   $variables['#attached']['library'][] = 'cavalla_photo_album/photoGallery';
 }
-

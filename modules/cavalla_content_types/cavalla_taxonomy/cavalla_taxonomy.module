@@ -2,11 +2,12 @@
 
 /**
  * @file
- * cavalla_taxonomy module file.
+ * Cavalla_taxonomy module file.
  */
 
+use Drupal\block\Entity\Block;
 use Drupal\Core\Routing\RouteMatchInterface;
-use \Drupal\taxonomy\Entity\Term;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * Implements hook_help().
@@ -31,6 +32,7 @@ function cavalla_taxonomy_help($route_name, RouteMatchInterface $route_match) {
   }
   return NULL;
 }
+
 /**
  * Implements hook_theme().
  * Lets us define our node templates in this module.
@@ -42,13 +44,13 @@ function cavalla_taxonomy_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
 /**
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
  */
-
-function cavalla_taxonomy_preprocess_taxonomy_term(&$variables){
-  $breadcrump_block_object = \Drupal\block\Entity\Block::load('cavalla_theme_breadcrumbs');
+function cavalla_taxonomy_preprocess_taxonomy_term(&$variables) {
+  $breadcrump_block_object = Block::load('cavalla_theme_breadcrumbs');
   /* creates a renderable array from the block object */
   $variables['breadcrumb'] = \Drupal::entityManager()->getViewBuilder('block')->view($breadcrump_block_object);
 

@@ -11,9 +11,11 @@ dependencies:
   - cavalla_cards
   - cavalla_embed_media
   - cavalla_featurette
-  - cavalla_feature_blog_post
   - cavalla_testimonials
+  - comment
+  - image
   - viewfield
   - views_base_url
   - statistics
   - menu_ui
+  - node

@@ -11,3 +11,4 @@ dependencies:
   - paragraphs
   - field_group
   - media
+  - image

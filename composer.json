@@ -21,7 +21,6 @@
         "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "^5.4",
         "drupal/honeypot": "^1.29",
-        "drupal/link_target": "^1.2",
         "drupal/media_entity": "^1.8",
         "drupal/filefield_paths": "^1.0",
         "drupal/commerce": "^2.14",
@@ -31,7 +30,8 @@
         "drupal/devel": "^2.1",
         "drupal/search_api": "^1.14",
         "drupal/pathauto": "^1.6",
-        "drupal/views_base_url": "^1.0"
+        "drupal/views_base_url": "^1.0",
+        "drupal/console": "~1.0"
     },
     "minimum-stability": "dev",
     "authors": [
@@ -46,7 +46,7 @@
     },
     "extra": {
         "branch-alias": {
-        "8.x-1.x": "1.x-dev"
+        "8.x-2.x": "2.x"
         }
     }
 }

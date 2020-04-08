@@ -2,7 +2,7 @@
 
 /**
  * @file
- * cavalla module file.
+ * Cavalla module file.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;

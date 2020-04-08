@@ -5,7 +5,7 @@ dependencies:
   module:
     - paragraphs
 _core:
-  default_config_hash: LAs9-8_h2NWv2ohab00ENbRbkwBD-xZTEgydJ8cNZ_c
+  default_config_hash: chjXR9dHOyyNz-v2zi2XDDi0_VUBCXneMIFNC5ImJUU
 id: paragraph.field_testimonial_field_job
 field_name: field_testimonial_field_job
 entity_type: paragraph

@@ -10,7 +10,7 @@ entity_type: paragraph
 bundle: cavalla_call_to_action
 label: Header
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

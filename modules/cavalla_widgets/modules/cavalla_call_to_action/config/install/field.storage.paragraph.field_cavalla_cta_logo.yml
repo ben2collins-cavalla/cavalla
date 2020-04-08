@@ -3,15 +3,12 @@ status: true
 dependencies:
   module:
     - paragraphs
-    - viewfield
-    - views
-id: paragraph.field_cavalla_blog_recent_post
-field_name: field_cavalla_blog_recent_post
+id: paragraph.field_cavalla_cta_logo
+field_name: field_cavalla_cta_logo
 entity_type: paragraph
-type: viewfield
-settings:
-  target_type: view
-module: viewfield
+type: boolean
+settings: {  }
+module: core
 locked: false
 cardinality: 1
 translatable: true

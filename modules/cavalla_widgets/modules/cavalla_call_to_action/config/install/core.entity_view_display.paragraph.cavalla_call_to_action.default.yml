@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_of_action_sb
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_px
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
+    - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_logo
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
     - image
@@ -94,6 +95,16 @@ content:
   field_cavalla_call_to_action_vw:
     weight: 6
     label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_cavalla_cta_logo:
+    weight: 9
+    label: above
     settings:
       format: default
       format_custom_false: ''
