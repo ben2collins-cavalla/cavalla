@@ -4,7 +4,7 @@
     "description": "This module is designed to provide default content types and modules for the Cavalla",
     "keywords": ["Drupal"],
     "homepage": "https://github.com/ben2collins-cavalla/cavalla",
-    "license": "GPL-2.0+",
+    "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
@@ -46,7 +46,7 @@
     },
     "extra": {
         "branch-alias": {
-        "8.x-2.x": "2.x"
+        "8.x-2.x": "2.x-dev"
         }
     }
 }
