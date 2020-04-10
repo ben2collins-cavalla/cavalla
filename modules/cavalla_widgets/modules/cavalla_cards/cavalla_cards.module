@@ -39,9 +39,6 @@ function cavalla_cards_theme($existing, $type, $theme, $path) {
     'paragraph__cavalla_card' => [
       'base hook' => 'paragraph',
     ],
-    'paragraph__cavalla_card_introduction' => [
-      'base hook' => 'paragraph',
-    ],
     'paragraph__cavalla_card_field' => [
       'base hook' => 'paragraph',
     ],
