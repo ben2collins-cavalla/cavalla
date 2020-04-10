@@ -51,3 +51,9 @@ function cavalla_embed_media_theme($existing, $type, $theme, $path) {
 
   ];
 }
+
+
+function cavalla_embed_media_preprocess_paragraph__cavalla_embed_media_youtube(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $variables['url'] = str_replace('https://youtu.be/','https://www.youtube.com/embed/', $paragraph->get('field_cavalla_em_youtube')->value );
+}
