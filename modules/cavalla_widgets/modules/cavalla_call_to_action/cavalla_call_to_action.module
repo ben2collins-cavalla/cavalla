@@ -51,16 +51,16 @@ function cavalla_call_to_action_preprocess_paragraph__cavalla_call_to_action(&$v
   $paragraph = $variables['elements']['#paragraph'];
 
   if ($paragraph->get('field_cavalla_call_to_action_vw')->value == '1') {
-      $half_view_display = 'half_view ';
+    $half_view_display = 'half_view ';
   }
 
   if ($paragraph->get('field_cavalla_cta_overlay')->value == '1') {
-      $overlay = 'overlay ';
+    $overlay = 'overlay ';
   }
 
   $cta_logo = $paragraph->get('field_cavalla_cta_logo')->value;
   $sky_background = $paragraph->get('field_cavalla_call_of_action_sb')->value . ' cloud';
 
-  $variables['class'] = 'call_to_action_bundle '. $overlay. $half_view_display. $sky_background;
+  $variables['class'] = 'call_to_action_bundle ' . $overlay . $half_view_display . $sky_background;
 
- }
+}

@@ -11,6 +11,9 @@ function cavalla_featurette_update_8001() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_featurette');
 }
 
+/**
+ *
+ */
 function cavalla_featurette_update_8002() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_featurette');
 }

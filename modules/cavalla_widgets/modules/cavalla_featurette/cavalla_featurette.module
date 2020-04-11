@@ -52,7 +52,7 @@ function cavalla_featurette_preprocess_paragraph__cavalla_featurette(array &$var
   $variables['float_left'] = $paragraph->get('field_featurette_image_alignment')->value;
   $circular_image = $paragraph->get('field_cavalla_featurette_cimg')->value;
 
-  if ( $circular_image == 1 ){
-      $variables['circular_image'] = 'circular_image';
+  if ($circular_image == 1) {
+    $variables['circular_image'] = 'circular_image';
   }
 }
