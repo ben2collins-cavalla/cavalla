@@ -51,15 +51,16 @@ function cavalla_call_to_action_preprocess_paragraph__cavalla_call_to_action(&$v
   $paragraph = $variables['elements']['#paragraph'];
 
   if ($paragraph->get('field_cavalla_call_to_action_vw')->value == '1') {
-    $variables['half_view_display'] = 'call_to_action_bundle_half_view';
+      $half_view_display = 'half_view ';
   }
 
-  $variables['sky_background'] = $paragraph->get('field_cavalla_call_of_action_sb')->value . ' cloud';
-}
+  if ($paragraph->get('field_cavalla_cta_overlay')->value == '1') {
+      $overlay = 'overlay ';
+  }
 
-/**
- *
- */
-function cavalla_call_to_action_update_8002() {
-  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_call_to_action');
-}
+  $cta_logo = $paragraph->get('field_cavalla_cta_logo')->value;
+  $sky_background = $paragraph->get('field_cavalla_call_of_action_sb')->value . ' cloud';
+
+  $variables['class'] = 'call_to_action_bundle '. $overlay. $half_view_display. $sky_background;
+
+ }

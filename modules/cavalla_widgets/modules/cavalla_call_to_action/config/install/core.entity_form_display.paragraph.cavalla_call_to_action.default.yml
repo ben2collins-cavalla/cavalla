@@ -9,9 +9,9 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_of_action_sb
-    - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_px
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_logo
+    - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_overlay
     - image.style.thumbnail
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
@@ -64,6 +64,7 @@ third_party_settings:
     group_cavalla_call_to_action_vw:
       children:
         - field_cavalla_call_to_action_vw
+        - field_cavalla_cta_overlay
         - field_cavalla_cta_logo
       parent_name: ''
       weight: 1
@@ -159,6 +160,13 @@ content:
     type: boolean_checkbox
     region: content
   field_cavalla_cta_logo:
+    weight: 9
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_cavalla_cta_overlay:
     weight: 8
     settings:
       display_label: true
@@ -167,5 +175,4 @@ content:
     region: content
 hidden:
   created: true
-  field_cavalla_call_to_action_px: true
   status: true
