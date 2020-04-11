@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.cavalla_featurette.field_cavalla_featurette_cimg
     - field.field.paragraph.cavalla_featurette.field_featurette_header
     - field.field.paragraph.cavalla_featurette.field_featurette_hyperlink
     - field.field.paragraph.cavalla_featurette.field_featurette_image
@@ -12,13 +13,21 @@ dependencies:
   module:
     - image
     - link
-_core:
-  default_config_hash: ouS-GopOh2HI5x2wIwVThqzID4VPrPyTFreA5mkhGp4
 id: paragraph.cavalla_featurette.default
 targetEntityType: paragraph
 bundle: cavalla_featurette
 mode: default
 content:
+  field_cavalla_featurette_cimg:
+    weight: 6
+    label: visually_hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_featurette_header:
     weight: 3
     label: hidden

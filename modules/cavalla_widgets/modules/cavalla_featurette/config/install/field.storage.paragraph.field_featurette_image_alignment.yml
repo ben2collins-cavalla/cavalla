@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - paragraphs
-_core:
-  default_config_hash: 1cphzyyJMPPtPA-VSJMBNh97RgTS6Cc-ZDTRcWRn6t4
 id: paragraph.field_featurette_image_alignment
 field_name: field_featurette_image_alignment
 entity_type: paragraph

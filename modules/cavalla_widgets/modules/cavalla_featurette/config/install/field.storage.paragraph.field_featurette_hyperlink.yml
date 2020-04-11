@@ -4,8 +4,6 @@ dependencies:
   module:
     - link
     - paragraphs
-_core:
-  default_config_hash: duhCQJrwOQ7XWE-74XT_h5uKwpyDRCHD7-KEKReECDI
 id: paragraph.field_featurette_hyperlink
 field_name: field_featurette_hyperlink
 entity_type: paragraph

@@ -6,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_featurette
   module:
     - link
-_core:
-  default_config_hash: tBF9OdpxXCvpVR7hSEzCFjRFmx_OZJtmRm5s_fR3us8
 id: paragraph.cavalla_featurette.field_featurette_hyperlink
 field_name: field_featurette_hyperlink
 entity_type: paragraph

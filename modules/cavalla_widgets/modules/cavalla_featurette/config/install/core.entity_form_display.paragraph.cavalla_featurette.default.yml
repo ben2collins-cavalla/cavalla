@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.cavalla_featurette.field_cavalla_featurette_cimg
     - field.field.paragraph.cavalla_featurette.field_featurette_header
     - field.field.paragraph.cavalla_featurette.field_featurette_hyperlink
     - field.field.paragraph.cavalla_featurette.field_featurette_image
@@ -60,6 +61,7 @@ third_party_settings:
       children:
         - field_featurette_image_alignment
         - field_featurettes_animation
+        - field_cavalla_featurette_cimg
       parent_name: ''
       weight: 2
       format_type: details
@@ -71,13 +73,18 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Display Options'
-_core:
-  default_config_hash: 1qCbv2Z5TDcUS045KmtKqxGUiy5yz0oJzpkf-lIngIc
 id: paragraph.cavalla_featurette.default
 targetEntityType: paragraph
 bundle: cavalla_featurette
 mode: default
 content:
+  field_cavalla_featurette_cimg:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_featurette_header:
     weight: 4
     settings:
