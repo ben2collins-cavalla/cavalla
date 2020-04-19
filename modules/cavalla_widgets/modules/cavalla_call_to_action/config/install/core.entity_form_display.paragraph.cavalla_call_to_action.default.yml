@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
-    - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_of_action_sb
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_logo
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_overlay
@@ -80,7 +79,6 @@ third_party_settings:
     group_cavalla_call_to_action_eff:
       children:
         - field_call_to_action_animation
-        - field_cavalla_call_of_action_sb
       parent_name: ''
       weight: 3
       format_type: details
@@ -140,18 +138,12 @@ content:
     weight: 6
     settings:
       match_operator: CONTAINS
+      match_limit: 0
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_cavalla_call_of_action_sb:
-    type: options_select
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_cavalla_call_to_action_vw:
     weight: 7
     settings:

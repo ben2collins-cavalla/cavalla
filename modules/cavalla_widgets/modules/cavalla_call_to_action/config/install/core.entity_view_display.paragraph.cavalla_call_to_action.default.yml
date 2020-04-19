@@ -8,7 +8,6 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
-    - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_of_action_sb
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_logo
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_overlay
@@ -16,7 +15,6 @@ dependencies:
   module:
     - image
     - link
-    - options
 id: paragraph.cavalla_call_to_action.default
 targetEntityType: paragraph
 bundle: cavalla_call_to_action
@@ -76,13 +74,6 @@ content:
       view_mode: default
     third_party_settings: {  }
     region: content
-  field_cavalla_call_of_action_sb:
-    type: list_default
-    weight: 7
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_cavalla_call_to_action_vw:
     weight: 6
     label: hidden
@@ -95,7 +86,7 @@ content:
     region: content
   field_cavalla_cta_logo:
     weight: 9
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -105,7 +96,7 @@ content:
     region: content
   field_cavalla_cta_overlay:
     weight: 10
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
