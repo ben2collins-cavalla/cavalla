@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * cavalla_commerce install file.
+ */
+
+/**
+ *
+ */
+/* function cavalla_commerce_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_commerce');
+} */
