@@ -26,6 +26,7 @@
         "drupal/commerce": "^2.14",
         "drupal/color_field": "^2.0",
         "drupal/commerce_add_to_cart_link": "^1.0",
+        "drupal/commerce_paypal": "^1.0",
         "drupal/commerce_cart_flyout": "^1.7",
         "drupal/devel": "^2.1",
         "drupal/search_api": "^1.14",
