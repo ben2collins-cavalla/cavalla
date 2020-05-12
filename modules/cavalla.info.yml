@@ -15,3 +15,4 @@ dependencies:
   - cavalla_feature_blog_post
   - cavalla_photo_album
   - cavalla_reviews
+  - cavalla_commerce
