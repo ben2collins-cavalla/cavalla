@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart_flyout
+  theme:
+    - cavalla_theme
+id: cart
+theme: cavalla_theme
+region: cart
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: visible
+  use_quantity_count: false
+  dropdown: true
+visibility: {  }

@@ -11,3 +11,4 @@ dependencies:
   - commerce_cart_flyout
   - commerce_paypal
   - commerce_cart_api
+  - commerce_tax
