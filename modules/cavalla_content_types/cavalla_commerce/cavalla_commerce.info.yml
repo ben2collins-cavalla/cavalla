@@ -12,3 +12,4 @@ dependencies:
   - commerce_paypal
   - commerce_cart_api
   - commerce_tax
+  - commerce_checkout
