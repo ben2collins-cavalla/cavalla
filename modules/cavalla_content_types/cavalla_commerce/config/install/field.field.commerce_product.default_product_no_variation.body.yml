@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.clothes
+    - commerce_product.commerce_product_type.default_product_no_variation
     - field.storage.commerce_product.body
   module:
     - text
-id: commerce_product.clothes.body
+id: commerce_product.default_product_no_variation.body
 field_name: body
 entity_type: commerce_product
-bundle: clothes
+bundle: default_product_no_variation
 label: Body
 description: ''
 required: false

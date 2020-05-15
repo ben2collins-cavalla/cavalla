@@ -1,10 +1,10 @@
 langcode: en
 status: true
 dependencies: {  }
-id: clothes
-label: Clothes
+id: default_product_types
+label: 'Default Product Types'
 description: ''
-variationType: clothes
+variationType: default_products
 multipleVariations: true
 injectVariationFields: true
 traits: {  }

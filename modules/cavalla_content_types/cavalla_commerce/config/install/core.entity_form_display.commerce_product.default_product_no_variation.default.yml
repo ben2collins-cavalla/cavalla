@@ -1,17 +1,17 @@
-uuid: fb748ad8-b549-4fa2-965d-3108b926db15
 langcode: en
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_type.clothes
-    - field.field.commerce_product.clothes.body
+    - commerce_product.commerce_product_type.default_product_no_variation
+    - field.field.commerce_product.default_product_no_variation.body
   module:
     - commerce
+    - commerce_product
     - path
     - text
-id: commerce_product.clothes.default
+id: commerce_product.default_product_no_variation.default
 targetEntityType: commerce_product
-bundle: clothes
+bundle: default_product_no_variation
 mode: default
 content:
   body:
@@ -71,5 +71,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  variations: true
+  variations:
+    type: commerce_product_single_variation
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

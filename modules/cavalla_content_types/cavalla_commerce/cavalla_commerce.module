@@ -7,7 +7,8 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\commerce_product\Entity\ProductVariation;
-use Drupal\commerce_add_to_cart_link\AddToCartLink;
+use Drupal\commerce_product\Entity\ProductType;
+use Drupal\commerce_product\Entity\Product;
 use \Drupal\file\Entity\File;
 use \Drupal\Core\Link;
 use \Drupal\Core\Url;
@@ -69,19 +70,15 @@ function cavalla_commerce_preprocess_commerce_product(array &$variables) {
   $product = $variables['elements']['#commerce_product'];
 
   $product_id = $product->get('product_id')->value;
+  $product_type = $product->get('type')->target_id;
+
   //Retrieve Default Product Variation ID
-  $default_var_id = $product->getDefaultVariation()->id();
-
+  $default_var_id = (empty($product->getDefaultVariation()) ? $product_id : $product->getDefaultVariation()->id());
   //Retrieve Variation ID from URL
-  $variation_id = \Drupal::request()->query->get('v');
-
   //If Variation ID isn't in current URL use Default Variation ID
-  $variation_id = ($variation_id == NULL ? $default_var_id : $variation_id);
-  $variables['variation_id']=$variation_id;
-  //Current Variation Color
-  $current_attr_color = ProductVariation::load($variation_id)->getAttributeValue('attribute_color')->getName();
+  $variation_id = (\Drupal::request()->query->get('v') == NULL ? $default_var_id : \Drupal::request()->query->get('v'));
   $variables['image'] =  _cavalla_commerce_image($variation_id);
-  $variables['colors'] = _cavalla_commerce_color($product->getVariationIds());
+  $variables['colors'] = _cavalla_commerce_color($product->getVariationIds(),$product_type);
 }
 
 function cavalla_commerce_preprocess_commerce_product_variation(array &$variables) {
@@ -124,28 +121,39 @@ function cavalla_commerce_theme_suggestions_commerce_cart_flyout_offcanvas_conte
  */
 
 function _cavalla_commerce_image($variation_id){
-  $variation = ProductVariation::load($variation_id);
-  $file = File::load($variation->get('field_commerce_var_image')->target_id);
-  $image_uri = $file->getFileUri();
-  return file_create_url($image_uri);
+
+  $image_path = '../modules/contrib/cavalla/modules/cavalla_content_types/cavalla_commerce/src/images/600px-No_image_available.svg.png';
+
+  if ( !empty(ProductVariation::load($variation_id)) ){
+    $variation = ProductVariation::load($variation_id);
+    if ( $variation->hasField('field_commerce_var_image') ){
+        $file = File::load($variation->get('field_commerce_var_image')->target_id );
+        $image_uri = $file->getFileUri();
+        $image_path = file_create_url($image_uri);
+    }
+  }
+  return  $image_path;
 }
 
 /**
  * Retrieves Product Variation Colors.
  */
-function _cavalla_commerce_color($variation_ids){
+function _cavalla_commerce_color($variation_ids, $product_type){
   $arr=[];
-  $variations = ProductVariation::loadMultiple($variation_ids);
-  foreach ($variations as  $value){
-    $color = $value->getAttributeValues()['attribute_color']->getName();
-    $arr[$color]['url'] = $value->toUrl()->toString();
+  if(ProductType::load($product_type)->allowsMultipleVariations()){
+    if (!empty($variation_ids)){
+      $variations = ProductVariation::loadMultiple($variation_ids);
+      foreach ($variations as  $value){
+        $color = $value->getAttributeValues()['attribute_color']->getName();
+        $arr[$color]['url'] = $value->toUrl()->toString();
 
-    $file = File::load($value->get('field_commerce_var_image')->target_id);
-    $image_uri = $file->getFileUri();
-    file_create_url($image_uri);
-    $arr[$color]['image'] = file_create_url($image_uri);
-    $arr[$color]['color']= $color;
+        $file = File::load($value->get('field_commerce_var_image')->target_id);
+        $image_uri = $file->getFileUri();
+        file_create_url($image_uri);
+        $arr[$color]['image'] = file_create_url($image_uri);
+        $arr[$color]['color']= $color;
+      }
+    }
   }
-  //var_dump( $attr_value_id );
   return $arr;
 }

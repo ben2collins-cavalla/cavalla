@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-id: clothes
-label: Clothes
+id: default_products_no_variation
+label: 'Default Products - No Variation'
 orderItemType: default
 generateTitle: true
 traits: {  }
