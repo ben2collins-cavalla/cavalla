@@ -12,8 +12,7 @@ use Drupal\commerce_product\Entity\Product;
 use \Drupal\file\Entity\File;
 use \Drupal\Core\Link;
 use \Drupal\Core\Url;
-use \Drupal\Core\Form\FormStateInterface;
-
+use Drupal\Core\Entity\EntityType;
 
 /**
  * Implements hook_help().
@@ -56,6 +55,9 @@ function cavalla_commerce_theme($existing, $type, $theme, $path) {
     ],
     'views_view__commerce_cart_form' => [
       'base hook' => 'views_view',
+    ],
+    'paragraph__cavalla_commerce_product_feed' => [
+      'base hook' => 'paragraph',
     ],
   ];
 }
@@ -101,6 +103,10 @@ function cavalla_commerce_preprocess_commerce_product(array &$variables) {
 function cavalla_commerce_preprocess_commerce_product_variation(array &$variables) {
 
   $product_variation = $variables['elements']['#commerce_product_variation'];
+
+
+  //$variables['addToCart'] = \Drupal::formBuilder()->getForm('\Drupal\commerce_order\Form\OrderAddForm');
+
   $variation_id = $product_variation->id();
   $product_type = $product_variation->getProduct()->get('type')->target_id;
 
@@ -110,6 +116,7 @@ function cavalla_commerce_preprocess_commerce_product_variation(array &$variable
   $variables['image'] = _cavalla_commerce_image($variation_id);
   $variables['price'] = $product_variation ->getPrice();
 }
+
 
 function cavalla_commerce_theme_suggestions_commerce_cart_flyout_offcanvas(array $variables) {
   $suggestions = [];
@@ -122,7 +129,6 @@ function cavalla_commerce_theme_suggestions_commerce_cart_flyout_offcanvas_conte
   $suggestions[] = 'commerce_cart_flyout_offcanvas_contents_items__default';
   return $suggestions;
 }
-
 
 /**
  * Retrieves Product Variation Images.
