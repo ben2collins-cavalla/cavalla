@@ -9,6 +9,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\commerce_product\Entity\ProductVariation;
 use Drupal\commerce_product\Entity\ProductType;
 use Drupal\commerce_product\Entity\Product;
+use Drupal\commerce_price\Entity\Currency;
 use \Drupal\file\Entity\File;
 use \Drupal\Core\Link;
 use \Drupal\Core\Url;
@@ -114,7 +115,8 @@ function cavalla_commerce_preprocess_commerce_product_variation(array &$variable
   $variables['color'] = ($product_variation->hasField('attribute_color') ? $product_variation->getAttributeValue('attribute_color')->getName(): NULL);
   $variables['size'] = ($product_variation->hasField('attribute_size') ? $product_variation->getAttributeValue('attribute_size')->getName() : NULL );
   $variables['image'] = _cavalla_commerce_image($variation_id);
-  $variables['price'] = $product_variation ->getPrice();
+  $variables['price'] = '$'. str_replace('USD', '', $product_variation ->getPrice()) ;
+
 }
 
 
