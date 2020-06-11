@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * cavalla_commerce install file.
+ */
+
+/**
+ *
+ */
+  function cavalla_commerce_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_commerce');
+   \Drupal::configFactory()->getEditable('views.view.product_brand')->delete();
+   \Drupal::configFactory()->getEditable('core.entity_form_display.paragraph.cavalla_commerce_product_feed.default')->delete();
+   \Drupal::configFactory()->getEditable('core.entity_view_display.paragraph.cavalla_commerce_product_feed.default')->delete();
+   \Drupal::configFactory()->getEditable('core.entity_view_display.paragraph.cavalla_commerce_product_feed')->delete();
+   \Drupal::configFactory()->getEditable('field.field.commerce_product.default_product_no_variation.field_cavalla_commerce_cat_tag')->delete();
+   \Drupal::configFactory()->getEditable('field.field.commerce_product.default_product_types.field_cavalla_commerce_cat_tag')->delete();
+   \Drupal::configFactory()->getEditable('field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_product_count')->delete();
+   \Drupal::configFactory()->getEditable('field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_taxonomy')->delete();
+   \Drupal::configFactory()->getEditable('field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_text.yml')->delete();
+   \Drupal::configFactory()->getEditable('field.field.paragraph.cavalla_commerce_product_feed.field_cc_product_feed')->delete();
+   \Drupal::configFactory()->getEditable('field.storage.commerce_product.field_cavalla_commerce_cat_tag')->delete();
+   \Drupal::configFactory()->getEditable('config/install/field.storage.paragraph.field_cavalla_pf_header')->delete();
+   \Drupal::configFactory()->getEditable('field.storage.paragraph.field_cavalla_pf_product_count')->delete();
+   \Drupal::configFactory()->getEditable('field.storage.paragraph.field_cavalla_pf_taxonomy')->delete();
+   \Drupal::configFactory()->getEditable('field.storage.paragraph.field_cavalla_pf_text')->delete();
+   \Drupal::configFactory()->getEditable('field.storage.paragraph.field_cc_product_feed')->delete();
+   \Drupal::configFactory()->getEditable('paragraphs.paragraphs_type.cavalla_commerce_product_feed')->delete();
+   \Drupal::configFactory()->getEditable('views.view.product_brand')->delete();
+   \Drupal::configFactory()->getEditable('paragraph--cavalla-commerce-product-feed')->delete();
+}
+

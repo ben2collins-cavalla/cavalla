@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * cavalla_product_feed module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+
+
+/**
+ * Implements hook_help().
+ *
+ * @inheritdoc
+ */
+function cavalla_product_feed_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.cavalla_product_feed':
+      $text = file_get_contents(dirname(__FILE__) . "/README.md");
+      if (!\Drupal::moduleHandler()->moduleExists('markdown')) {
+        return '<pre>' . $text . '</pre>';
+      }
+      else {
+        // Use the Markdown filter to render the README.
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        return $filter->process($text, 'en');
+      }
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_theme().
+ * Lets us define our node templates in this module.
+ */
+function cavalla_product_feed_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraph__cavalla_commerce_product_feed' => [
+      'base hook' => 'paragraph',
+    ],
+  ];
+}
+
+function cavalla_product_feed_preprocess_paragraph(array &$variables) {
+  // Paragraph array.
+  $paragraph = $variables['elements']['#paragraph'];
+  // Term id for selected taxonomy value.
+  $target_id = $paragraph->field_cavalla_pf_taxonomy->getValue()[0]['target_id'];
+
+  $product_feed = 10;
+  if ($paragraph->field_cavalla_pf_product_count->value) {
+    $product_feed = $paragraph->field_cavalla_pf_product_count->value;
+  }
+
+  $variables['product_feed'] = views_embed_view('cavalla_product_feed', 'block_1', $target_id , $product_feed);
+
+}
+
+/**
+ * Implements hook views_pre_view().
+ * Display sets number of articles.
+ */
+function cavalla_product_feed_views_pre_view(ViewExecutable $view, $display_id, array &$args){
+  if ($view->id() == 'cavalla_product_feed' && $view->current_display == 'block_1') {
+    $view->setItemsPerPage($args[1]);
+    // remove pager
+    $pager = $view->display_handler->getOption('pager');
+    $pager['type'] = 'some';
+    $view->display_handler->setOption('pager', $pager);
+  }
+}

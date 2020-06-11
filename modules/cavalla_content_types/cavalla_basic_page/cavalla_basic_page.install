@@ -32,3 +32,7 @@ function cavalla_basic_page_update_8003() {
 function cavalla_basic_page_update_8004() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
 }
+
+function cavalla_basic_page_update_8005() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
+}
