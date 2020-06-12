@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_header
     - field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_product_count
     - field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_tags
-    - field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_taxonomy
     - field.field.paragraph.cavalla_commerce_product_feed.field_cavalla_pf_text
     - paragraphs.paragraphs_type.cavalla_commerce_product_feed
   module:
@@ -44,8 +43,6 @@ third_party_settings:
         classes: ''
         open: false
       label: Category/Tag(s)
-_core:
-  default_config_hash: jHiYFPZSSt38k7SFUmHn93EKOXC2yVVzjZmJKGZmUbc
 id: paragraph.cavalla_commerce_product_feed.default
 targetEntityType: paragraph
 bundle: cavalla_commerce_product_feed
@@ -88,5 +85,4 @@ content:
     region: content
 hidden:
   created: true
-  field_cavalla_pf_taxonomy: true
   status: true

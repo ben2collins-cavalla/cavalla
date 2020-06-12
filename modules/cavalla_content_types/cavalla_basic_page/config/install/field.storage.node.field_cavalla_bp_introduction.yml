@@ -2,10 +2,12 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_cavalla_pf_text
-field_name: field_cavalla_pf_text
-entity_type: paragraph
+    - node
+_core:
+  default_config_hash: B3IEmJf6bg5rfP9Vdk90-FFSx2O2YkoGf_LCINwzQeA
+id: node.field_cavalla_bp_introduction
+field_name: field_cavalla_bp_introduction
+entity_type: node
 type: string_long
 settings:
   case_sensitive: false

@@ -1,9 +1,0 @@
-name: 'Cavalla: Product Feed'
-type: module
-description: 'Use the Cavalla Product Feed to display a list of available products.'
-version: 8.x-1.0
-core: 8.x
-package: 'Cavalla Widget'
-dependencies:
-  - cavalla_commerce
-  - commerce_product

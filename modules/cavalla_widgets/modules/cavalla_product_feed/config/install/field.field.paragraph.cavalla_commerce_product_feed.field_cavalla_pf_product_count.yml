@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_cavalla_pf_product_count
     - paragraphs.paragraphs_type.cavalla_commerce_product_feed
-_core:
-  default_config_hash: gPnfA6NX83IQsCU56Q8qLnvHmQe00HWPNURI6JSFQgA
 id: paragraph.cavalla_commerce_product_feed.field_cavalla_pf_product_count
 field_name: field_cavalla_pf_product_count
 entity_type: paragraph
