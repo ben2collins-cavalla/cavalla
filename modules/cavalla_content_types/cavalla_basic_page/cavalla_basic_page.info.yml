@@ -18,6 +18,7 @@ dependencies:
   - cavalla_featurette
   - cavalla_photo_album_feed
   - cavalla_photos
+  - cavalla_product_feed
   - cavalla_reviews_feed
   - cavalla_testimonials
   - cavalla_webform
