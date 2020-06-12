@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: 47Ype6r4Gs4mT7O4rGFlgYL2EiWCFqm0_24oP9igMfk
 id: cavalla_commerce_product_feed
 label: 'Product Feed'
 icon_uuid: null

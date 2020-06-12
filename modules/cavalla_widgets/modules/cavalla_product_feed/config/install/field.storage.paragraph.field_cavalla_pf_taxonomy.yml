@@ -4,6 +4,8 @@ dependencies:
   module:
     - paragraphs
     - taxonomy
+_core:
+  default_config_hash: bzO1yE77mVdzp96_x9cTvRfQ8EPkp0ip8xm20pubLLs
 id: paragraph.field_cavalla_pf_taxonomy
 field_name: field_cavalla_pf_taxonomy
 entity_type: paragraph

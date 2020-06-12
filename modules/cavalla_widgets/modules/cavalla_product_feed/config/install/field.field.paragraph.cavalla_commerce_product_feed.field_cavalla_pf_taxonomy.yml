@@ -6,6 +6,8 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_commerce_product_feed
     - taxonomy.vocabulary.cavalla_commerce
     - taxonomy.vocabulary.commerce_tags
+_core:
+  default_config_hash: 7NuY7ah36VF_cgymo2IM83oV6Vgtk3X1wfLB2BeriTM
 id: paragraph.cavalla_commerce_product_feed.field_cavalla_pf_taxonomy
 field_name: field_cavalla_pf_taxonomy
 entity_type: paragraph

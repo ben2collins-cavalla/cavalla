@@ -3,6 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
+_core:
+  default_config_hash: fLCsMkPboKaP6rjbYwLwclsEok8T0HDFPeo65Py_xVk
 id: paragraph.field_cavalla_pf_text
 field_name: field_cavalla_pf_text
 entity_type: paragraph
