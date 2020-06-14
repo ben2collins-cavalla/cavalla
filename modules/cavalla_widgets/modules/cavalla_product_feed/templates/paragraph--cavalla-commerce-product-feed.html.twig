@@ -7,5 +7,14 @@
         <section class="card-deck my-4">
         {{ product_feed }}
         </section>
+        <section class="hyperlink">
+            {%  if true in content.field_cavalla_pf_hyperlink[0] %}
+            {% for i in 0..content.field_cavalla_pf_hyperlink|length %}
+                {% if content.field_cavalla_pf_hyperlink[i] is not null %}
+                <a class="btn btn-dark" href="{{ content.field_cavalla_pf_hyperlink[i]['#url'] }}">{{ content.field_cavalla_pf_hyperlink[i]['#title'] }}&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+                {% endif %}
+            {% endfor %}
+            {% endif %}
+        </section>
     </section>
 </section>

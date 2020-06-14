@@ -1,8 +1,11 @@
+uuid: a8dbfa40-10e8-4824-9a1a-06f59e298d51
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
+_core:
+  default_config_hash: RiaUdiFMsF6CFLAeFQkB6pul2WPYPoJ85EJlDFB-Q4U
 id: cavalla_product_feed
 label: 'Cavalla Product Feed'
 module: views

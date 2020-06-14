@@ -39,7 +39,7 @@ function cavalla_product_feed_help($route_name, RouteMatchInterface $route_match
  */
 function cavalla_product_feed_theme($existing, $type, $theme, $path) {
   return [
-    'paragraph__cavalla_commerce_product_feed' => [
+    'paragraph__cavalla_product_feed' => [
       'base hook' => 'paragraph',
     ],
   ];
@@ -53,7 +53,7 @@ function cavalla_product_feed_preprocess_paragraph(array &$variables) {
   $tags_term_id =  $paragraph->field_cavalla_pf_tags->getValue()[0]['target_id'];
 
 
-  var_dump($term_id);
+  //var_dump($term_id);
   $product_count = 10;
   if ($paragraph->field_cavalla_pf_product_count->value) {
     $product_count = $paragraph->field_cavalla_pf_product_count->value;
@@ -77,10 +77,10 @@ function cavalla_product_feed_views_pre_view(ViewExecutable $view, $display_id, 
     $pager['type'] = 'some';
     $view->display_handler->setOption('pager', $pager);
 
-    $filter['field_cavalla_commerce_category_target_id'] = array(
-      'id' => 'field_cavalla_commerce_category_target_id',
-      'table'=> 'commerce_product__field_cavalla_commerce_category',
-      'field'=> 'field_cavalla_commerce_category_target_id',
+    $filter['field_cavalla_category_target_id'] = array(
+      'id' => 'field_cavalla_category_target_id',
+      'table'=> 'commerce_product__field_cavalla_category',
+      'field'=> 'field_cavalla_category_target_id',
       'relationship' => 'none',
       'group_type' => 'group',
       'ui_name' => '',
@@ -93,10 +93,10 @@ function cavalla_product_feed_views_pre_view(ViewExecutable $view, $display_id, 
       "is_grouped" => FALSE
     );
 
-    $filter['field_cavalla_commerce_tag_target_id'] = array(
-      'id' => 'field_cavalla_commerce_tag_target_id',
-      'table'=> 'commerce_product__field_cavalla_commerce_tag',
-      'field'=> 'field_cavalla_commerce_tag_target_id',
+    $filter['field_cavalla_tag_target_id'] = array(
+      'id' => 'field_cavalla_tag_target_id',
+      'table'=> 'commerce_product__field_cavalla_tag',
+      'field'=> 'field_cavalla_tag_target_id',
       'relationship' => 'none',
       'group_type' => 'group',
       'ui_name' => '',
