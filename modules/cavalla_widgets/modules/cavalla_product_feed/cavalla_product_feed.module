@@ -49,14 +49,17 @@ function cavalla_product_feed_preprocess_paragraph(array &$variables) {
   // Paragraph array.
   $paragraph = $variables['elements']['#paragraph'];
   // Term id for selected taxonomy value.
-  $target_id = $paragraph->field_cavalla_pf_taxonomy->getValue()[0]['target_id'];
+  $category_term_id =  $paragraph->field_cavalla_pf_category->getValue()[0]['target_id'];
+  $tags_term_id =  $paragraph->field_cavalla_pf_tags->getValue()[0]['target_id'];
 
-  $product_feed = 10;
+
+  var_dump($term_id);
+  $product_count = 10;
   if ($paragraph->field_cavalla_pf_product_count->value) {
-    $product_feed = $paragraph->field_cavalla_pf_product_count->value;
+    $product_count = $paragraph->field_cavalla_pf_product_count->value;
   }
 
-  $variables['product_feed'] = views_embed_view('cavalla_product_feed', 'block_1', $target_id , $product_feed);
+  $variables['product_feed'] = views_embed_view('cavalla_product_feed', 'block_1', $category_term_id, $tags_term_id , $product_count);
 
 }
 
@@ -66,10 +69,48 @@ function cavalla_product_feed_preprocess_paragraph(array &$variables) {
  */
 function cavalla_product_feed_views_pre_view(ViewExecutable $view, $display_id, array &$args){
   if ($view->id() == 'cavalla_product_feed' && $view->current_display == 'block_1') {
-    $view->setItemsPerPage($args[1]);
+    $view->setItemsPerPage($args[2]);
     // remove pager
     $pager = $view->display_handler->getOption('pager');
+    $filter = $view->display_handler->getOption('filters');
+    print_r($filter);
     $pager['type'] = 'some';
     $view->display_handler->setOption('pager', $pager);
+
+    $filter['field_cavalla_commerce_category_target_id'] = array(
+      'id' => 'field_cavalla_commerce_category_target_id',
+      'table'=> 'commerce_product__field_cavalla_commerce_category',
+      'field'=> 'field_cavalla_commerce_category_target_id',
+      'relationship' => 'none',
+      'group_type' => 'group',
+      'ui_name' => '',
+      'operator' => 'or',
+      'value'=> array(
+        '0' => $args[0],
+        ),
+      'group' => "1",
+      "exposed" => FALSE,
+      "is_grouped" => FALSE
+    );
+
+    $filter['field_cavalla_commerce_tag_target_id'] = array(
+      'id' => 'field_cavalla_commerce_tag_target_id',
+      'table'=> 'commerce_product__field_cavalla_commerce_tag',
+      'field'=> 'field_cavalla_commerce_tag_target_id',
+      'relationship' => 'none',
+      'group_type' => 'group',
+      'ui_name' => '',
+      'operator' => 'or',
+      'value'   => array(
+          '0' => $args[1],
+      ),
+      'group' => "1",
+      "exposed" => FALSE,
+      "is_grouped" => FALSE
+    );
+
+
+    $view->display_handler->setOption('filters', $filter);
+
   }
 }
