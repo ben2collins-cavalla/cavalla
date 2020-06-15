@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: yu5fu3aC36aUmntNrVBrv08NknlrE98kvIdFoLujF_o
 id: node.field_cavalla_bp_hero_image_hide
 field_name: field_cavalla_bp_hero_image_hide
 entity_type: node

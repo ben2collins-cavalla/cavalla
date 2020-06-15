@@ -9,17 +9,15 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_blog_feeds
     - paragraphs.paragraphs_type.cavalla_call_to_action
     - paragraphs.paragraphs_type.cavalla_card
-    - paragraphs.paragraphs_type.cavalla_commerce_product_feed
     - paragraphs.paragraphs_type.cavalla_embed_media
     - paragraphs.paragraphs_type.cavalla_feature_blog_post
     - paragraphs.paragraphs_type.cavalla_featurette
     - paragraphs.paragraphs_type.cavalla_photo_album_feed
+    - paragraphs.paragraphs_type.cavalla_product_feed
     - paragraphs.paragraphs_type.cavalla_testimonials
     - paragraphs.paragraphs_type.cavalla_webform
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: 2SSSVAv8LyaxkOzOSNUdKrVVIJfPr-RH53u6dK843NA
 id: node.cavalla_basic_page.field_cavalla_bp_widgets
 field_name: field_cavalla_bp_widgets
 entity_type: node
@@ -44,9 +42,9 @@ settings:
       cavalla_basic_html: cavalla_basic_html
       cavalla_blog_feeds: cavalla_blog_feeds
       cavalla_embed_media: cavalla_embed_media
-      cavalla_commerce_product_feed: cavalla_commerce_product_feed
       cavalla_feature_blog_post: cavalla_feature_blog_post
       cavalla_photo_album_feed: cavalla_photo_album_feed
+      cavalla_product_feed: cavalla_product_feed
     target_bundles_drag_drop:
       cavalla_call_to_action:
         enabled: true
@@ -97,8 +95,8 @@ settings:
         enabled: true
         weight: 35
       cavalla_commerce_product_feed:
-        enabled: true
         weight: 36
+        enabled: false
       cavalla_embed_media_soundcloud:
         weight: 36
         enabled: false
@@ -117,6 +115,9 @@ settings:
       cavalla_reviews_feed:
         weight: 42
         enabled: false
+      cavalla_product_feed:
+        enabled: true
+        weight: 43
       cavalla_taxonomy_feed:
         weight: 43
         enabled: false

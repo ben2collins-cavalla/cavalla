@@ -56,8 +56,6 @@ third_party_settings:
         open: false
       label: 'Meta Description'
       region: content
-_core:
-  default_config_hash: ZX76ji6L-KHtNhHtY6qM_spzjaAlyMAHQ7bSKiLST30
 id: node.cavalla_basic_page.default
 targetEntityType: node
 bundle: cavalla_basic_page

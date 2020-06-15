@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_cavalla_bp_introduction
     - node.type.cavalla_basic_page
-_core:
-  default_config_hash: OHeqDyzAt5wvG3_w1bXy57fO1Jonekp7_gK20IFJBNE
 id: node.cavalla_basic_page.field_cavalla_bp_introduction
 field_name: field_cavalla_bp_introduction
 entity_type: node

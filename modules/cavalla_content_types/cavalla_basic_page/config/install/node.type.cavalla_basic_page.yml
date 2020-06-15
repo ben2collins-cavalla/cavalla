@@ -8,8 +8,6 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: eRbC_OqOGObskI89FAGB9LhyrGsAlkM_geGdoNWP0vw
 name: 'Cavalla Basic Page'
 type: cavalla_basic_page
 description: 'Use Cavalla Basic Pages for your static content, such as an ''About us'' page.'

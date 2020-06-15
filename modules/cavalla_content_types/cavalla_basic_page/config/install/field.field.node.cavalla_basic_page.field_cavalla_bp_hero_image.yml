@@ -1,4 +1,3 @@
-uuid: 952a4010-fc93-46d5-87da-1da3ce5f313e
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.cavalla_basic_page
   module:
     - image
-_core:
-  default_config_hash: ogVDh1rdKgUPyJJRzZs4EYneFKB_5TE54bCHOuuQ5x0
 id: node.cavalla_basic_page.field_cavalla_bp_hero_image
 field_name: field_cavalla_bp_hero_image
 entity_type: node
