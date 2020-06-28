@@ -8,7 +8,11 @@
 /**
  *
  */
-  function cavalla_commerce_update_8001() {
+function cavalla_commerce_update_8001() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_commerce');
+}
+
+function cavalla_commerce_update_8002() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_commerce');
 }
 

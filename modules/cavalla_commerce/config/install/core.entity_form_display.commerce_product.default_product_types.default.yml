@@ -4,8 +4,7 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default_product_types
     - field.field.commerce_product.default_product_types.body
-    - field.field.commerce_product.default_product_types.field_cavalla_commerce_category
-    - field.field.commerce_product.default_product_types.field_cavalla_commerce_tag
+    - field.field.commerce_product.default_product_types.field_cavalla_commerce_taxonomy
   module:
     - commerce
     - field_group
@@ -64,17 +63,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cavalla_commerce_category:
-    weight: 7
-    settings: {  }
+  field_cavalla_commerce_taxonomy:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
-    region: content
-  field_cavalla_commerce_tag:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path
