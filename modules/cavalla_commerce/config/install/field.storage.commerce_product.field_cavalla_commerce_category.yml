@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - commerce_product
     - taxonomy
-id: paragraph.field_cavalla_pf_tags
-field_name: field_cavalla_pf_tags
-entity_type: paragraph
+id: commerce_product.field_cavalla_commerce_category
+field_name: field_cavalla_commerce_category
+entity_type: commerce_product
 type: entity_reference
 settings:
   target_type: taxonomy_term

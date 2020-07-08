@@ -5,7 +5,11 @@ version: 8.x-1.0
 core: 8.x
 package: 'Cavalla Widget'
 dependencies:
-  - cavalla_commerce
-  - commerce_product
-  - field_group
-  - paragraphs
+  0: cavalla_commerce
+  1: commerce_product
+  2: field_group
+  3: paragraphs
+  5: hal
+  6: rest
+  7: serialization
+  8: user

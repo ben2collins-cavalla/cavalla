@@ -4,7 +4,8 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default_product_no_variation
     - field.field.commerce_product.default_product_no_variation.body
-    - field.field.commerce_product.default_product_no_variation.field_cavalla_commerce_taxonomy
+    - field.field.commerce_product.default_product_no_variation.field_cavalla_commerce_category
+    - field.field.commerce_product.default_product_no_variation.field_cavalla_commerce_tags
   module:
     - commerce_product
     - field_group
@@ -43,7 +44,8 @@ third_party_settings:
       label: Variation
     group_cavalla_commerce_cat_tag:
       children:
-        - field_cavalla_commerce_taxonomy
+        - field_cavalla_commerce_category
+        - field_cavalla_commerce_tags
       parent_name: ''
       weight: 2
       format_type: details
@@ -72,19 +74,25 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cavalla_commerce_taxonomy:
-    weight: 3
+  field_cavalla_commerce_category:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_cavalla_commerce_tags:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   path:
     type: path
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -92,12 +100,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 7
     region: content
     third_party_settings: {  }
   stores:
     type: options_select
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -111,7 +119,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
