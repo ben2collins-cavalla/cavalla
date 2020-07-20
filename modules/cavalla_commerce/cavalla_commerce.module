@@ -161,14 +161,20 @@ function _cavalla_commerce_colors($variation_ids, $product_type){
     if (!empty($variation_ids) ){
       $variations = ProductVariation::loadMultiple($variation_ids);
       foreach ($variations as  $value){
-        $color = $value->getAttributeValues()['attribute_color']->getName();
-        $arr[$color]['url'] = $value->toUrl()->toString();
-
-        $file = File::load($value->get('field_commerce_var_image')->target_id);
-        $image_uri = $file->getFileUri();
-        file_create_url($image_uri);
-        $arr[$color]['image'] = file_create_url($image_uri);
-        $arr[$color]['color']= $color;
+        if (!empty($value->getAttributeValues()['attribute_color'])){
+          $color = $value->getAttributeValues()['attribute_color']->getName();
+          $arr[$color]['url'] = $value->toUrl()->toString();
+          if(!empty($value->get('field_commerce_var_image')->target_id)){
+            $file = File::load($value->get('field_commerce_var_image')->target_id);
+            $image_uri = $file->getFileUri();
+            file_create_url($image_uri);
+            $arr[$color]['image'] = file_create_url($image_uri);
+          }
+          else{
+            $arr[$color]['image'] = '../modules/contrib/cavalla/modules/cavalla_commerce/src/images/600px-No_image_available.svg.png';
+          }
+          $arr[$color]['color']= $color;
+        }
       }
     }
   }
