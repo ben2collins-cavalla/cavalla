@@ -29,3 +29,7 @@ function cavalla_basic_page_update_8005() {
   \Drupal::configFactory()->getEditable('field.field.node.cavalla_basic_page.field_cavalla_bp_intro_hide')->delete();
   \Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_bp_intro_hide')->delete();
 }
+
+function cavalla_basic_page_update_8006() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_basic_page');
+}

@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_photo_album_feed
     - paragraphs.paragraphs_type.cavalla_product_feed
     - paragraphs.paragraphs_type.cavalla_testimonials
+    - paragraphs.paragraphs_type.cavalla_timeline_carousel
     - paragraphs.paragraphs_type.cavalla_webform
   module:
     - entity_reference_revisions
@@ -37,6 +38,7 @@ settings:
       cavalla_card: cavalla_card
       cavalla_featurette: cavalla_featurette
       cavalla_testimonials: cavalla_testimonials
+      cavalla_timeline_carousel: cavalla_timeline_carousel
       cavalla_webform: cavalla_webform
       cavalla_accordion: cavalla_accordion
       cavalla_basic_html: cavalla_basic_html
@@ -67,9 +69,15 @@ settings:
       cavalla_testimonials_field:
         weight: 16
         enabled: false
+      cavalla_timeline_carousel:
+        weight: 17
+        enabled: true
+      cavalla_timeline_carousel_field:
+        weight: 18
+        enable: false
       cavalla_webform:
         enabled: true
-        weight: 17
+        weight: 19
       cavalla_accordion:
         enabled: true
         weight: 24
