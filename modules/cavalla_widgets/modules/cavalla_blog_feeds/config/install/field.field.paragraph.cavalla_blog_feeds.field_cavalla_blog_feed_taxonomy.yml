@@ -6,15 +6,19 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_blog_feeds
     - taxonomy.vocabulary.cavalla_blog_category
     - taxonomy.vocabulary.cavalla_blog_tags
+  content:
+    - 'taxonomy_term:cavalla_blog_category:4d52cf58-8a59-48b5-8721-5cddeef1c190'
 id: paragraph.cavalla_blog_feeds.field_cavalla_blog_feed_taxonomy
 field_name: field_cavalla_blog_feed_taxonomy
 entity_type: paragraph
 bundle: cavalla_blog_feeds
 label: Taxonomy
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 4d52cf58-8a59-48b5-8721-5cddeef1c190
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

@@ -55,6 +55,13 @@ function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$var
       $target_id =  $variables['elements']['#paragraph']->field_cavalla_blog_feed_taxonomy->target_id;
   }
 
+  // Link Options
+  if ($variables['elements']['#paragraph']->field_cavalla_blog_feed_clo->value ) {
+      $variables['link_option'] = $variables['elements']['#paragraph']->field_cavalla_blog_feed_clo->value;
+  }
+
+ // var_dump( $variables['link_option'] );
+
   // Article count value.
   $blog_feed_count = 10;
   if ($variables['elements']['#paragraph']->field_cavalla_blog_feed_count->value ) {

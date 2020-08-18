@@ -15,17 +15,36 @@
     </section>
     {% if blog_row_visible %}
     <section class="col-md-4">
-      <div class="category_link d-none d-lg-block">
-        <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}">Read more {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} post</a>
+        {% if link_option == 'Custom Link' %}
+       <div class="category_link d-lg-none">
+          <a href="{{ content.field_cavalla_blog_link[0]['#url'] }}">{{ content.field_cavalla_blog_link[0]['#title'] }}</a>
       </div>
+      {% endif %}
+
+      {% if link_option == 'Default Taxonomy List' %}
+      <div class="category_link d-lg-none">
+          <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}"> View More{{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} Post</a>
+      </div>
+      {% endif %}
+
       <div class="blog_feeds_wrapper">
         {{ jumbotron_blog_feeds }}
       </div>
+
+      {% if link_option == 'Custom Link' %}
        <div class="category_link d-lg-none">
-        <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}">Read more {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} post</a>
+          <a href="{{ content.field_cavalla_blog_link[0]['#url'] }}">{{ content.field_cavalla_blog_link[0]['#title'] }}</a>
       </div>
+      {% endif %}
+
+      {% if link_option == 'Default Taxonomy List' %}
+      <div class="category_link d-lg-none">
+          <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}">View More {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} Post</a>
+      </div>
+      {% endif %}
+
     </section>
-   {% endif %}
+    {% endif %}
   </section>
   {% endif %}
 
@@ -34,6 +53,19 @@
     <div class="row row-cols-1 row-cols-md-3">
       {{ cards_blog_feeds }}
     </div>
+
+    {% if link_option == 'Custom Link' %}
+     <div class="category_link">
+        <a href="{{ content.field_cavalla_blog_link[0]['#url'] }}">{{ content.field_cavalla_blog_link[0]['#title'] }}</a>
+    </div>
+    {% endif %}
+
+    {% if link_option == 'Default Taxonomy List' %}
+     <div class="category_link">
+        <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}"> View More  {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} Post</a>
+    </div>
+    {% endif %}
+
   </div>
   {% endif %}
   <!--Cards-->

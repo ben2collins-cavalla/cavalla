@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - link
     - paragraphs
-id: paragraph.field_cavalla_blog_feed_count
-field_name: field_cavalla_blog_feed_count
+id: paragraph.field_cavalla_blog_link
+field_name: field_cavalla_blog_link
 entity_type: paragraph
-type: integer
-settings:
-  unsigned: false
-  size: normal
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true
