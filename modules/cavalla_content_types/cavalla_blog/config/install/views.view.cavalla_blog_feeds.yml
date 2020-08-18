@@ -1,3 +1,4 @@
+uuid: 150c1dbf-0833-418c-9d40-fe0eff72700e
 langcode: en
 status: true
 dependencies:
@@ -14,7 +15,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: l5Yq_Cy0hzht06nJs5EvJLS9U5xHS9wdX9Jg7lliPEM
+  default_config_hash: r-2caDMAywNxMxtWxGCqWAQB-m2AC2hjyJHkBqIhud0
 id: cavalla_blog_feeds
 label: 'Cavalla Blog Feeds'
 module: views
@@ -1204,7 +1205,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_hero_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
+            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1838,7 +1839,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_hero_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
+            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2472,7 +2473,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_hero_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
+            text: "<div class=\"col\">\r\n<div class=\"card mb-3\">\r\n    <img src=\"{{ field_cavalla_blog_image }} \" class=\"card-img-top\" alt=\"Image Related to {{ title_1 }}\">\r\n        <div class=\"card-body\">\r\n          <p class=\"card-text mb-0\"><small class=\"text-muted\">{{ created }}</small></p>\r\n          <h5 class=\"card-title mb-0\">{{ title }}</h5>\r\n          <p class=\"card-text\">{{ uid }}</p>\r\n        </div>\r\n      </div>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
