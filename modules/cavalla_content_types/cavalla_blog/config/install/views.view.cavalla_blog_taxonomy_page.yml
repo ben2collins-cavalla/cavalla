@@ -174,7 +174,6 @@ display:
             path: ''
             absolute: false
             external: false
-            replace_spaces: false
             path_case: none
             trim_whitespace: false
             alt: ''
@@ -406,8 +405,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'M d, Y'
             timezone: ''
           group_column: value
           group_columns: {  }

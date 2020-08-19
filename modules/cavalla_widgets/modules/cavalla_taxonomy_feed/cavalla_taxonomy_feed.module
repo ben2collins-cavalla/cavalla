@@ -50,13 +50,16 @@ function cavalla_taxonomy_feed_theme($existing, $type, $theme, $path) {
 function cavalla_taxonomy_feed_preprocess_paragraph__cavalla_taxonomy_feed(&$variables) {
   $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
   $name = Term::load($tid)->get('name')->value;
+  $vid = Term::load($tid)->get('vid')->target_id;
+  //var_dump($tid);
 
-  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/category/') !== FALSE) {
-    $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_category_page', $name);
+  if ($vid == 'cavalla_blog_category') {
+      $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_category_page', $name);
   }
 
-  if (strpos($_SERVER['REQUEST_URI'], 'offapew.com/tags/') !== FALSE) {
-    $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_tag_page', $name);
+  if ($vid == 'cavalla_blog_tags') {
+      $variables['cavalla_blog_taxonomy_page'] = views_embed_view('cavalla_blog_taxonomy_page', 'cavalla_blog_taxonomy_tag_page', $name);
   }
+
   $variables['page_title'] = $name;
 }

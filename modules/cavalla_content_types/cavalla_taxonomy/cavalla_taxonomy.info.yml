@@ -12,3 +12,4 @@ dependencies:
   - image
   - node
   - taxonomy
+  - pathauto
