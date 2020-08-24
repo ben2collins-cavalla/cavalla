@@ -4,12 +4,11 @@ dependencies:
   config:
     - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_hero_img
     - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_hide_himg
-    - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_node_feed
+    - image.style.thumbnail
     - taxonomy.vocabulary.cavalla_blog_category
   module:
     - field_group
     - image
-    - paragraphs
     - path
     - text
 third_party_settings:
@@ -70,18 +69,6 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-    region: content
-  field_cavalla_taxonomy_node_feed:
-    weight: 6
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
     region: content
   name:
     type: string_textfield
