@@ -39,9 +39,12 @@ function cavalla_taxonomy_help($route_name, RouteMatchInterface $route_match) {
  */
 function cavalla_taxonomy_theme($existing, $type, $theme, $path) {
   return [
-    'node__view__taxonomy_term' => [
+    'node__cavalla_blog__teaser' => [
       'base hook' => 'node',
     ],
+    'cavalla_taxonomy__views_view' => [
+      'base hook' => 'cavalla_taxonomy',
+    ]
   ];
 }
 
