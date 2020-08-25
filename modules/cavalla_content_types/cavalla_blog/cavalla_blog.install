@@ -30,3 +30,8 @@ function cavalla_blog_update_8004() {
 function cavalla_blog_update_8005() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
 }
+
+
+function cavalla_blog_update_8006() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
+}

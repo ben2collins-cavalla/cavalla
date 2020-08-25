@@ -48,6 +48,14 @@ function cavalla_taxonomy_theme($existing, $type, $theme, $path) {
   ];
 }
 
+function cavalla_taxonomy_theme_suggestions_views_view(array $variables) {
+  $suggestions = [];
+  $suggestions[] = 'cavalla_taxonomy__views_view';
+  return $suggestions;
+}
+
+
+
 /**
  * Implements hook_theme().
  * Lets us define our paragraphs templates in this module.
@@ -61,3 +69,4 @@ function cavalla_taxonomy_preprocess_taxonomy_term(&$variables) {
   $name = Term::load($tid)->get('name')->value;
   $variables['page_title'] = $name;
 }
+

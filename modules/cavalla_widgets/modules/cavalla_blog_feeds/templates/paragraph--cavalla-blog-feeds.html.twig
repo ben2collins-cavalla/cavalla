@@ -16,14 +16,14 @@
     {% if blog_row_visible %}
     <section class="col-md-4">
         {% if link_option == 'Custom Link' %}
-       <div class="category_link d-lg-none">
+       <div class="category_link category_link d-none d-md-none d-lg-block mb-3">
           <a href="{{ content.field_cavalla_blog_link[0]['#url'] }}">{{ content.field_cavalla_blog_link[0]['#title'] }}</a>
       </div>
       {% endif %}
 
       {% if link_option == 'Default Taxonomy List' %}
-      <div class="category_link d-lg-none">
-          <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}"> View More{{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} Post</a>
+      <div class="category_link category_link d-none d-md-none d-lg-block mb-3">
+          <a href="{{ content.field_cavalla_blog_feed_taxonomy[0]['#url'] }}"> View More {{ content.field_cavalla_blog_feed_taxonomy[0]['#title'] }} Post</a>
       </div>
       {% endif %}
 

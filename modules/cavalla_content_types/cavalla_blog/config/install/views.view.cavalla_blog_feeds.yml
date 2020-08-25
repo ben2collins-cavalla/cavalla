@@ -1,4 +1,3 @@
-uuid: 150c1dbf-0833-418c-9d40-fe0eff72700e
 langcode: en
 status: true
 dependencies:
@@ -14,8 +13,6 @@ dependencies:
     - image
     - node
     - user
-_core:
-  default_config_hash: r-2caDMAywNxMxtWxGCqWAQB-m2AC2hjyJHkBqIhud0
 id: cavalla_blog_feeds
 label: 'Cavalla Blog Feeds'
 module: views
@@ -1052,8 +1049,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'M d, Y'
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -1686,8 +1683,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'M d, Y'
             timezone: ''
           group_column: value
           group_columns: {  }
@@ -2320,8 +2317,8 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
-            custom_date_format: ''
+            date_format: custom
+            custom_date_format: 'M d, Y'
             timezone: ''
           group_column: value
           group_columns: {  }
