@@ -8,7 +8,6 @@ dependencies:
   - entity_reference_revisions
   - paragraphs
   - field_group
-  - cavalla_taxonomy_feed
   - image
   - node
   - taxonomy
