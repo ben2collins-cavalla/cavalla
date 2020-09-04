@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\user\Entity\User;
+
 
 /**
  * Implements hook_help().
@@ -56,3 +58,13 @@ function cavalla_blog_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+function cavalla_blog_preprocess_node__cavalla_blog__teaser(&$variables) {
+  $node = $variables['elements']['#node'];
+
+  $user = User::load($node->get('uid')->target_id);
+  $first_name = $user->get('field_user_first_name')->value;
+  $last_name = $user->get('field_user_last_name')->value;
+
+  $variables['author'] =  $first_name .' '. $last_name ;
+ }
