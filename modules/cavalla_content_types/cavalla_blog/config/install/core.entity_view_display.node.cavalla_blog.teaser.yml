@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.cavalla_blog.field_cavalla_blog_author
     - field.field.node.cavalla_blog.field_cavalla_blog_category
     - field.field.node.cavalla_blog.field_cavalla_blog_comments
-    - field.field.node.cavalla_blog.field_cavalla_blog_comments_feed
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
     - field.field.node.cavalla_blog.field_cavalla_blog_image
@@ -18,8 +17,6 @@ dependencies:
   module:
     - image
     - user
-_core:
-  default_config_hash: mME8TNq2Z_SJlBX0YZ0aEYMMcwxL7RySNjaONIi-VGc
 id: node.cavalla_blog.teaser
 targetEntityType: node
 bundle: cavalla_blog
@@ -49,7 +46,6 @@ hidden:
   field_cavalla_blog_author: true
   field_cavalla_blog_category: true
   field_cavalla_blog_comments: true
-  field_cavalla_blog_comments_feed: true
   field_cavalla_blog_hero_image: true
   field_cavalla_blog_hero_img_hide: true
   field_cavalla_blog_sp_feeds: true
