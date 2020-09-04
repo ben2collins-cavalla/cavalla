@@ -1,4 +1,4 @@
-<section id="blog_page_cavalla">
+ <section id="blog_page_cavalla">
   {% if 'Off' in content.field_cavalla_blog_hero_img_hide[0] %}
   <!--Hero Image-->
   <section class="hero_image">
@@ -29,6 +29,9 @@
         {{ content.field_cavalla_blog_widgets }}
         <section class="blog_author" aria="Blog Author">
           {{ content.field_cavalla_blog_author }}
+        </section>
+        <section class="mt-5">
+          {{ content.field_cavalla_blog_comments }}
         </section>
       </section>
     </div>
