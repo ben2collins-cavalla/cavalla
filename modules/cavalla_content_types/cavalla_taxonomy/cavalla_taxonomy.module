@@ -8,6 +8,8 @@
 use Drupal\block\Entity\Block;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\taxonomy\Entity\Term;
+use \Drupal\user\Entity\User;
+
 
 /**
  * Implements hook_help().
@@ -37,6 +39,51 @@ function cavalla_taxonomy_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  * Lets us define our node templates in this module.
  */
+
+
+function getNodesByTaxonomyTermIds($termIds){
+  $termIds = (array) $termIds;
+  if(empty($termIds)){
+    return NULL;
+  }
+
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', array('nid'));
+  $query->condition('ti.tid', $termIds, 'IN');
+  $query->distinct(TRUE);
+  $result = $query->execute();
+
+  if($nodeIds = $result->fetchCol()){
+    return Node::loadMultiple($nodeIds);
+  }
+
+  return NULL;
+}
+
+
+/**
+ * Implements hook_theme().
+ * Lets us define our paragraphs templates in this module.
+ */
+function cavalla_taxonomy_preprocess_taxonomy_term(&$variables) {
+  $breadcrump_block_object = Block::load('cavalla_theme_breadcrumbs');
+  /* creates a renderable array from the block object */
+  $variables['breadcrumb'] = \Drupal::entityManager()->getViewBuilder('block')->view($breadcrump_block_object);
+
+  $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+  $name = Term::load($tid)->get('name')->value;
+  $variables['page_title'] = $name;
+
+
+  $user = User::load(\Drupal::currentUser()->id());
+  $first_name = $user->get('field_user_first_name')->value;
+  $last_name = $user->get('field_user_last_name')->value;
+
+  $variables['author'] =  $first_name .''. $last_name ;
+
+
+}
+
 function cavalla_taxonomy_theme($existing, $type, $theme, $path) {
   return [
     'node__cavalla_blog__teaser' => [
@@ -53,20 +100,3 @@ function cavalla_taxonomy_theme_suggestions_views_view(array $variables) {
   $suggestions[] = 'cavalla_taxonomy__views_view';
   return $suggestions;
 }
-
-
-
-/**
- * Implements hook_theme().
- * Lets us define our paragraphs templates in this module.
- */
-function cavalla_taxonomy_preprocess_taxonomy_term(&$variables) {
-  $breadcrump_block_object = Block::load('cavalla_theme_breadcrumbs');
-  /* creates a renderable array from the block object */
-  $variables['breadcrumb'] = \Drupal::entityManager()->getViewBuilder('block')->view($breadcrump_block_object);
-
-  $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
-  $name = Term::load($tid)->get('name')->value;
-  $variables['page_title'] = $name;
-}
-

@@ -50,10 +50,7 @@
 
   {% if display_options =='Cards' %}
   <div class="card-grpup card_display">
-    <div class="row row-cols-1 row-cols-md-3">
-      {{ cards_blog_feeds }}
-    </div>
-
+    {{ cards_blog_feeds }}
     {% if link_option == 'Custom Link' %}
      <div class="category_link">
         <a href="{{ content.field_cavalla_blog_link[0]['#url'] }}">{{ content.field_cavalla_blog_link[0]['#title'] }}</a>

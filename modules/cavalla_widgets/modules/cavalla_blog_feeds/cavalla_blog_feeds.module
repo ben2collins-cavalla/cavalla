@@ -90,6 +90,12 @@ function cavalla_blog_feeds_preprocess_paragraph__cavalla_blog_feeds(array &$var
 
 }
 
+function cavalla_blog_feeds_preprocess_views_view__cavalla_blog_feeds(&$variables){
+  $view = $variables['view'];
+  if ($view->current_display == 'cards_blog_feeds'){
+      $variables['attributes']['class'] = "row row-cols-1 row-cols-md-3";
+  }
+}
 /**
  *
  */
