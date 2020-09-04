@@ -61,10 +61,28 @@ function cavalla_blog_theme($existing, $type, $theme, $path) {
 
 function cavalla_blog_preprocess_node__cavalla_blog__teaser(&$variables) {
   $node = $variables['elements']['#node'];
+  $user = User::load($node->get('uid')->target_id);
+  $first_name = $user->get('field_user_first_name')->value;
+  $last_name = $user->get('field_user_last_name')->value;
+  $variables['author'] =  $first_name .' '. $last_name ;
+ }
+
+
+ function cavalla_blog_preprocess_node__cavalla_blog(&$variables) {
+  $node = $variables['elements']['#node'];
 
   $user = User::load($node->get('uid')->target_id);
   $first_name = $user->get('field_user_first_name')->value;
   $last_name = $user->get('field_user_last_name')->value;
 
   $variables['author'] =  $first_name .' '. $last_name ;
+  $variables['user_bio'] = $user->get('field_cavalla_account_bio')->value;
+
+  if (!$user->user_picture->isEmpty()) {
+    $variables['user_image']= file_create_url($user->user_picture->entity->getFileUri());
+  }
+  else{
+    $variables['user_image']= 'themes/contrib/cavalla_theme/templates/_includes/global/images/male.png';
+  }
+
  }

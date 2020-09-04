@@ -28,15 +28,23 @@
       <section class="container">
         {{ content.field_cavalla_blog_widgets }}
         <section class="blog_author" aria="Blog Author">
-          {{ content.field_cavalla_blog_author }}
-        </section>
-        <section class="mt-5">
-          {{ content.field_cavalla_blog_comments }}
+          <div class="media">
+            <img src="{{ user_image }}" class="mr-3 blog_author_photo rounded-circle" alt="The article's author e.jackson-stokes">
+            <div class="media-body">
+              <p class="m-0 blog_author_name">{{ author }}</p>
+              <p class="blog_author_bio"> {{ user_bio }} </p>
+            </div>
+          </div>
         </section>
       </section>
+      <section class="mt-5">
+          {{ content.field_cavalla_blog_comments }}
+      </section>
+    </section>
     </div>
     <div class="col col-12 col-md-3 blog_post_feed mx-auto">
       {{ content.field_cavalla_blog_sp_feeds }}
     </div>
   </section>
 </section>
+
