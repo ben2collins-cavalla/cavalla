@@ -41,12 +41,6 @@ function cavalla_blog_feeds_theme($existing, $type, $theme, $path) {
     'paragraph__cavalla_blog_feeds' => [
       'base hook' => 'paragraph',
     ],
-    'cavalla_blog_feeds__views_view' => [
-      'base hook' => 'cavalla_blog_feeds',
-    ],
-    'cavalla_blog_feeds__views_view_unformatted' => [
-      'base hook' => 'cavalla_blog_feeds',
-    ],
   ];
 }
 
@@ -125,16 +119,4 @@ function cavalla_blog_feeds_views_pre_view(ViewExecutable $view, $display_id, ar
       $view->display_handler->setOption('pager', $pager);
     }
   }
-}
-
-function cavalla_blog_feeds_theme_suggestions_views_view(array $variables) {
-  $suggestions = [];
-  $suggestions[] = 'cavalla_blog_feeds__views_view';
-  return $suggestions;
-}
-
-function cavalla_blog_feeds_theme_suggestions_views_view_unformatted(array $variables) {
-  $suggestions = [];
-  $suggestions[] = 'cavalla_blog_feeds__views_view_unformatted';
-  return $suggestions;
 }

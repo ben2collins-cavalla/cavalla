@@ -23,28 +23,38 @@
   </section>
   <!--Breadcrumb-->
   {% endif %}
-  <section class="row m-auto w-100">
-    <div class="col col-12 col-md-9">
-      <section class="container">
-        {{ content.field_cavalla_blog_widgets }}
-        <section class="blog_author" aria="Blog Author">
-          <div class="media">
-            <img src="{{ user_image }}" class="mr-3 blog_author_photo rounded-circle" alt="The article's author e.jackson-stokes">
-            <div class="media-body">
-              <p class="m-0 blog_author_name">{{ author }}</p>
-              <p class="blog_author_bio"> {{ user_bio }} </p>
-            </div>
-          </div>
+  <section class="container">
+    <section class="row m-auto w-100">
+      <div class="col col-12  col-lg-8">
+        <section class="container">
+          {{ content.field_cavalla_blog_widgets }}
         </section>
-      </section>
-      <section class="mt-5">
-          {{ content.field_cavalla_blog_comments }}
-      </section>
+      </div>
+      <div class="col col-12 col-lg-4 blog_post_feed">
+        <section class="container">
+          {{ content.field_cavalla_blog_sp_feeds }}
+        </section>
+      </div>
     </section>
-    </div>
-    <div class="col col-12 col-md-3 blog_post_feed mx-auto">
-      {{ content.field_cavalla_blog_sp_feeds }}
-    </div>
+    <section class="row my-5 ml-0 w-100">
+      <div class="col col-12 col-lg-8">
+        <section class="container">
+          <section class="blog_author" aria="Blog Author">
+            <div class="media">
+              <img src="{{ user_image }}" class="mr-3 blog_author_photo rounded-circle" alt="The article's author e.jackson-stokes">
+              <div class="media-body">
+                <p class="m-0 blog_author_name">{{ author }}</p>
+                <p class="blog_author_bio"> {{ user_bio }} </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </section>
+    <section class="row my-5 ml-0 w-100">
+      <div class="col col-12 col-lg-9">
+        {{ content.field_cavalla_blog_comments }}
+      </div>
+    </section>
   </section>
 </section>
-

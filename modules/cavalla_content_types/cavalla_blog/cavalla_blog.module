@@ -75,7 +75,7 @@ function cavalla_blog_preprocess_node__cavalla_blog__teaser(&$variables) {
   $first_name = $user->get('field_user_first_name')->value;
   $last_name = $user->get('field_user_last_name')->value;
 
-  $variables['author'] =  $first_name .' '. $last_name ;
+  $variables['author_name'] =  $first_name .' '. $last_name ;
   $variables['user_bio'] = $user->get('field_cavalla_account_bio')->value;
 
   if (!$user->user_picture->isEmpty()) {
