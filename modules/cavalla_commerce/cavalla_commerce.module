@@ -133,6 +133,11 @@ function cavalla_commerce_theme_suggestions_commerce_cart_flyout_offcanvas_conte
   return $suggestions;
 }
 
+
+function cavalla_commerce_preprocess_commerce_cart_flyout_offcanvas_contents_items(array &$variables){
+  $variables['cart_url'] = getBaseUrl(). '/cart';
+}
+
 /**
  * Retrieves Product Variation Images.
  */

@@ -28,6 +28,9 @@
       <div class="col col-12  col-lg-8">
         <section class="container">
           {{ content.field_cavalla_blog_widgets }}
+          <section class="blog_post_feed_footer">
+            {{ content.field_suggested_post_feeds_foot }}
+          </section>
         </section>
       </div>
       <div class="col col-12 col-lg-4 blog_post_feed">
@@ -40,6 +43,7 @@
       <div class="col col-12 col-lg-8">
         <section class="container">
           <section class="blog_author" aria="Blog Author">
+          <h1>About the Author</h1>
             <div class="media">
               <img src="{{ user_image }}" class="mr-3 blog_author_photo rounded-circle" alt="The article's author e.jackson-stokes">
               <div class="media-body">
