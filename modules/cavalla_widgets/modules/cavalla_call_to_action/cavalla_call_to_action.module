@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\media\Entity\Media;
+
 
 /**
  * Implements hook_help().
@@ -51,14 +53,32 @@ function cavalla_call_to_action_preprocess_paragraph__cavalla_call_to_action(&$v
   $paragraph = $variables['elements']['#paragraph'];
 
   if ($paragraph->get('field_cavalla_call_to_action_vw')->value == '1') {
-    $half_view_display = 'half_view ';
+      $half_view_display = 'half_view ';
   }
 
   if ($paragraph->get('field_cavalla_cta_overlay')->value == '1') {
-    $overlay = 'overlay ';
+      $overlay = 'overlay ';
   }
 
   $variables['cta_logo'] = $paragraph->get('field_cavalla_cta_logo')->value;
   $variables['attributes']['class'] = 'call_to_action_bundle ' . $overlay . $half_view_display;
 
+
+  $video= $paragraph->get('field_call_to_action_media')->getValue();
+  $entity = Media::load($video[0]['target_id']);
+  $variables['bundle'] = $entity->bundle();
+  $url = $entity->field_media_oembed_video->value;
+  $source = $entity->getSource();
+  $provider = $source->getMetadata($entity, 'provider_name');
+  $variables['provider'] = $provider;
+
+
+  if ($provider == "YouTube"){
+      $url =  strstr( $url, 'v=' );
+      $id = str_replace("v=", "", $url);
+      $variables['url']='https://www.youtube.com/embed/'. $id .'?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&showinfo=0&playlist='.$id;
+  }
+  if ($provider == "Vimeo"){
+      $variables['url'] = $url.'?background=1&autoplay=1&muted=1&controls=0&loop=1&byline=0&title=0';
+  }
 }

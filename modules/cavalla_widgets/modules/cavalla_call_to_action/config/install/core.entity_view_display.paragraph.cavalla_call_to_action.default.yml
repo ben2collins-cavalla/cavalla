@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_header
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_hyperlink
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
+    - field.field.paragraph.cavalla_call_to_action.field_call_to_action_media
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
@@ -57,6 +58,15 @@ content:
       image_style: ''
     third_party_settings: {  }
     type: image_url
+    region: content
+  field_call_to_action_media:
+    type: entity_reference_entity_view
+    weight: 11
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_call_to_action_subtext:
     weight: 1

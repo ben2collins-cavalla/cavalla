@@ -6,17 +6,17 @@ dependencies:
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_header
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_hyperlink
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_image
+    - field.field.paragraph.cavalla_call_to_action.field_call_to_action_media
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_subtext
     - field.field.paragraph.cavalla_call_to_action.field_call_to_action_video
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_call_to_action_vw
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_logo
     - field.field.paragraph.cavalla_call_to_action.field_cavalla_cta_overlay
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.cavalla_call_to_action
   module:
     - field_group
-    - image
     - link
+    - media_library
 third_party_settings:
   field_group:
     group_call_to_action_introductio:
@@ -35,8 +35,7 @@ third_party_settings:
       region: content
     group_call_to_action_media:
       children:
-        - field_call_to_action_image
-        - field_call_to_action_video
+        - field_call_to_action_media
       parent_name: ''
       weight: 2
       format_type: details
@@ -118,13 +117,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_call_to_action_image:
+  field_call_to_action_media:
     weight: 5
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
+    type: media_library_widget
     region: content
   field_call_to_action_subtext:
     weight: 2
@@ -133,16 +131,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-    region: content
-  field_call_to_action_video:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      match_limit: 0
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_cavalla_call_to_action_vw:
     weight: 7
@@ -167,4 +155,6 @@ content:
     region: content
 hidden:
   created: true
+  field_call_to_action_image: true
+  field_call_to_action_video: true
   status: true
