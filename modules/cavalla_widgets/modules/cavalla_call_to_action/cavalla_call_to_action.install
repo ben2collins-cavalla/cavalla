@@ -29,3 +29,7 @@ function cavalla_call_to_action_update_8005() {
 function cavalla_call_to_action_update_8006() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_call_to_action');
 }
+
+function cavalla_call_to_action_update_8007() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_call_to_action');
+}
