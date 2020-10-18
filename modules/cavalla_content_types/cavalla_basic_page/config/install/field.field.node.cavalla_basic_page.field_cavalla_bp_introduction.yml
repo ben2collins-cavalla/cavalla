@@ -9,7 +9,7 @@ field_name: field_cavalla_bp_introduction
 entity_type: node
 bundle: cavalla_basic_page
 label: 'Meta Description'
-description: 'Provides a brief summary of your Cavalla Basic Page. Search engines such as Google often display the meta description in search results.'
+description: 'A snippet of text that describes a page's content. Meta Descriptions are essentially little content descriptors that help tell search engines what a web page is about.'
 required: true
 translatable: false
 default_value: {  }

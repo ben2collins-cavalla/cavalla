@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_cavalla_em_soundcloud_url
-field_name: field_cavalla_em_soundcloud_url
-entity_type: paragraph
+    - media
+id: media.field_media_oembed_video_1
+field_name: field_media_oembed_video_1
+entity_type: media
 type: string
 settings:
   max_length: 255

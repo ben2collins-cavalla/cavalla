@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - media
     - paragraphs
-id: paragraph.field_cavalla_em_youtube
-field_name: field_cavalla_em_youtube
+id: paragraph.field_field_cavalla_embed_media
+field_name: field_field_cavalla_embed_media
 entity_type: paragraph
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: media
 module: core
 locked: false
 cardinality: 1
