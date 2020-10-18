@@ -48,7 +48,7 @@
               <img src="{{ user_image }}" class="mr-3 blog_author_photo rounded-circle" alt="The article's author e.jackson-stokes">
               <div class="media-body">
                 <p class="m-0 blog_author_name">{{ author }}</p>
-                <p class="blog_author_bio"> {{ user_bio }} </p>
+                <p class="blog_author_bio"> {{ user_bio | raw}} </p>
               </div>
             </div>
           </section>
