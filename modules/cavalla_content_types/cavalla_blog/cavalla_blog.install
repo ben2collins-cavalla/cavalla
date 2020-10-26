@@ -39,3 +39,18 @@ function cavalla_blog_update_8006() {
 function cavalla_blog_update_8007() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
 }
+
+function cavalla_blog_update_8008() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
+
+  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_hero_image.yml')->delete();
+  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog_hero_image.yml')->delete();
+  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_author.yml')->delete();
+  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog.field_cavalla_blog_author.yml')->delete();
+
+  Drupal::configFactory()->getEditable('views.view.cavalla_blog_author.yml')->delete();
+  Drupal::configFactory()->getEditable('views.view.cavalla_blog_taxonomy_page.yml')->delete();
+
+
+}
+

@@ -3,32 +3,31 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.cavalla_blog.field_cavalla_blog_author
     - field.field.node.cavalla_blog.field_cavalla_blog_category
     - field.field.node.cavalla_blog.field_cavalla_blog_comments
-    - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_feature_img
+    - field.field.node.cavalla_blog.field_cavalla_blog_hero
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
-    - field.field.node.cavalla_blog.field_cavalla_blog_image
     - field.field.node.cavalla_blog.field_cavalla_blog_sp_feeds
     - field.field.node.cavalla_blog.field_cavalla_blog_summary
     - field.field.node.cavalla_blog.field_cavalla_blog_widgets
     - field.field.node.cavalla_blog.field_suggested_post_feeds_foot
     - node.type.cavalla_blog
   module:
-    - image
     - user
 id: node.cavalla_blog.teaser
 targetEntityType: node
 bundle: cavalla_blog
 mode: teaser
 content:
-  field_cavalla_blog_image:
-    type: image_url
+  field_cavalla_blog_feature_img:
+    type: entity_reference_entity_view
     weight: 2
     region: content
-    label: hidden
+    label: above
     settings:
-      image_style: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
   field_cavalla_blog_summary:
     type: basic_string
@@ -43,10 +42,9 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_cavalla_blog_author: true
   field_cavalla_blog_category: true
   field_cavalla_blog_comments: true
-  field_cavalla_blog_hero_image: true
+  field_cavalla_blog_hero: true
   field_cavalla_blog_hero_img_hide: true
   field_cavalla_blog_sp_feeds: true
   field_cavalla_blog_widgets: true

@@ -8,6 +8,7 @@ core: '8.x'
 package: Cavalla Content Type
 dependencies:
   - easy_install
+  - media_library
   - cavalla_basic_page
   - cavalla_blog
   - cavalla_blog_feeds

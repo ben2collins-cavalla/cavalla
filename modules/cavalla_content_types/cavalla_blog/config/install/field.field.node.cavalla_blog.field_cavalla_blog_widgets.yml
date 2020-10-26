@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_card
     - paragraphs.paragraphs_type.cavalla_embed_media
     - paragraphs.paragraphs_type.cavalla_featurette
+    - paragraphs.paragraphs_type.cavalla_testimonials
   module:
     - entity_reference_revisions
 id: node.cavalla_blog.field_cavalla_blog_widgets
@@ -32,6 +33,7 @@ settings:
       cavalla_basic_html: cavalla_basic_html
       cavalla_card: cavalla_card
       cavalla_featurette: cavalla_featurette
+      cavalla_testimonials: cavalla_testimonials
       cavalla_embed_media: cavalla_embed_media
     target_bundles_drag_drop:
       cavalla_accordion:
@@ -59,8 +61,8 @@ settings:
         enabled: true
         weight: 17
       cavalla_testimonials:
+        enabled: true
         weight: 18
-        enabled: false
       cavalla_testimonials_field:
         weight: 19
         enabled: false
@@ -99,5 +101,17 @@ settings:
         enabled: false
       cavalla_taxonomy_feed:
         weight: 41
+        enabled: false
+      cavalla_feature_blog_post:
+        weight: 42
+        enabled: false
+      cavalla_product_feed:
+        weight: 45
+        enabled: false
+      cavalla_timeline_carousel:
+        weight: 50
+        enabled: false
+      cavalla_timeline_carousel_field:
+        weight: 51
         enabled: false
 field_type: entity_reference_revisions

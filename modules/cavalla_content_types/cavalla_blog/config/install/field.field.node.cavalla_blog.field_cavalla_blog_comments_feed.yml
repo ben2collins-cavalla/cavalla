@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_cavalla_blog_comments_feed
     - node.type.cavalla_blog
-    - views.view.comment
   module:
     - viewfield
 id: node.cavalla_blog.field_cavalla_blog_comments_feed

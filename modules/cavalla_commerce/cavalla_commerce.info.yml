@@ -9,6 +9,7 @@ package: Cavalla Content Type
 dependencies:
   - commerce
   - commerce_cart_flyout
+  - commerce_stripe
   - commerce_paypal
   - commerce_cart_api
   - commerce_tax

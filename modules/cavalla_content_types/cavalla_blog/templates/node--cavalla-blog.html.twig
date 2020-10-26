@@ -2,10 +2,8 @@
   {% if 'Off' in content.field_cavalla_blog_hero_img_hide[0] %}
   <!--Hero Image-->
   <section class="hero_image">
-  {%  if true in content.field_cavalla_blog_hero_image[0] %}
-    <picture class="">
-      <img  class="background_image" src="{% spaceless %}{{content.field_cavalla_blog_hero_image[0]}}{% endspaceless %}" />
-    </picture>
+  {%  if true in content.field_cavalla_blog_hero[0] %}
+    {{ content.field_cavalla_blog_hero }}
     <div class="marketing_background_text center_text">
       <div class="container">
         <h1 class="title-header">{{node.title.value}}</h1>

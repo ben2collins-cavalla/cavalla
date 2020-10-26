@@ -2,31 +2,27 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.cavalla_blog.field_cavalla_blog_author
     - field.field.node.cavalla_blog.field_cavalla_blog_category
     - field.field.node.cavalla_blog.field_cavalla_blog_comments
-    - field.field.node.cavalla_blog.field_cavalla_blog_hero_image
+    - field.field.node.cavalla_blog.field_cavalla_blog_feature_img
+    - field.field.node.cavalla_blog.field_cavalla_blog_hero
     - field.field.node.cavalla_blog.field_cavalla_blog_hero_img_hide
-    - field.field.node.cavalla_blog.field_cavalla_blog_image
     - field.field.node.cavalla_blog.field_cavalla_blog_sp_feeds
     - field.field.node.cavalla_blog.field_cavalla_blog_summary
     - field.field.node.cavalla_blog.field_cavalla_blog_widgets
     - field.field.node.cavalla_blog.field_suggested_post_feeds_foot
-    - image.style.thumbnail
     - node.type.cavalla_blog
   module:
     - comment
     - field_group
-    - image
+    - media_library
     - paragraphs
     - path
-    - viewfield
 third_party_settings:
   field_group:
     group_cavalla_blog_post:
       children:
         - group_cavalla_blog_w
-        - field_cavalla_blog_widgets
       parent_name: ''
       weight: 4
       format_type: details
@@ -54,7 +50,7 @@ third_party_settings:
       label: Tags/Category
     group_cavalla_blog_image:
       children:
-        - field_cavalla_blog_image
+        - field_cavalla_blog_feature_img
       parent_name: ''
       weight: 3
       format_type: details
@@ -67,7 +63,8 @@ third_party_settings:
         required_fields: true
       label: Image
     group_cavalla_blog_w:
-      children: {  }
+      children:
+        - field_cavalla_blog_widgets
       parent_name: group_cavalla_blog_post
       weight: 3
       format_type: details
@@ -81,7 +78,7 @@ third_party_settings:
       label: Widgets
     group_cavalla_blog_hero_image:
       children:
-        - field_cavalla_blog_hero_image
+        - field_cavalla_blog_hero
         - field_cavalla_blog_hero_img_hide
       parent_name: ''
       weight: 1
@@ -147,12 +144,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cavalla_blog_author:
-    weight: 12
-    settings: {  }
-    third_party_settings: {  }
-    type: viewfield_select
-    region: content
   field_cavalla_blog_category:
     weight: 4
     settings: {  }
@@ -165,28 +156,26 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
-  field_cavalla_blog_hero_image:
-    weight: 11
+  field_cavalla_blog_feature_img:
+    type: media_library_widget
+    weight: 19
+    region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
+  field_cavalla_blog_hero:
+    type: media_library_widget
+    weight: 12
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_cavalla_blog_hero_img_hide:
-    weight: 12
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-    region: content
-  field_cavalla_blog_image:
-    weight: 10
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_cavalla_blog_sp_feeds:
     type: entity_reference_paragraphs
