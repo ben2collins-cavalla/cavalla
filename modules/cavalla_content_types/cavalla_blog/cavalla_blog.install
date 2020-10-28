@@ -42,15 +42,16 @@ function cavalla_blog_update_8007() {
 
 function cavalla_blog_update_8008() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
+}
 
-  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_hero_image.yml')->delete();
-  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog_hero_image.yml')->delete();
-  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_author.yml')->delete();
-  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog.field_cavalla_blog_author.yml')->delete();
+function cavalla_blog_update_8009() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_blog');
 
-  Drupal::configFactory()->getEditable('views.view.cavalla_blog_author.yml')->delete();
-  Drupal::configFactory()->getEditable('views.view.cavalla_blog_taxonomy_page.yml')->delete();
-
-
+  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_hero_image')->delete();
+  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog_hero_image')->delete();
+  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_author')->delete();
+  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog.field_cavalla_blog_author')->delete();
+  Drupal::configFactory()->getEditable('views.view.cavalla_blog_author')->delete();
+  Drupal::configFactory()->getEditable('views.view.cavalla_blog_taxonomy_page')->delete();
 }
 

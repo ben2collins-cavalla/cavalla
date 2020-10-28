@@ -19,3 +19,9 @@ function cavalla_taxonomy_update_8003() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_taxonomy');
 }
 
+function cavalla_taxonomy_update_8004() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_taxonomy');
+  Drupal::configFactory()->getEditable('field.field.node.cavalla_blog.field_cavalla_blog_hero_image')->delete();
+  Drupal::configFactory()->getEditable('field.storage.node.field_cavalla_blog_hero_image')->delete();
+}
+
