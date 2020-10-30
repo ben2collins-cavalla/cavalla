@@ -2,11 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_hero_img
+    - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_hero
     - field.field.taxonomy_term.cavalla_blog_category.field_cavalla_taxonomy_hide_himg
     - taxonomy.vocabulary.cavalla_blog_category
   module:
-    - image
     - text
 id: taxonomy_term.cavalla_blog_category.default
 targetEntityType: taxonomy_term
@@ -20,13 +19,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cavalla_taxonomy_hero_img:
-    weight: 3
-    label: hidden
+  field_cavalla_taxonomy_hero:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
     settings:
-      image_style: ''
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    type: image_url
     region: content
   field_cavalla_taxonomy_hide_himg:
     weight: 1

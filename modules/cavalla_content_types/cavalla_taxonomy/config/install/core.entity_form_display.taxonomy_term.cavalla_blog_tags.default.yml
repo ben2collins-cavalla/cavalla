@@ -2,33 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.cavalla_blog_tags.field_cavalla_taxonomy_hero_img
+    - field.field.taxonomy_term.cavalla_blog_tags.field_cavalla_taxonomy_hero
     - field.field.taxonomy_term.cavalla_blog_tags.field_cavalla_taxonomy_hide_himg
-    - image.style.thumbnail
     - taxonomy.vocabulary.cavalla_blog_tags
   module:
     - field_group
-    - image
+    - media_library
     - path
+    - text
 third_party_settings:
   field_group:
-    group_cavalla_taxonomy_feed:
-      children:
-        - field_cavalla_taxonomy_node_feed
-      parent_name: ''
-      weight: 2
-      format_type: details
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        open: false
-        required_fields: true
-      label: 'Activate Feed'
     group_cavalla_taxonomy_hero_img:
       children:
-        - field_cavalla_taxonomy_hero_img
+        - field_cavalla_taxonomy_hero
         - field_cavalla_taxonomy_hide_himg
       parent_name: ''
       weight: 1
@@ -46,16 +32,23 @@ targetEntityType: taxonomy_term
 bundle: cavalla_blog_tags
 mode: default
 content:
-  field_cavalla_taxonomy_hero_img:
-    weight: 6
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
-    type: image_image
+  field_cavalla_taxonomy_hero:
+    weight: 5
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
     region: content
   field_cavalla_taxonomy_hide_himg:
-    weight: 7
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
@@ -82,5 +75,4 @@ content:
     weight: 4
     region: content
     third_party_settings: {  }
-hidden:
-  description: true
+hidden: {  }
