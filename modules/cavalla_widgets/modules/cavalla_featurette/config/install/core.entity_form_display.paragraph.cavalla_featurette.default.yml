@@ -9,12 +9,11 @@ dependencies:
     - field.field.paragraph.cavalla_featurette.field_featurette_image_alignment
     - field.field.paragraph.cavalla_featurette.field_featurette_subtext
     - field.field.paragraph.cavalla_featurette.field_featurettes_animation
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.cavalla_featurette
   module:
     - field_group
-    - image
     - link
+    - media_library
 third_party_settings:
   field_group:
     group_featurettes_introduction:
@@ -73,6 +72,8 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Display Options'
+_core:
+  default_config_hash: UMATwE3wGahjbZlI_XMTHoL5at2af72yS2odH0cM8LE
 id: paragraph.cavalla_featurette.default
 targetEntityType: paragraph
 bundle: cavalla_featurette
@@ -102,12 +103,11 @@ content:
     type: link_default
     region: content
   field_featurette_image:
-    weight: 4
+    type: media_library_widget
+    weight: 7
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_featurette_image_alignment:
     weight: 4

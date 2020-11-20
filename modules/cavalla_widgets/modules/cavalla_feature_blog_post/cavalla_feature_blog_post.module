@@ -7,7 +7,8 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\node\Entity\Node;
-use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
+
 
 /**
  * Implements hook_help().
@@ -64,11 +65,11 @@ function cavalla_feature_blog_post_preprocess_paragraph__cavalla_feature_blog_po
       // Link.
       $variables['hyperlink'] = $entity->toUrl()->toString();
 
-      $featured_image = $entity->get('field_cavalla_blog_image')->getValue()[0]['target_id'];
+      $featured_image = $entity->get('field_cavalla_blog_feature_img')->getValue()[0]['target_id'];
       // Load the image file.
-      $file = File::load($featured_image);
-      $file_uri = $file->getFileUri();
-      $variables['image'] = file_url_transform_relative(file_create_url($file_uri));
+      $media = Media::load($featured_image);
+      $image_uri = $media->field_media_image->entity->getFileUri();
+      $variables['image'] = file_create_url($image_uri);
 
     }
   }

@@ -6,11 +6,10 @@ dependencies:
     - field.field.node.cavalla_basic_page.field_cavalla_bp_hero_image_hide
     - field.field.node.cavalla_basic_page.field_cavalla_bp_introduction
     - field.field.node.cavalla_basic_page.field_cavalla_bp_widgets
-    - image.style.thumbnail
     - node.type.cavalla_basic_page
   module:
     - field_group
-    - image
+    - media_library
     - paragraphs
     - path
 third_party_settings:
@@ -68,12 +67,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_cavalla_bp_hero_image:
-    weight: 122
+    type: media_library_widget
+    weight: 125
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
   field_cavalla_bp_hero_image_hide:
     weight: 123
