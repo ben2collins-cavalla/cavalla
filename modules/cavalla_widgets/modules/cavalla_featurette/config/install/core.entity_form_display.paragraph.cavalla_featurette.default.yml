@@ -5,8 +5,8 @@ dependencies:
     - field.field.paragraph.cavalla_featurette.field_cavalla_featurette_cimg
     - field.field.paragraph.cavalla_featurette.field_featurette_header
     - field.field.paragraph.cavalla_featurette.field_featurette_hyperlink
-    - field.field.paragraph.cavalla_featurette.field_featurette_image
     - field.field.paragraph.cavalla_featurette.field_featurette_image_alignment
+    - field.field.paragraph.cavalla_featurette.field_featurette_media
     - field.field.paragraph.cavalla_featurette.field_featurette_subtext
     - field.field.paragraph.cavalla_featurette.field_featurettes_animation
     - paragraphs.paragraphs_type.cavalla_featurette
@@ -32,7 +32,7 @@ third_party_settings:
       region: content
     group_featurettes_image:
       children:
-        - field_featurette_image
+        - field_featurette_media
       parent_name: ''
       weight: 1
       format_type: details
@@ -73,7 +73,7 @@ third_party_settings:
         required_fields: true
       label: 'Display Options'
 _core:
-  default_config_hash: UMATwE3wGahjbZlI_XMTHoL5at2af72yS2odH0cM8LE
+  default_config_hash: 6YpE_Wpd1Tl5itNjOzm8qxYPoWJ8aAapXCu0Z1E2QU4
 id: paragraph.cavalla_featurette.default
 targetEntityType: paragraph
 bundle: cavalla_featurette
@@ -102,19 +102,19 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_featurette_image:
-    type: media_library_widget
-    weight: 7
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-    region: content
   field_featurette_image_alignment:
     weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
+  field_featurette_media:
+    type: media_library_widget
+    weight: 8
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
     region: content
   field_featurette_subtext:
     weight: 5

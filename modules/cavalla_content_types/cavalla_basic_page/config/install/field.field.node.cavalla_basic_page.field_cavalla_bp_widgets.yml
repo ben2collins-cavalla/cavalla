@@ -15,10 +15,11 @@ dependencies:
     - paragraphs.paragraphs_type.cavalla_photo_album_feed
     - paragraphs.paragraphs_type.cavalla_product_feed
     - paragraphs.paragraphs_type.cavalla_testimonials
-    - paragraphs.paragraphs_type.cavalla_timeline_carousel
     - paragraphs.paragraphs_type.cavalla_webform
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: syDv-9QQwvhMrokeRq7A7pbQbNf_xnERUNpZEi-ZYp8
 id: node.cavalla_basic_page.field_cavalla_bp_widgets
 field_name: field_cavalla_bp_widgets
 entity_type: node
