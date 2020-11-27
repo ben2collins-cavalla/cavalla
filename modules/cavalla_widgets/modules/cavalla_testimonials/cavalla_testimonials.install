@@ -11,3 +11,9 @@
 function cavalla_testimonials_update_8001() {
   \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_testimonials');
 }
+
+function cavalla_testimonials_update_8002() {
+  \Drupal::service('config.installer')->installDefaultConfig('module', 'cavalla_testimonials');
+  Drupal::configFactory()->getEditable('field.field.paragraph.cavalla_testimonials_field.field_testimonial_field_image')->delete();
+  Drupal::configFactory()->getEditable('field.storage.paragraph.field_testimonial_field_image')->delete();
+}

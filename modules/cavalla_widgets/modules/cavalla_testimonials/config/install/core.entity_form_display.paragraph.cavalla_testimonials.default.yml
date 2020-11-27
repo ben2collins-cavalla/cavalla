@@ -1,4 +1,3 @@
-uuid: 23ff39f3-bed4-496e-a94d-e46c296e2d10
 langcode: en
 status: true
 dependencies:
@@ -49,11 +48,12 @@ third_party_settings:
       weight: 1
       format_type: details
       format_settings:
+        description: ''
         id: ''
         classes: ''
         open: false
         required_fields: false
-      label: 'Testimonial Widgets'
+      label: Testimonials
       region: content
     group_cavalla_animation:
       children:
@@ -70,7 +70,7 @@ third_party_settings:
         required_fields: true
       label: Animation
 _core:
-  default_config_hash: BW-fuYM_asTBUDkAlps2rNSqjObSNBrI5Kgv_APowgM
+  default_config_hash: opsKd10XnnmNuU6xCihGogHqIkBXct43biuZl0GaukA
 id: paragraph.cavalla_testimonials.default
 targetEntityType: paragraph
 bundle: cavalla_testimonials

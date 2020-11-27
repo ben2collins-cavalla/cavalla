@@ -1,4 +1,3 @@
-uuid: 9d80aa3e-74ff-4b67-a3ef-72d52fdf36dd
 langcode: en
 status: true
 dependencies:
@@ -9,12 +8,12 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: 5_-t_ASrHLOa6VlL0E-UJROfeWEj8s1fuy1ZvTBhQj0
+  default_config_hash: ocHgcHbPR3ebl14TyFNdBknO7ZD7RkX4XHdOfke7-9I
 id: paragraph.cavalla_testimonials.field_testimonial_widget
 field_name: field_testimonial_widget
 entity_type: paragraph
 bundle: cavalla_testimonials
-label: 'Testimonial Widgets'
+label: Testimonials
 description: ''
 required: false
 translatable: false
@@ -27,10 +26,82 @@ settings:
     target_bundles:
       cavalla_testimonials_field: cavalla_testimonials_field
     target_bundles_drag_drop:
+      cavalla_accordion:
+        weight: 27
+        enabled: false
+      cavalla_accordion_field:
+        weight: 28
+        enabled: false
+      cavalla_basic_html:
+        weight: 29
+        enabled: false
+      cavalla_blog_feeds:
+        weight: 30
+        enabled: false
+      cavalla_blog_popular_post:
+        weight: 31
+        enabled: false
+      cavalla_blog_reccomened_post:
+        weight: 32
+        enabled: false
+      cavalla_blog_recent_post:
+        weight: 33
+        enabled: false
+      cavalla_call_to_action:
+        weight: 34
+        enabled: false
+      cavalla_card:
+        weight: 35
+        enabled: false
+      cavalla_card_field:
+        weight: 36
+        enabled: false
+      cavalla_card_introduction:
+        weight: 37
+        enabled: false
+      cavalla_embed_media:
+        weight: 38
+        enabled: false
+      cavalla_embed_media_soundcloud:
+        weight: 39
+        enabled: false
+      cavalla_embed_media_youtube:
+        weight: 40
+        enabled: false
+      cavalla_feature_blog_post:
+        weight: 42
+        enabled: false
+      cavalla_featurette:
+        weight: 41
+        enabled: false
+      cavalla_photo_album_feed:
+        weight: 44
+        enabled: false
+      cavalla_photos:
+        weight: 43
+        enabled: false
+      cavalla_product_feed:
+        weight: 45
+        enabled: false
+      cavalla_reviews_feed:
+        weight: 46
+        enabled: false
+      cavalla_taxonomy_feed:
+        weight: 47
+        enabled: false
       cavalla_testimonials:
         weight: 3
         enabled: false
       cavalla_testimonials_field:
         enabled: true
         weight: 4
+      cavalla_timeline_carousel:
+        weight: 50
+        enabled: false
+      cavalla_timeline_carousel_field:
+        weight: 51
+        enabled: false
+      cavalla_webform:
+        weight: 52
+        enabled: false
 field_type: entity_reference_revisions
