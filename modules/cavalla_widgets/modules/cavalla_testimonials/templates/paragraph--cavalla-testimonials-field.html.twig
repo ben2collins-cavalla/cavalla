@@ -1,8 +1,8 @@
 <div class="testimonial_bundle card">
     <div class="testimonial">
-        {% if true in content.field_testimonial_field_image[0] %}
+        {% if true in content.field_testimonial_field_media[0] %}
             <div class="avatar">
-                <div class="pic" style="background-image: url('{{ content.field_testimonial_field_image[0] }}')">&nbsp;</div>
+                {{ content.field_testimonial_field_media }}
             </div>
         {% endif %}
         <div class="container text-center py-3">
