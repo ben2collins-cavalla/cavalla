@@ -13,11 +13,16 @@
 					  <p class="lead">{{ content.field_featurette_subtext[0] }}</p>
 					  {% endif %}
 
-					  {%  if true in content.field_featurette_hyperlink[0] %}
-					  <section class="hyperlinks">
-					  	<a class="btn btn-dark" href="{{ content.field_featurette_hyperlink[0]['#url'] }}">{{ content.field_featurette_hyperlink[0]['#title'] }}&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-					  </section>
-          			  {% endif %}
+					{%  if true in content.field_featurette_hyperlink[0] %}
+						<section class="hyperlinks">
+					  	{% for i in 0..content.field_featurette_hyperlink|length %}
+            				{% if content.field_featurette_hyperlink[i] is not null %}
+								<a class="btn btn-dark" href="{{ content.field_featurette_hyperlink[i]['#url'] }}">{{ content.field_featurette_hyperlink[i]['#title'] }}&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+							{% endif %}
+						{% endfor %}
+						</section>
+					{% endif %}
+
 					</aside>
 				</div>
 		   		<div class="col-lg-6 col-md-6 featurettes_image p-3 d-md-table-cell align-middle {{ circular_image}}">
@@ -40,9 +45,13 @@
 					{% endif %}
 
 					{%  if true in content.field_featurette_hyperlink[0] %}
-					<section class="hyperlinks">
-						<a class="btn btn-dark" href="{{ content.field_featurette_hyperlink[0]['#url'] }}">{{ content.field_featurette_hyperlink[0]['#title'] }}&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
-					</section>
+						<section class="hyperlinks">
+					  	{% for i in 0..content.field_featurette_hyperlink|length %}
+            				{% if content.field_featurette_hyperlink[i] is not null %}
+								<a class="btn btn-dark" href="{{ content.field_featurette_hyperlink[i]['#url'] }}">{{ content.field_featurette_hyperlink[i]['#title'] }}&nbsp;<i class="fa fa-arrow-circle-right"></i></a>
+							{% endif %}
+						{% endfor %}
+						</section>
 					{% endif %}
 				</aside>
 			 </div>

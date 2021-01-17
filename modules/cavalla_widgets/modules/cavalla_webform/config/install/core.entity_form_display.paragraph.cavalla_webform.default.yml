@@ -2,6 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_map
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_wf
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_city
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_state
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_street
@@ -28,7 +31,7 @@ third_party_settings:
         - field_cavalla_wf_address_city
         - field_cavalla_wf_address_state
         - field_cavalla_wf_address_zipcode
-      parent_name: ''
+      parent_name: group_cavalla_webform_bi
       weight: 2
       format_type: details
       region: content
@@ -42,7 +45,7 @@ third_party_settings:
     group_cavalla_wf_telephone:
       children:
         - field_cavalla_wf_telephone
-      parent_name: ''
+      parent_name: group_cavalla_webform_bi
       weight: 3
       format_type: details
       region: content
@@ -56,7 +59,7 @@ third_party_settings:
     group_cavalla_wf_email:
       children:
         - field_cavalla_wf_email
-      parent_name: ''
+      parent_name: group_cavalla_webform_bi
       weight: 4
       format_type: details
       region: content
@@ -70,7 +73,7 @@ third_party_settings:
     group_cavalla_wf_company_name:
       children:
         - field_cavalla_wf_company_name
-      parent_name: ''
+      parent_name: group_cavalla_webform_bi
       weight: 1
       format_type: details
       region: content
@@ -84,8 +87,9 @@ third_party_settings:
     group_cavalla_wf_map:
       children:
         - field_cavalla_wf_map
+        - field_cavalla_webform_hide_map
       parent_name: ''
-      weight: 5
+      weight: 4
       format_type: details
       region: content
       format_settings:
@@ -98,8 +102,8 @@ third_party_settings:
     group_cavalla_wf_work_hours:
       children:
         - field_cavalla_wf_work_hours
-      parent_name: ''
-      weight: 6
+      parent_name: group_cavalla_webform_bi
+      weight: 5
       format_type: details
       region: content
       format_settings:
@@ -124,11 +128,51 @@ third_party_settings:
         open: false
         required_fields: true
       label: Introduction
+    group_cavalla_webform_bi:
+      children:
+        - group_cavalla_wf_company_name
+        - group_cavalla_wf_address
+        - group_cavalla_wf_telephone
+        - group_cavalla_wf_email
+        - group_cavalla_wf_work_hours
+        - field_cavalla_webform_hide_
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: false
+        required_fields: true
+      label: 'Business Information'
 id: paragraph.cavalla_webform.default
 targetEntityType: paragraph
 bundle: cavalla_webform
 mode: default
 content:
+  field_cavalla_webform_hide_:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_cavalla_webform_hide_map:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_cavalla_webform_hide_wf:
+    weight: 8
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_cavalla_wf_address_city:
     weight: 2
     settings:
@@ -207,9 +251,10 @@ content:
     type: telephone_default
     region: content
   field_cavalla_wf_webform:
-    weight: 7
+    weight: 6
     settings:
       default_data: true
+      webforms: {  }
     third_party_settings: {  }
     type: webform_entity_reference_select
     region: content

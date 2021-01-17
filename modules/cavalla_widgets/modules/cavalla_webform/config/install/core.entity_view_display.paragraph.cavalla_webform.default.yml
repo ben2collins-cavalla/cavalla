@@ -2,6 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_map
+    - field.field.paragraph.cavalla_webform.field_cavalla_webform_hide_wf
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_city
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_state
     - field.field.paragraph.cavalla_webform.field_cavalla_wf_address_street
@@ -25,6 +28,36 @@ targetEntityType: paragraph
 bundle: cavalla_webform
 mode: default
 content:
+  field_cavalla_webform_hide_:
+    weight: 15
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_cavalla_webform_hide_map:
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_cavalla_webform_hide_wf:
+    weight: 14
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_cavalla_wf_address_city:
     weight: 1
     label: hidden

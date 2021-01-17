@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_cavalla_wf_webform
     - paragraphs.paragraphs_type.cavalla_webform
-    - webform.webform.contact
   module:
     - webform
 id: paragraph.cavalla_webform.field_cavalla_wf_webform
