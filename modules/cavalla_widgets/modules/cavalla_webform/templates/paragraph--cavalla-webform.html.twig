@@ -1,7 +1,8 @@
 <section class="webform_bundle">
+  <div class="row">
     {% if hide_webform == 0 %}
-    <aside class="{{ col_width }} position-relative d-table-cell webform_section">
-        <section class="webform">
+    <aside class="{{ col_width }}">
+        <section class="container">
 
           {%  if true in content.field_cavalla_wf_intro_title[0] %}
             <h1>{{ content.field_cavalla_wf_intro_title[0] }}</h1>
@@ -17,7 +18,7 @@
     {% endif %}
 
     {%  if (hide_map == 0) or (hide_business_information == 0) %}
-    <aside class="{{ col_width }} position-relative d-table-cell contactInfo_section">
+    <aside class="{{ col_width }}">
       {%  if hide_map ==  0 %}
         {{ content.field_cavalla_wf_map[0] }}
       {% endif %}
@@ -66,4 +67,5 @@
 
     </aside>
    {% endif %}
+   </div>
 </section>

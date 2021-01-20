@@ -84,14 +84,20 @@ function cavalla_webform_preprocess_paragraph__cavalla_webform(array &$variables
   $variables['hide_business_information'] = $paragraph->get('field_cavalla_webform_hide_')->value;
   $variables['hide_map'] = $paragraph->get('field_cavalla_webform_hide_map')->value;
 
+  $hide_business_information= $paragraph->get('field_cavalla_webform_hide_')->value;
+  $hide_webform = $paragraph->get('field_cavalla_webform_hide_wf')->value;
 
-  if ($variables['hide_business_information'] == 1 &&  $variables['hide_webform'] == 1) {
-      $variables['col_width'] = 'w-100';
+
+
+
+  if ($variables['hide_business_information'] == 1 && $variables['hide_map'] ==  1 && $variables['hide_webform'] == 0  ) {
+      $variables['col_width'] = 'col-12';
   }
-  if ($variables['hide_webform'] == 1 ) {
-      $variables['col_width'] = 'w-100';
+  else if (($variables['hide_webform'] == 1 && $variables['hide_business_information'] == 0) || ($variables['hide_webform'] == 1 && $variables['hide_map'] == 0 )) {
+      $variables['col_width'] = 'col-12';
   }
   else{
-    $variables['col_width'] = 'w-50';
+    $variables['col_width'] = 'col-md-6';
   }
+
 }
