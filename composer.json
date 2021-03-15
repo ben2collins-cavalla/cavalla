@@ -20,7 +20,6 @@
         "drupal/webform": "^5.4",
         "drupal/honeypot": "^1.29",
         "drupal/media_entity": "^1.8",
-        "drupal/filefield_paths": "^1.0",
         "drupal/commerce": "^2.14",
         "drupal/commerce_stripe": "^1.0",
         "drupal/color_field": "^2.0",
